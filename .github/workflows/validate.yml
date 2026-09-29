@@ -28,7 +28,7 @@ jobs:
           node-version: 24.17.0
       - run: npm install --global pnpm@12.6.0
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:api && pnpm test:db && pnpm test:auth && pnpm test:requests && pnpm test:allocation
+      - run: pnpm build && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:api && pnpm test:db && pnpm test:auth && pnpm test:requests && pnpm test:allocation && pnpm test:lifecycle
       - run: pnpm exec playwright install --with-deps chromium
       - name: Clean Compose initialization and repeat startup
         run: |

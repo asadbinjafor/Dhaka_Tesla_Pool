@@ -5,8 +5,10 @@ import type {Quote,Receipt} from '@dtp/contracts';
 import {ApiError,useSession} from './session-provider';
 
 interface Intent {key:string;target:string;method:string;body:Readonly<Record<string,unknown>>}
+interface Confirmation {target:string;label:'cancelRide'|'driverArrive'|'startTrip'|'completeTrip'|'cancelPool';needsReason:boolean}
 interface UI {
   draft:{pickupId:string;destinationId:string;seats:number};quote:Quote|null;intent:Intent|null;busy:boolean;error:string|null;receipt:Receipt|null;
+  confirmation:Confirmation|null;reason:string;setReason(reason:string):void;confirm(value:Confirmation):void;closeConfirmation():void;
   change(draft:UI['draft']):void;getQuote():Promise<void>;
   execute(target:string,body:Record<string,unknown>,method?:string):Promise<Receipt|undefined>;
   retry():Promise<Receipt|undefined>;clearReceipt():void;
@@ -17,18 +19,20 @@ export function RideUIProvider({children}:{children:ReactNode}) {
   const [draft,setDraft]=useState({pickupId:'banani',destinationId:'mohakhali',seats:1});
   const [quote,setQuote]=useState<Quote|null>(null);const [intent,setIntent]=useState<Intent|null>(null);
   const [busy,setBusy]=useState(false);const [error,setError]=useState<string|null>(null);const [receipt,setReceipt]=useState<Receipt|null>(null);
+  const [confirmation,setConfirmation]=useState<Confirmation|null>(null);const [reason,setReason]=useState('');
   const running=useRef(false);const mounted=useRef(true);
   useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;};},[]);
   async function run(next:Intent) {
     if(running.current)return;
     running.current=true;setBusy(true);setError(null);setIntent(next);
-    try {const result=await session.call<Receipt>(next.target,next.method,next.body,next.key);if(!mounted.current)return;setReceipt(result);setIntent(null);return result;}
+    try {const result=await session.call<Receipt>(next.target,next.method,next.body,next.key);if(!mounted.current)return;setReceipt(result);setIntent(null);setConfirmation(null);setReason('');return result;}
     catch(cause){if(!mounted.current)return;const code=cause instanceof ApiError?cause.code:'INTERNAL_ERROR';setError(code);
       // Unknown/temporary/auth outcomes retain this exact key/body for reconciliation.
       if(!['COMMAND_OUTCOME_UNKNOWN','TEMPORARILY_UNAVAILABLE','AUTH_REQUIRED','CSRF_REJECTED'].includes(code))setIntent(null);
     } finally {if(mounted.current){running.current=false;setBusy(false);}}
   }
-  return <Context.Provider value={{draft,quote,intent,busy,error,receipt,
+  return <Context.Provider value={{draft,quote,intent,busy,error,receipt,confirmation,reason,setReason,
+    confirm(value){if(busy||intent)return;setReason('');setConfirmation(value);},closeConfirmation:()=>setConfirmation(null),
     change(next){if(busy||intent)return;setDraft(next);setQuote(null);setError(null);},
     async getQuote(){if(running.current||intent)return;running.current=true;setBusy(true);setError(null);
       try{const result=await session.call<Quote>('/fare-quotes','POST',draft);if(mounted.current)setQuote(result);}

@@ -2,7 +2,7 @@ import {Inject,Injectable} from '@nestjs/common';
 import {DatabaseService} from '../database/database.service.js';
 import {BusinessError,fail} from '../common/business-error.js';
 import {command} from '../common/command.js';
-import {RideRepository} from '../rides/ride.repository.js';
+import {RideRepository,fare} from '../rides/ride.repository.js';
 import type {Ride} from '../rides/ride.repository.js';
 import {PoolRepository} from './pool.repository.js';
 import type {TripPool} from './pool.repository.js';
@@ -55,6 +55,33 @@ export class PoolService {
   });}
   async current(driver:string){return this.db.transaction(async client=>{const repo=new PoolRepository(client);const p=await repo.current(driver);return {data:p?await repo.detail(p.id,driver):null};},true);}
   async detail(driver:string,id:string){return this.db.transaction(async client=>({data:await new PoolRepository(client).detail(id,driver)}),true);}
+  async transition(driver:string,id:string,key:string,action:'ARRIVE'|'START'|'COMPLETE'|'DRIVER_CANCEL',reason?:string){
+    if(action==='DRIVER_CANCEL'&&(!reason||reason.length>200))fail('INVALID_INPUT',400);
+    return this.db.transaction(async client=>{
+      const pools=new PoolRepository(client);const rides=new RideRepository(client);await pools.ownPool(id,driver);
+      return {data:await command(client,driver,action,key,`pool:${id}`,reason?{reason}:{},async()=>{
+        await pools.parent(driver);const pool=await pools.ownPool(id,driver,true);
+        const expected=action==='ARRIVE'?'ACCEPTED':action==='START'?'DRIVER_ARRIVED':action==='COMPLETE'?'STARTED':null;
+        if(expected?pool.status!==expected:!['ACCEPTED','DRIVER_ARRIVED'].includes(pool.status))fail('INVALID_TRANSITION');
+        const members=await pools.members(id,true);if(!members.length)fail('INVALID_TRANSITION');
+        const memberState=pool.status==='ACCEPTED'?'MATCHED':pool.status;
+        if(members.some(r=>r.status!==memberState))fail('INVALID_TRANSITION');
+        const next=action==='ARRIVE'?'DRIVER_ARRIVED':action==='START'?'STARTED':action==='COMPLETE'?'COMPLETED':'CANCELLED';
+        const timeColumn=action==='ARRIVE'?'arrived_at':action==='START'?'started_at':action==='COMPLETE'?'completed_at':'cancelled_at';
+        const at=(await client.query('SELECT clock_timestamp()::text AS at')).rows[0].at;
+        const changedPool=(await client.query<TripPool>(`UPDATE pools SET status=$2,version=version+1,${timeColumn}=$3${action==='DRIVER_CANCEL'?',cancellation_reason=$4':''} WHERE id=$1 RETURNING *`,action==='DRIVER_CANCEL'?[id,next,at,reason]:[id,next,at])).rows[0]!;
+        for(const r of members){
+          const params:unknown[]=[r.id,next,at];let extra='';
+          if(action==='ARRIVE'){params.push(fare(r.booking_snapshot,members.length));extra=',final_fare_snapshot=$4,finalized_at=$3';}
+          if(action==='DRIVER_CANCEL'){params.push(reason);extra=',cancellation_reason=$4';}
+          const changed=(await client.query<Ride>(`UPDATE ride_requests SET status=$2,version=version+1,${timeColumn}=$3${extra} WHERE id=$1 RETURNING *`,params)).rows[0]!;
+          await rides.event(driver,action,changed,id,changedPool.version,r.status);
+        }
+        await pools.event(driver,action,changedPool,pool.status);
+        return {resourceId:id,action,appliedVersion:changedPool.version};
+      })};
+    });
+  }
   async cancelPassenger(owner:string,id:string,key:string,reason:string){
     if(!reason||reason.length>200)fail('INVALID_INPUT',400);
     for(let attempt=0;attempt<3;attempt++){
