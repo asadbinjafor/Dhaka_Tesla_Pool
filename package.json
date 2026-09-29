@@ -23,6 +23,7 @@
     "test:allocation": "pnpm --filter @dtp/api build && node --test tests/integration/allocation.test.mjs",
     "test:lifecycle": "pnpm --filter @dtp/api build && node --test tests/integration/lifecycle.test.mjs",
     "test:statistics": "pnpm --filter @dtp/api build && node --test tests/integration/statistics.test.mjs",
+    "test:hardening": "pnpm --filter @dtp/api build && node --test tests/integration/hardening.test.mjs",
     "test:e2e": "playwright test",
     "test:i18n": "node --import tsx --test tests/unit/catalog.test.ts",
     "check:reference": "node tools/verify-reference.mjs"
