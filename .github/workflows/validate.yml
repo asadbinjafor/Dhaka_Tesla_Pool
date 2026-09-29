@@ -38,6 +38,7 @@ jobs:
           curl --fail http://127.0.0.1:3000/api/v1/health/ready
           docker compose up --wait
           curl --fail http://127.0.0.1:3000/api/v1/health/ready
+          pnpm test:smoke
           export DEMO_PASSWORD=Browser-test-nonsecret-2026
           docker compose --profile demo run --rm seed
           E2E_PASSWORD="$DEMO_PASSWORD" pnpm test:e2e
