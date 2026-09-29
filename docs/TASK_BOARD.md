@@ -1,3 +1,5 @@
+> Current application evidence is in [FINAL_AUDIT.md](FINAL_AUDIT.md) and the dated complete-product checkpoint below. Earlier starter/foundation tables are preserved history, not current missing-feature claims.
+
 # Task board template — NOT an application completion report
 Do not overwrite an existing project's progress with this starter. Keep HANDOFF evidence
 separate from actual application evidence. Only packaging/template checks have run here.
@@ -60,3 +62,26 @@ DATABASE_AUDIT.md and evidence/runs/2026-09-29-database/ supersede the earlier n
 # 2026-09-29 authentication checkpoint
 
 Authentication backend/account UI implemented; real PostgreSQL/HTTP tests and build/lint/typecheck/unit/reference checks PASS. Full product remains IN_PROGRESS. Auth browser suite pending isolated CI; local additional frontend preview was rejected by automatic approval review (blocked by policy). Database Docker CI run 36526747393 PASS. Next: owned quotes/requests, then shared-driver allocation/lifecycle, history/graphs/full UI. See AUTH_AUDIT.md; historical board entries below remain intact.
+
+## Current complete-product checkpoint — 2026-09-29
+
+This dated table supersedes historical starter/foundation blockers above; those records and approvals remain unchanged. All actual application work followed scoped feature commits and tested master integrations. Exact Git refs and executed CI are authoritative; final required branches are actually published as recorded below.
+
+| Slice | Actual status | Exact evidence |
+|---|---|---|
+| 00 source/PDF/UI/repository audit | PASS / RECORDED_BEFORE_APP | c746707 -> master65b2fd4; INITIAL_AUDIT, original5pages/tables/source interactions; reference84/84 |
+| 01 selected modern foundation | PASS / INTEGRATED |35fed0c/2e16dfc -> master7ce8017; native build/HTTP/SSR/unit/browser |
+| 02 PostgreSQL/schema/seed | PASS / INTEGRATED |bebaea3 -> master9de6647; actual PostgreSQL migration/checksum/repeat seed/constraints; CI36526747393 |
+| 03 real auth/ownership/account | PASS / INTEGRATED |7ce2c49 -> masterf2f2c99; real Argon2/cookie/CSRF/roles; CI36528241459 |
+| 04 quotes/owned requests/retry | PASS / INTEGRATED |69d5671/257dc32 -> mastere5062a8; real SQL + CI36529950932 |
+| 05 shared capacity/allocation | PASS / INTEGRATED |8563052/7ed148d -> masterd90c54b; both last-seat winners/two APIs/rollback/unknown-COMMIT; CI36530650512 |
+| 06 lifecycle/immutable final/terminal | PASS / INTEGRATED |195d473 -> master3a15d6a; real lifecycle/cutoff tests; CI36531122860 |
+| 07–08 owned history/graphs/full product | PASS / INTEGRATED |d0d9d45/d10a63b + baf7434 -> master76dd592; CI36532896472/36534145195;22browser cases/300actual views |
+| 09 independent review/hardening | PASS / INTEGRATED |37ef042PASS36534932216; d677e12FAIL focus, b87fdfb+c985c29 repairPASS36537302983;8ff59d8 PASS36538087317(27E2E/300views/min chart label14px); mastera6109ac PASS36539130836 |
+| 10 documentation/release publication | PASS / PUBLISHED | Pre-releasece17ce5 PASS36540258465; complete doc/license candidatea470f72 PASS36540724158 (64cases/all operational gates); release/v1.0.0 created/pushed from verifieda470f72, with final doc-only closure/CI tracked separately |
+| Domain assumptions | ADOPTED_ENGINEERING_BASELINE | D01–D29 adopted under current completion request/PRD§17, no fabricated individual rate approval |
+| Deployment | PASS_TESTED_DOCKER_FALLBACK | Free public-repo CI production containers fresh/repeat/persistence/reseed/outage503/recovery200; no paid/public-hosted endpoint claimed |
+| Video P38/U11 | DEFERRED_BY_USER | Required row/link placeholder retained; no script/record/upload |
+| Human live explanation/debug assessment | NOT_RUN | Factual AI disclosure and engineering/debug notes provided; no automatic human-ability certification |
+
+A parallel-file native run had21PASS/1FAIL from owned test DB cleanup's3s timeout. The failed log is retained; separate administrative15s budget/always-close guard plus sequential full retest PASS24/24. Business3s statement/2s lock deadlines and real overlapping race tests stay unchanged. UI assertion failures were repaired or exposed/fixed actual defects, never weakened. Local additional preview remains BLOCKED by automatic approval review (blocked by policy); real browser/Docker proof uses CI. Original user processes/private app DB data remain preserved.

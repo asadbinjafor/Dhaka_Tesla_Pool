@@ -1,0 +1,130 @@
+{
+  "observedAtUtc": "2026-09-29T08:17:32.5792404Z",
+  "repository": "https://github.com/asadbinjafor/Dhaka_Tesla_Pool",
+  "candidateSha": "a470f72cb180e9cd3f87ae04b86cf141cae038ab",
+  "candidateRun": 36540724158,
+  "candidateResult": "success",
+  "runtime": "Node24.17.0/pnpm12.6.0/PostgreSQL18.6/Ubuntu24.04 production Docker Chromium",
+  "unitCases": 9,
+  "nativeSqlHttpCases": 25,
+  "ssrGatewaySmokeCases": 3,
+  "browserCases": 27,
+  "totalCases": 64,
+  "principalScreenWidthViews": 300,
+  "video": "DEFERRED_BY_USER",
+  "actualRefsAtCandidatePublication": [
+    "a6109ac293222f11200845fcf2c87a887ebfd25f\trefs/heads/master",
+    "a470f72cb180e9cd3f87ae04b86cf141cae038ab\trefs/heads/pre-release",
+    "a470f72cb180e9cd3f87ae04b86cf141cae038ab\trefs/heads/release/v1.0.0"
+  ],
+  "jobSteps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Initialize containers",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run npm install --global pnpm@12.6.0",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run pnpm install --frozen-lockfile",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run pnpm build && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:api && pnpm test:db && pnpm test:auth && pnpm test:requests && pnpm test:allocation && pnpm test:lifecycle && pnpm test:statistics && pnpm test:hardening",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run pnpm exec playwright install --with-deps chromium",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Clean Compose initialization and repeat startup",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Stop containers",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "countLogLines": [
+    "2026-09-29T08:07:59.7993325Z ℹ tests 9",
+    "2026-09-29T08:07:59.8019178Z ℹ pass 9",
+    "2026-09-29T08:07:59.8019712Z ℹ fail 0",
+    "2026-09-29T08:08:02.3998636Z ℹ tests 2",
+    "2026-09-29T08:08:02.3999544Z ℹ pass 2",
+    "2026-09-29T08:08:02.3999946Z ℹ fail 0",
+    "2026-09-29T08:08:04.7323331Z ℹ tests 1",
+    "2026-09-29T08:08:04.7324073Z ℹ pass 1",
+    "2026-09-29T08:08:04.7324289Z ℹ fail 0",
+    "2026-09-29T08:08:07.9447199Z ℹ tests 1",
+    "2026-09-29T08:08:07.9447691Z ℹ pass 1",
+    "2026-09-29T08:08:07.9447895Z ℹ fail 0",
+    "2026-09-29T08:08:11.5136616Z ℹ tests 1",
+    "2026-09-29T08:08:11.5137529Z ℹ pass 1",
+    "2026-09-29T08:08:11.5137919Z ℹ fail 0",
+    "2026-09-29T08:08:16.2109027Z ℹ tests 4",
+    "2026-09-29T08:08:16.2109963Z ℹ pass 4",
+    "2026-09-29T08:08:16.2110365Z ℹ fail 0",
+    "2026-09-29T08:08:21.4189444Z ℹ tests 6",
+    "2026-09-29T08:08:21.4190088Z ℹ pass 6",
+    "2026-09-29T08:08:21.4190293Z ℹ fail 0",
+    "2026-09-29T08:08:24.3978285Z ℹ tests 1",
+    "2026-09-29T08:08:24.3979239Z ℹ pass 1",
+    "2026-09-29T08:08:24.3979644Z ℹ fail 0",
+    "2026-09-29T08:08:31.5333161Z ℹ tests 9",
+    "2026-09-29T08:08:31.5334085Z ℹ pass 9",
+    "2026-09-29T08:08:31.5334493Z ℹ fail 0",
+    "2026-09-29T08:10:01.5169142Z ℹ tests 3",
+    "2026-09-29T08:10:01.5169627Z ℹ pass 3",
+    "2026-09-29T08:10:01.5169839Z ℹ fail 0",
+    "2026-09-29T08:13:42.5269617Z   27 passed (3.6m)"
+  ],
+  "limits": [
+    "Additional local preview BLOCKED by automatic approval review: blocked by policy",
+    "Public hosted TLS NOT_RUN; tested Docker fallback delivered",
+    "Human live assessment and full assistive-technology certification NOT_RUN"
+  ]
+}

@@ -1,0 +1,36 @@
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: offline obtains driver lock first (1476.2031ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: accept obtains driver lock first (960.0029ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ arrival first blocks actually contending passenger cancellation without fare/event damage (885.2842ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ completed remaining pool leaves earlier canceled member and event byte-for-byte intact (803.76ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ expired quote and session cannot leak receipt; same verified owner replays completed create once (1746.3404ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ HTTPS-origin configuration issues Secure cookies and rejects untrusted forwarding origin (826.0916ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ waiting hints expose only observed eligibility for offline/full/arrived/incompatible vehicles (1008.1958ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation first serializes against acceptance on the real request lock with no orphan membership (881.9664ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+{"event":"request_failed","requestId":"79a61f19-5625-4529-9695-de4522518af0","code":"TEMPORARILY_UNAVAILABLE"}
+✔ owned read database failure returns safe unknown outcome without directory/hint/private diagnostic, then recovers (711.5662ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10549.0919

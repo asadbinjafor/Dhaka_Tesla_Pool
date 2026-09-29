@@ -1,5 +1,7 @@
 # Test plan and proof of completion
 
+**Current executed evidence:** see [TEST_EVIDENCE.md](TEST_EVIDENCE.md) and [FINAL_AUDIT.md](FINAL_AUDIT.md). The planned-only statements below are preserved original handoff history, not current delivery status.
+
 **Status: all new full-stack tests below are PLANNED / NOT_RUN.** Prototype-only rerun evidence is separate. PRD §12 calls for meaningful risky-behavior tests, not a decorative coverage score.
 
 ## Unit tests (no database)

@@ -1,3 +1,5 @@
+> Current application evidence is in [FINAL_AUDIT.md](FINAL_AUDIT.md) and the dated complete-product checkpoint below. Earlier starter/foundation tables are preserved history, not current missing-feature claims.
+
 # Original-PDF requirement matrix — initial planning baseline
 
 Source: reference/PRD.pdf. All five pages/19 sections are represented. This table
@@ -78,3 +80,56 @@ DATABASE_AUDIT.md and evidence/runs/2026-09-29-database/ supersede the earlier n
 ## Auth/request/allocation checkpoint — 2026-09-29
 
 AUTH_AUDIT, REQUESTS_AUDIT and ALLOCATION_AUDIT supersede earlier absence claims. Real sessions/roles/owned quotes and request details, quantity reservation, matching and exact fares are implemented. Real PostgreSQL simultaneous last-seat cases for both winner orders, independent same-Jashim API instances, rollback/unknown-COMMIT recovery, private serialization and cancellations PASS. Docker/auth browser run 36528241459 PASS; booking run 36529197693 FAIL solely at an ambiguous test locator, repaired at 257dc32 with rerun pending. Lifecycle/history/full UI/graphs and final/release audit remain incomplete. Required video row remains deferred.
+
+## Current complete-product audit — 2026-09-29 (supersedes historical statuses above)
+
+Authority: all five actual PDF pages and role/stack/evaluation tables reread independently of prior completion summaries. Original/extras remain separate. Current evidence: complete UI CI36534145195/baf7434; hardening CI36534932216/37ef042; local final PostgreSQL/HTTP run; operating docs, actual architecture/ERD/API and screenshot provenance. Strengthened four-mode journeys/SSR and final64-case pre-release gates PASS36540258465/36540724158; release/v1.0.0 created/pushed from verifieda470f72. Earlier initial/foundation observations and approvals are preserved history.
+
+| ID | Current artifact status | Actual implementation/evidence |
+|---|---|---|
+| P01 | VERIFIED | Named non-destructive DB seed and named four-actor pooling E2E; README/story |
+| P02 | VERIFIED | RideRepository allowlisted own fare/status; PoolRepository owned roster; auth/request/allocation privacy tests |
+| P03 | VERIFIED | Retained terminal requests/pools/memberships/events, stable IDs; lifecycle restart and history tests |
+| P04 | VERIFIED | Real Nest Argon2/session signup/login/logout + four-mode gateway auth E2E |
+| P05 | VERIFIED | Booking UI -> owned quote -> typed request -> PostgreSQL; real booking E2E/requests tests |
+| P06 | VERIFIED | Exact integer-poysha solo/pooled quotes and own breakdown; named arithmetic assertions |
+| P07 | VERIFIED | Real lifecycle/polling/stable terminal detail; named full journeys, terminal reload |
+| P08 | VERIFIED | Own cancellation cutoff, atomic release, immutable canceled history; lifecycle/hardening tests |
+| P09 | VERIFIED | Real driver session, own immutable Bullet/capacity and online/offline guards/races |
+| P10 | VERIFIED | Relevant oldest dispatch and parent-locked acceptance; allocation E2E/actual SQL tests |
+| P11 | VERIFIED | Authorized ARRIVE/START/COMPLETE exact-state guards and actual named UI journeys |
+| P12 | VERIFIED | Owned current/historical roster with quantity and terminal keyset history |
+| P13 | VERIFIED | Actual shared-driver two-API-instance contention, both last-seat winner orders, rollback, <=3 seats |
+| P14 | VERIFIED | Durable one-lifetime membership, aggregate own pool detail, immutable per-booking fare facts |
+| P15 | VERIFIED | Documented request/pool transition distinction; arrival closes joins/cancel; real guard tests |
+| P16 | VERIFIED | Banani -> Mohakhali/Gulshan1/2 demo zones/distances; BANANI_V1 same pickup/group/version; named different-destination tests |
+| P17 | VERIFIED | README hand-checkable fare-v1 formula, integer poysha, immutable quote/final snapshots; native exact arithmetic |
+| P18 | VERIFIED | Cash-only choice; NOT_TRACKED collection, no invented paid/refund behavior |
+| P19 | VERIFIED | Production Next App Router/Nest build and actual browser -> API flows |
+| P20 | VERIFIED | Actual PostgreSQL18 schema/migrations/transactions; explicit rationale/alternatives |
+| P21 | VERIFIED | Thin controllers/strict DTOs/guards/services/pg repositories/safe logs/errors; ownership, state, validation, concurrency tests |
+| P22 | VERIFIED | Real API UI, pending/empty/error/recovery states, selected responsive design; current browser evidence |
+| P23 | VERIFIED | Applied001 schema with types/FKs/partial unique/indexes/immutability; actual ERD and schema tests |
+| P24 | VERIFIED | Actual CI Docker fresh/repeat up, migration + named explicit seed, persistent down/up, repeat seed, outage503/recovery200 |
+| P25 | VERIFIED | Source-permitted tested free Docker fallback; OPERATIONS states no configured public backend/URL, no paid hosting |
+| P26 | VERIFIED | README choices/realistic alternatives/fit/change triggers plus DEPENDENCIES/THIRD_PARTY_ASSETS |
+| P27 | PARTIAL | Required AI disclosure/accepted+changed suggestion and debugging material VERIFIED; author's live explain/debug ability NOT_RUN, cannot be automated |
+| P28 | VERIFIED | Early design retained; README Browser -> Next -> Nest -> DB, IMPLEMENTED_ARCHITECTURE and actual ERD match code |
+| P29 | VERIFIED | One modular API, one UI and PostgreSQL; no gratuitous queue/cache/orchestrator infrastructure |
+| P30 | VERIFIED | Contemporary scoped feature commits and tested non-fast-forward master integrations; exact public remote |
+| P31 | VERIFIED | Integrated mastera6109ac -> tested pre-releasea470f72 PASS36540724158 -> actually created/pushed release/v1.0.0 at sameverifiedSHA; doc-only closure recorded separately |
+| P32 | VERIFIED | Meaningful conventional commits preserved; no fabricated count/history or backdating |
+| P33 | VERIFIED | Complete operating README/features/tree/requirements and17 original current-product PNGs with CI provenance |
+| P34 | VERIFIED | Complete env/native/Docker/migrate/explicit seed/run/test instructions; named emails and operator-chosen private demo password |
+| P35 | VERIFIED | Actual API/decisions/limitations/improvements/CI fallback/AI links; required video link explicitly deferred P38 |
+| P36 | VERIFIED | Real PostgreSQL capacity/transition/ownership/cancel/fare/contention/rollback/replay and actual browser journeys |
+| P37 | VERIFIED | SCALING reasoning only; no 1M-user benchmark or deployed scaling infrastructure claimed |
+| P38 | DEFERRED_BY_USER | Required max-six-minute video submission retained; no script/record/upload/link |
+| P39 | VERIFIED | Exact public repo/default master accessible; current runtime/docs/tests/artifacts and verified required release branch ordinary-pushed; see GITHUB_REPOSITORY/RELEASE_CHECKLIST |
+| P40 | VERIFIED | Product/process/backend/UI/Docker/tests/privacy evidence separated; no invented assessment score |
+| P41 | VERIFIED | No paid infra/private secrets/PDF publication/giant finished bootstrap/direct feature-on-master/history rewrite; actual staged review |
+| P42 | VERIFIED | D01-D29 adopted documented engineering assumptions under §17/continuation; no invented individual rate approval |
+| P43 | VERIFIED | Named seeds/tests/README and real development journey/choices; human video deferred separately |
+| P44 | PARTIAL | Understand/design/build/commit/test/ship/debug/change artifacts observable; live human assessment NOT_RUN |
+
+VERIFIED refers to actual artifact/tests in the stated environment, never a future production guarantee or evaluation score. P27/P44 human live ability is an assessment responsibility, not silently converted to PASS. Complete submission still includes the user-deferred required video. See FINAL_AUDIT for gate details and actual candidate result.
