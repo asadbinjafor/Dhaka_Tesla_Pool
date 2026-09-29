@@ -1,0 +1,16 @@
+# New-workspace starter. Reconcile rather than replace an existing .gitignore.
+reference/
+node_modules/
+.next/
+dist/
+coverage/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+*.log
+*.pem
+*.key
+.DS_Store
+Thumbs.db
