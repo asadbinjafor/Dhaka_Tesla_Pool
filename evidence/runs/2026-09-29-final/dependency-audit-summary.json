@@ -1,0 +1,20 @@
+{
+  "observedDate": "2026-09-29",
+  "command": "pnpm audit --json",
+  "packageManager": "pnpm12.6.0",
+  "result": "PASS_REVIEWED",
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0
+    },
+    "dependencies": 187,
+    "devDependencies": 354,
+    "optionalDependencies": 129,
+    "totalDependencies": 593
+  },
+  "note": "Dated advisory result, not a permanent guarantee. ESLint9 maintenance/deprecation compatibility trade-off is documented separately."
+}

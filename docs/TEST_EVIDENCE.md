@@ -7,8 +7,9 @@ This supersedes the original planned-only status of 08-TEST-PLAN.md without dele
 - [CI36538087317](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36538087317), `8ff59d89fed9fc94df59d455354e7855496711ae`: **PASS** build, typecheck, lint,9unit,24native SQL/HTTP,3SSR/gateway smoke,27browser cases. Browser cases include300 principal screen/width views. Production Compose clean/repeat startup, explicit seed, retained rows after down/up and repeated seed, unavailable DB readiness503 then recovered200 all PASS.
 - [Master CI36539130836](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36539130836), `a6109ac293222f11200845fcf2c87a887ebfd25f`: **PASS** same complete gates after integration.
 - Native complete sequential retest:24/24 **PASS**, `evidence/runs/2026-09-29-final/native-postgresql-http-retest.txt`. Earlier parallel cleanup failure21/22 is retained in `native-postgresql-http.txt`; repair separates administrative15s CREATE/DROP budget from unchanged business3s statement/2s lock deadlines.
-- Native strengthened candidate hardening:9/9 **PASS**, `native-hardening-candidate.txt`, including injected private-read connection failure, safe503 envelope, no private directory/raw diagnostic, restored owned read. This replaces prior8-case hardening suite; the full candidate CI count is25native, pending actual observation.
-- Pre-release `ce17ce50b11bd98c9447548c91205168b0b4b6a8`, [CI36540258465](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36540258465): **PENDING** at this checkpoint. Stronger existing browser cases additionally switch language/theme before lost-response same-key recovery and test localized read503/manual recovery; these are not extra test-count inflation.
+- Native strengthened candidate hardening:9/9 **PASS**, `native-hardening-candidate.txt`, including injected private-read connection failure, safe503 envelope, no private directory/raw diagnostic, restored owned read. This replaces prior8-case hardening suite; the full candidate CI count is25native, PASS in both pre-release runs36540258465/36540724158.
+- Pre-release `ce17ce50b11bd98c9447548c91205168b0b4b6a8`, [CI36540258465](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36540258465): **PASS**, all64cases and operational gates. Stronger existing browser cases switch language/theme before lost-response same-key recovery and test localized read503/manual recovery; these are not extra test-count inflation.
+- Full documentation/license candidate `a470f72cb180e9cd3f87ae04b86cf141cae038ab`, [CI36540724158](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36540724158): **PASS**, same64cases and operational gates. Required release branch created and pushed from this verified pre-release.
 
 ## Original planned scenario trace
 
@@ -23,7 +24,7 @@ This supersedes the original planned-only status of 08-TEST-PLAN.md without dele
 | I33–I35 | requests/allocation/lifecycle/hardening: canonical target/body hash conflict, committed original-key replay after terminal state/quote consumption, real quote wall-clock expiry while lock held | PASS |
 | I36–I38 | lifecycle/statistics + booking/lifecycle/state-boundary E2E: stable terminal refresh/current=null, late real older pool-version fare blocked, full-precision equal/submillisecond cursor pagination and filter/owner binding | PASS |
 | I39–I44 | database/requests/allocation/lifecycle/hardening: constraints, rollback/COMMIT ambiguity, post-wait fresh count, catalog version immutability, prior-canceled membership unchanged, original ARRIVE receipt versus fresh key | PASS |
-| I45 | hardening: aggregate offline/full/closed/incompatible hints; latest native9th case safe unknown read failure/recovery | PASS native; stronger browser recovery pending candidate CI |
+| I45 | hardening: aggregate offline/full/closed/incompatible hints; latest native9th case safe unknown read failure/recovery | PASS native and candidate browser localized503/manual recovery |
 | I46 | state-boundary/auth/recovery E2E: real delayed prior-user callback cannot navigate/reveal after logout/new login; root private epoch/draft/intent boundary | PASS |
 | I47 | database native + production Compose after E2E: explicit repeat seed preserves credentials/timestamps and created records/counts | PASS |
 | I48 | auth/gateway native/unit/production E2E: actual HTTP cookies/CSRF/proxy stripping, HTTPS configuration Secure attributes | PASS HTTP/configuration; actual public HTTPS/TLS termination NOT_RUN. Tested HTTP Docker fallback is permitted PDF scope |
@@ -34,12 +35,12 @@ This supersedes the original planned-only status of 08-TEST-PLAN.md without dele
 | IDs | Actual tests and artifacts | Status |
 |---|---|---|
 | X01–X02 | auth/lifecycle/statistics/zz-ui four-mode browser cases; catalog.test.ts key/placeholder parity | PASS |
-| X03–X05 | booking/auth/recovery/lifecycle browser: valid draft/quote, delayed mutation key/body, stable terminal route/refresh; canonical presentation-state units | PASS; strengthened lost-response switch regression pending candidate |
+| X03–X05 | booking/auth/recovery/lifecycle browser: valid draft/quote, delayed mutation key/body, stable terminal route/refresh; canonical presentation-state units | PASS; strengthened lost-response switch/reauth one-effect regression PASS36540258465/36540724158 |
 | X06–X08 | real safe error/strict DTO/auth/owned read; catalog/format/SSR/gateway; Bangla search/digits, ISO canonical dates, preference/locale routing | PASS; native browser date-input chrome follows browser locale, user-entered names are preserved |
 | X09–X11 | zz-ui/lifecycle/statistics: fonts/keyboard/dialog focus/no page errors/reduced motion,300 views; SQL/card/table/SVG parity, canceled/midnight/quantity denominator | PASS; actual min chart-label height14px in CI artifact; no exhaustive assistive-technology certification |
 | X12–X13 | actual Nest guards/filter/repos and Next fixed gateway; production Docker build/SSR/browser/Tailwind assets | PASS |
 | X14–X15 | real old-account callback, unknown command/same-owner recovery, stale pool-version read; initial F01–F08 findings/fix/retest and separate final review | PASS; evidence limits explicit in FINAL_AUDIT |
-| X16 | actual contemporary Git branch graph, tested non-destructive integration/push to supplied remote | Feature/master PASS; final pre-release/release publication checkpoint pending |
+| X16 | actual contemporary Git branch graph, tested non-destructive integration/push to supplied remote | PASS actual feature/master/pre-release/release history, exact remote; see RELEASE_CHECKLIST/GITHUB_REPOSITORY |
 
 ## Evidence rules and limits
 

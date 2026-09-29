@@ -83,7 +83,7 @@ AUTH_AUDIT, REQUESTS_AUDIT and ALLOCATION_AUDIT supersede earlier absence claims
 
 ## Current complete-product audit — 2026-09-29 (supersedes historical statuses above)
 
-Authority: all five actual PDF pages and role/stack/evaluation tables reread independently of prior completion summaries. Original/extras remain separate. Current evidence: complete UI CI36534145195/baf7434; hardening CI36534932216/37ef042; local final PostgreSQL/HTTP run; operating docs, actual architecture/ERD/API and screenshot provenance. Candidate strengthened four-mode journey/SSR checks and release publication remain pending until the explicit final gate checkpoint. Earlier initial/foundation observations and approvals are preserved history.
+Authority: all five actual PDF pages and role/stack/evaluation tables reread independently of prior completion summaries. Original/extras remain separate. Current evidence: complete UI CI36534145195/baf7434; hardening CI36534932216/37ef042; local final PostgreSQL/HTTP run; operating docs, actual architecture/ERD/API and screenshot provenance. Strengthened four-mode journeys/SSR and final64-case pre-release gates PASS36540258465/36540724158; release/v1.0.0 created/pushed from verifieda470f72. Earlier initial/foundation observations and approvals are preserved history.
 
 | ID | Current artifact status | Actual implementation/evidence |
 |---|---|---|
@@ -117,15 +117,15 @@ Authority: all five actual PDF pages and role/stack/evaluation tables reread ind
 | P28 | VERIFIED | Early design retained; README Browser -> Next -> Nest -> DB, IMPLEMENTED_ARCHITECTURE and actual ERD match code |
 | P29 | VERIFIED | One modular API, one UI and PostgreSQL; no gratuitous queue/cache/orchestrator infrastructure |
 | P30 | VERIFIED | Contemporary scoped feature commits and tested non-fast-forward master integrations; exact public remote |
-| P31 | PARTIAL | Verified integrated MVP; pre-release/release publication pending final checkpoint |
+| P31 | VERIFIED | Integrated mastera6109ac -> tested pre-releasea470f72 PASS36540724158 -> actually created/pushed release/v1.0.0 at sameverifiedSHA; doc-only closure recorded separately |
 | P32 | VERIFIED | Meaningful conventional commits preserved; no fabricated count/history or backdating |
-| P33 | VERIFIED | Complete operating README/features/tree/requirements and12 original current-product PNGs with CI provenance |
+| P33 | VERIFIED | Complete operating README/features/tree/requirements and17 original current-product PNGs with CI provenance |
 | P34 | VERIFIED | Complete env/native/Docker/migrate/explicit seed/run/test instructions; named emails and operator-chosen private demo password |
 | P35 | VERIFIED | Actual API/decisions/limitations/improvements/CI fallback/AI links; required video link explicitly deferred P38 |
 | P36 | VERIFIED | Real PostgreSQL capacity/transition/ownership/cancel/fare/contention/rollback/replay and actual browser journeys |
 | P37 | VERIFIED | SCALING reasoning only; no 1M-user benchmark or deployed scaling infrastructure claimed |
 | P38 | DEFERRED_BY_USER | Required max-six-minute video submission retained; no script/record/upload/link |
-| P39 | PARTIAL | Exact public repo/default master accessible; runtime/docs/tests/artifacts published incrementally; final release refs pending |
+| P39 | VERIFIED | Exact public repo/default master accessible; current runtime/docs/tests/artifacts and verified required release branch ordinary-pushed; see GITHUB_REPOSITORY/RELEASE_CHECKLIST |
 | P40 | VERIFIED | Product/process/backend/UI/Docker/tests/privacy evidence separated; no invented assessment score |
 | P41 | VERIFIED | No paid infra/private secrets/PDF publication/giant finished bootstrap/direct feature-on-master/history rewrite; actual staged review |
 | P42 | VERIFIED | D01-D29 adopted documented engineering assumptions under §17/continuation; no invented individual rate approval |

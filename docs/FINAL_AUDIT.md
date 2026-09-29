@@ -32,7 +32,7 @@ Pure fixture/unit checks never substitute for DB security/capacity proof. Native
 | Raw numeric occupancy/roster and graph description in Bangla | Minor U06 | Intl locale numbers, localized graph dates/Dhaka copy; domain values remain canonical | Repaired b87fdfb; build/lint/typecheck PASS; real browser localized occupancy regression PASS36537302983/36538087317 |
 | Parallel Windows fixture DROP hit3s business budget | Test harness P36/U09 | Separate bounded15s administrative CREATE/DROP pool, always close; business3s/lock2s unchanged; sequential file execution documented | Initial FAIL21/22 retained; full repaired native retest PASS24/24; actual race overlaps retained |
 | Premature DOM/ambiguous locator/availability assertion | Test harness U09 | Await real data/control and assert all intended disabled controls | Earlier CI FAIL recorded; repaired runs36529950932/36530650512/36532896472 PASS |
-| Foundation-only README/matrix/AI/operating statuses stale | Major P26/P28/P33–P35/U09 | Current actual API/architecture/ERD/choices/operations/screenshots; dated superseding statuses preserve old history | Documentation completed in working candidate; publication/release gate pending |
+| Foundation-only README/matrix/AI/operating statuses stale | Major P26/P28/P33–P35/U09 | Current actual API/architecture/ERD/choices/operations/screenshots; dated superseding statuses preserve old history | PASS full operating docs/actual API/ERD/screenshots published and candidate gate36540724158; release branch actually created/pushed from verified candidate |
 
 ## Actual execution checkpoints
 
@@ -50,8 +50,9 @@ Pure fixture/unit checks never substitute for DB security/capacity proof. Native
 | Native repaired working hardening candidate | PASS | Build/lint/typecheck and24 real PostgreSQL/HTTP tests; exact failed/retest logs retained |
 | CI36537302983/c985c29 | PASS | Strict four-mode journeys/modal focus/format, canceled-after-arrival real UI,27E2E, current SSR smoke, all native and operational gates |
 | CI36538087317/8ff59d8 and master CI36539130836/a6109ac | PASS | Adaptive mobile chart labels actual minimum14px;27E2E/300views,24native,9unit,3SSR smoke and all production Docker gates |
-| Pre-release ce17ce5 / CI36540258465 | PENDING | Native strengthened hardening9/9 PASS; exact lost-response locale/theme retry and safe-read browser regressions await actual CI |
-| Final release publication | NOT_RUN | Exact refs/ancestry/gate recorded only after observed publication |
+| Pre-release ce17ce5 / CI36540258465 | PASS | Exact lost-response locale/theme same-key retry and safe-read localized/manual recovery;25native SQL/HTTP,9unit,3SSR smoke,27browser cases/300views; all Docker gates |
+| Complete candidate a470f72 / CI36540724158 | PASS | Full same64-case and operational gates with operating docs, images and unmodified upstream font license |
+| Required release/v1.0.0 publication | PASS | Created and ordinary-pushed from verified pre-releasea470f72; remote exact sameSHA, verified mastera6109ac ancestor. Final doc-only closure refs receive their own CI; inspect Actions for the latest published head |
 
 CI links use https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/<id>. Results/evidence/screenshots identify their actual tested artifact; previous PASS cannot retroactively cover changed code. No failing test is removed, asserted weaker or retried automatically. Read-only view checks reuse real fixture sessions in worker memory to respect the unchanged production throttle, while auth-form/throttle cases remain real.
 
@@ -64,6 +65,6 @@ CI links use https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/<id>.
 - Optional scale bonus: reasoning delivered in SCALING.md; no throughput/latency/1M-user benchmark claimed.
 - Required maximum-six-minute video **P38/U11 DEFERRED_BY_USER** remains visible in README/matrices/submission. No script, recording, trace, upload or fake video link. Full human assessment submission remains separate from implementation readiness.
 
-Final acceptance requires no unresolved confirmed required code/UI/operation defect and actual release ancestry/ref/push/gate evidence. The final publication checkpoint will replace pending candidate statuses only after observed completion.
+No unresolved confirmed required code/UI/operation defect remains after independent review, repairs and actual full candidate retest. Implementation/extras and source-permitted Docker fallback are verified. Required release branch was created from and pushed at the verified pre-release candidate; final documentation closure is a separate conventional commit with unchanged runtime. Its published heads are verified in Actions, never inferred from an earlier run. See RELEASE_CHECKLIST and verified-candidate.json. Human assessment/video readiness stays separate.
 
 Planned I01–I50/X01–X16 are mapped to actual executed suites and their precise limits in [TEST_EVIDENCE.md](TEST_EVIDENCE.md). Current screenshots/provenance come unchanged from verified8ff59d8 CI, not the old prototype or an untested candidate.

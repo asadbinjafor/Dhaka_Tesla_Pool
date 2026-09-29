@@ -39,7 +39,7 @@ U04 real PostgreSQL schema/auth/request/allocated capacity tests PASS. U12 now P
 
 ## Current complete-product audit — 2026-09-29 (supersedes historical statuses above)
 
-These remain user REQUIRED scope, separate from original PDF clauses. CI36534145195/baf7434 (22browser cases/300actual views), CI36534932216/37ef042 (24browser cases plus6new real SQL/HTTP cases and persistent/outage Docker proof). Final strengthened four-mode journey/SSR/release gates are recorded separately when observed.
+These remain user REQUIRED scope, separate from original PDF clauses. CI36534145195/baf7434 (22browser cases/300actual views), CI36534932216/37ef042 (24browser cases plus6new real SQL/HTTP cases and persistent/outage Docker proof). Strengthened four-mode journey/focus/SSR/recovery/safe-read gates PASS36540258465/36540724158 (64total executed cases); actual release/v1.0.0 created/pushed from verified pre-releasea470f72.
 
 | ID | Current status | Executed evidence / artifact |
 |---|---|---|
@@ -51,8 +51,8 @@ These remain user REQUIRED scope, separate from original PDF clauses. CI36534145
 | U06 | VERIFIED | Both full catalogs incl forms/errors/states/dialogs/history/graphs/ARIA; key/placeholder parity, localized poysha/Dhaka formatting, self-hosted Bengali glyphs |
 | U07 | VERIFIED | Owned completed-only SQL passenger/driver graphs, totals/table/bar parity in all modes; canceled/midnight/denominator/zero tests |
 | U08 | VERIFIED | Original five-page/source/interaction/repo INITIAL_AUDIT recorded before application changes; scoped repairs |
-| U09 | IMPLEMENTED_NOT_VERIFIED | Slice audits and independent same-agent source/code review recorded; final candidate/release gate still pending |
-| U10 | PARTIAL | Verified exact remote and contemporary feature -> tested master integration; pre-release/release pending final checkpoint |
+| U09 | VERIFIED | Initial and slice audits plus independent same-agent original5-page/tables review; confirmed focus/number/mobile-chart/harness/docs gaps repaired and actual full64-case candidate retest PASS |
+| U10 | VERIFIED | Verified exact public remote; contemporary feature commits -> tested mastera6109ac -> full64-case pre-releasea470f72 -> actually created/pushed release/v1.0.0 at verifiedcandidate |
 | U11 | DEFERRED_BY_USER | Required video row retained; no scripting/recording/upload or fake link |
 | U12 | VERIFIED | Real independent sessions/account/signout; server roles/owned resources before read/replay, real foreign access denial |
 | U13 | VERIFIED | Root state retains actual identity/ride ID/draft/quote/command UUID/body across presentation switches; lost response/reauth same-key recovery, old-account callback and pool-version freshness E2E |

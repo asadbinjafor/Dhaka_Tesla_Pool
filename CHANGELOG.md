@@ -21,3 +21,7 @@
 - Fixed same-account uncertain-command recovery, locale-switch modal trigger focus, raw numeric/graph-description localization and compressed mobile chart labels after actual evidence.
 - Added real multi-API contention/rollback/replay/privacy/state/expiry/graph/browser/a11y/persistent outage/recovery proof and operating/architecture/API/AI documentation.
 - Required video remains DEFERRED_BY_USER. Candidate publication status is recorded separately after actual gates; no final-version claim inferred from this changelog heading.
+
+### Verified 1.0.0 candidate publication — 2026-09-29
+
+Pre-releasece17ce5/a470f72 full64-case CI PASS36540258465/36540724158. Actual release/v1.0.0 created/pushed from verifieda470f72 after master ancestry/remote checks. Final audit matrices supersede starter blockers; confirmed required implementation gaps closed. Video alone remains explicitly deferred; human live assessment/TLS/certification limits remain truthful, not a fabricated score or deployment.

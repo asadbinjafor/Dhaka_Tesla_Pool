@@ -40,3 +40,9 @@ This publication checkpoint follows runtime implementation, not a fabricated his
 dump. Master integration proceeds from unchanged verified 65b2fd4 under the same scoped
 workflow; the merge commit records resulting ancestry. Required release stages remain
 pending full MVP/final gates.
+
+## Verified complete application publication — 2026-09-29
+
+Earlier destination/foundation statements are historical. Exact current public owner/repository is `asadbinjafor/Dhaka_Tesla_Pool`, origin `https://github.com/asadbinjafor/Dhaka_Tesla_Pool.git`, default master (observed metadata; no manual visibility/default change). Contemporary feature history and tested integrations are recorded in TASK_BOARD. Hardening8ff59d8 PASS36538087317 integrated into mastera6109ac PASS36539130836. Created pre-release from that verified master; strengthened test/1.0.0 metadata commitce17ce5 PASS36540258465, actual documentation/license commita470f72 PASS36540724158, each full64case/production operational gates.
+
+After checking current origin/master and origin/pre-release, master ancestry and absence of an existing release ref, `git branch release/v1.0.0 a470f72cb180e9cd3f87ae04b86cf141cae038ab` and `git push -u origin release/v1.0.0` succeeded. Remote pre-release/release both exactlya470f72, mastera6109ac at observed2026-09-29T08:14UTC. This proves actual creation/publication from a verified pre-release, not branch names alone. Final doc-only audit closure proceeds on pre-release, then ordinary release fast-forward and master documentation integration; runtime is unchanged, relevant document/link/secret/reference checks are performed, and published heads receive the normal full CI. No force, protection bypass, deletion, credential disclosure, history reconstruction or unrelated overwrite. Latest ref results are inspectable in public Actions; exact candidate evidence is in evidence/runs/2026-09-29-final/verified-candidate.json.

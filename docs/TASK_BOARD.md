@@ -65,7 +65,7 @@ Authentication backend/account UI implemented; real PostgreSQL/HTTP tests and bu
 
 ## Current complete-product checkpoint — 2026-09-29
 
-This dated table supersedes historical starter/foundation blockers above; those records and approvals remain unchanged. All actual application work followed scoped feature commits and tested master integrations. Exact Git refs are authoritative; required final branches are pending until the final gate below.
+This dated table supersedes historical starter/foundation blockers above; those records and approvals remain unchanged. All actual application work followed scoped feature commits and tested master integrations. Exact Git refs and executed CI are authoritative; final required branches are actually published as recorded below.
 
 | Slice | Actual status | Exact evidence |
 |---|---|---|
@@ -78,7 +78,7 @@ This dated table supersedes historical starter/foundation blockers above; those 
 | 06 lifecycle/immutable final/terminal | PASS / INTEGRATED |195d473 -> master3a15d6a; real lifecycle/cutoff tests; CI36531122860 |
 | 07–08 owned history/graphs/full product | PASS / INTEGRATED |d0d9d45/d10a63b + baf7434 -> master76dd592; CI36532896472/36534145195;22browser cases/300actual views |
 | 09 independent review/hardening | PASS / INTEGRATED |37ef042PASS36534932216; d677e12FAIL focus, b87fdfb+c985c29 repairPASS36537302983;8ff59d8 PASS36538087317(27E2E/300views/min chart label14px); mastera6109ac PASS36539130836 |
-| 10 documentation/release publication | IN_PROGRESS | Current operating/API/architecture/ERD/AI/matrices/PNG docs prepared; pre-releasece17ce5 pushed, CI36540258465 pending; native strengthened hardening9/9 PASS |
+| 10 documentation/release publication | PASS / PUBLISHED | Pre-releasece17ce5 PASS36540258465; complete doc/license candidatea470f72 PASS36540724158 (64cases/all operational gates); release/v1.0.0 created/pushed from verifieda470f72, with final doc-only closure/CI tracked separately |
 | Domain assumptions | ADOPTED_ENGINEERING_BASELINE | D01–D29 adopted under current completion request/PRD§17, no fabricated individual rate approval |
 | Deployment | PASS_TESTED_DOCKER_FALLBACK | Free public-repo CI production containers fresh/repeat/persistence/reseed/outage503/recovery200; no paid/public-hosted endpoint claimed |
 | Video P38/U11 | DEFERRED_BY_USER | Required row/link placeholder retained; no script/record/upload |
