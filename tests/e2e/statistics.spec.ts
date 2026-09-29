@@ -1,7 +1,8 @@
 import {test,expect} from '@playwright/test';
+import {fixtureSession} from './fixture-session';
 for(const [locale,theme] of [['en','dark'],['en','light'],['bn','dark'],['bn','light']] as const)test(`owned history and real graphs match gateway data ${locale}/${theme}`,async({page})=>{
   await page.goto(`/${locale}/sign-in`);if(await page.locator('html').getAttribute('data-theme')!==theme)await page.getByRole('button',{name:locale==='en'?'Switch to light mode':'লাইট মোড চালু করুন',exact:true}).click();
-  await page.getByLabel(locale==='en'?'Email address':'ইমেইল ঠিকানা',{exact:true}).fill('nusrat@demo.dhaka.test');await page.getByLabel(locale==='en'?'Password':'পাসওয়ার্ড',{exact:true}).fill(process.env.E2E_PASSWORD!);await page.getByRole('button',{name:locale==='en'?'Sign in':'সাইন ইন',exact:true}).click();await expect(page).toHaveURL(`/${locale}/account`);
+  await fixtureSession(page,'nusrat');await page.goto(`/${locale}/account`);await expect(page.getByRole('main').getByRole('heading',{level:1})).toBeVisible();
   await page.goto(`/${locale}/passenger/activity`);await expect(page.getByRole('table')).toBeVisible();
   const stats=(await (await page.request.get('/api/v1/statistics/passenger')).json()).data;
   expect(stats.population).toBe('COMPLETED_ONLY');expect(stats.totals.trips).toBeGreaterThanOrEqual(2);
