@@ -13,10 +13,11 @@ for(const actor of ['nusrat','jashim'] as const)for(const [locale,theme] of [['e
     await page.evaluate(()=>document.fonts.ready);
     expect(await page.locator('html').getAttribute('lang')).toBe(locale);expect(await page.locator('html').getAttribute('data-theme')).toBe(theme);
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);expect(overflow,`${path}/${width} outer overflow`).toBeLessThanOrEqual(1);
+    const chartLabelMinHeight=path.endsWith('/activity')?await page.locator('svg text').evaluateAll(nodes=>Math.min(...nodes.map(node=>node.getBoundingClientRect().height))):null;if(chartLabelMinHeight!==null)expect(chartLabelMinHeight,`${path}/${width} rendered chart labels`).toBeGreaterThanOrEqual(10);
     const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
     await info.attach(`${width}-${path.replaceAll('/','_')}-a11y`,{body:JSON.stringify({path,width,violations:scan.violations,incomplete:scan.incomplete.map(x=>x.id)}),contentType:'application/json'});expect(scan.violations).toEqual([]);
     await info.attach(`${width}-${path.replaceAll('/','_')}`,{body:await page.screenshot({fullPage:true}),contentType:'image/png'});
-    measurements.push({path,width,overflow,violations:scan.violations.length});
+    measurements.push({path,width,overflow,violations:scan.violations.length,chartLabelMinHeight});
   }
   await page.goto(`/${locale}/${role}`);const skip=page.getByRole('link',{name:t.skip,exact:true});await skip.focus();await expect(skip).toBeFocused();await page.keyboard.press('Enter');await expect(page.getByRole('main')).toBeFocused();
   if(locale==='bn')expect(await page.evaluate(()=>document.fonts.check('16px "Noto Sans Bengali"'))).toBe(true);
