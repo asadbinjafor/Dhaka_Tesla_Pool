@@ -33,3 +33,10 @@ succeeded, followed by master non-fast-forward integration 65b2fd4 and push. No 
 mirror/all push, branch deletion, rewritten/backdated history, credential printing,
 visibility/default change or different repository. Foundation branch publication follows
 only after its actual gates. pre-release/release/v1.0.0 are not created for a partial MVP.
+
+Foundation commit 35fed0c was actually pushed to refs/heads/feature/project-foundation
+after the recorded gates. Git transport confirmed the new ref and tracking branch.
+This publication checkpoint follows runtime implementation, not a fabricated history
+dump. Master integration proceeds from unchanged verified 65b2fd4 under the same scoped
+workflow; the merge commit records resulting ancestry. Required release stages remain
+pending full MVP/final gates.

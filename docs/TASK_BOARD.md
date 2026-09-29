@@ -44,3 +44,12 @@ boundary; apps/web selected auth design/locales/themes/skip/transport; shared vi
 contracts; actual tests; operating README; matrices/decisions/audits and evidence.
 No migrations, original reference or approvals overwritten. Foundations do not close
 domain/auth/DB/graph requirements. Final release branches/deployment are not created.
+
+### Foundation publication checkpoint
+
+Runtime/evidence commit **35fed0c** (`feat(foundation): add tested bilingual theme shell
+and Nest gateway`) was pushed successfully to the supplied repository's
+feature/project-foundation. Fresh frozen install/peer/typecheck/lint/build and 13
+automated tests passed; 84 immutable reference files passed integrity. Existing master
+at this checkpoint is 65b2fd4; integration uses non-fast-forward merge after these gates.
+Final exact integration refs are observable in Git history, not reconstructed later.
