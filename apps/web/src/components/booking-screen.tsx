@@ -1,14 +1,10 @@
 'use client';
-import {useEffect} from 'react';
-import {useRouter} from 'next/navigation';
-import {isLocale} from '@dtp/contracts';
 import {useRideUI} from './ride-ui-provider';
 import {useView} from './view-provider';
 import {ProductShell} from './product-shell';
 import {money,zoneLabel} from '@/i18n/format';
 export function BookingScreen(){
-  const {dictionary:t,locale}=useView();const ui=useRideUI();const router=useRouter();
-  useEffect(()=>{if(ui.receipt?.action==='CREATE_REQUEST'){const l=window.location.pathname.split('/')[1];const id=ui.receipt.resourceId;ui.clearReceipt();router.push(`/${isLocale(l)?l:locale}/passenger/rides/${id}`);}},[ui,router,locale]);
+  const {dictionary:t,locale}=useView();const ui=useRideUI();
   return <ProductShell role="PASSENGER"><h1 className="text-3xl font-bold">{t.bookRide}</h1><p className="mt-2 text-muted">{t.bookingHelp}</p>
     <form noValidate onSubmit={e=>{e.preventDefault();void ui.getQuote();}} className="mt-6 max-w-xl rounded-2xl border border-line bg-panel p-6">
       <fieldset disabled={ui.busy||!!ui.intent} className="space-y-5"><div><label className="field-label" htmlFor="pickup">{t.pickup}</label><select id="pickup" value={ui.draft.pickupId} onChange={e=>ui.change({...ui.draft,pickupId:e.target.value})}><option value="banani">{zoneLabel(locale,'banani')}</option></select></div>

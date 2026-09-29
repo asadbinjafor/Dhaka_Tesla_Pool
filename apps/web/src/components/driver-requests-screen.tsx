@@ -1,10 +1,10 @@
 'use client';
-import {useEffect} from 'react';import {useRouter} from 'next/navigation';import {isLocale} from '@dtp/contracts';
+import {useEffect} from 'react';
 import {ProductShell} from './product-shell';import {useView} from './view-provider';import {useRideUI} from './ride-ui-provider';import {useOwnedQuery} from './use-owned-query';import {errorText} from '@/i18n/catalog';import {zoneLabel,dateTime} from '@/i18n/format';
 interface Dispatch {online:boolean;availableSeats:number;requests:{id:string;displayName:string;pickupId:string;destinationId:string;seats:number;createdAt:string;canFit:boolean}[]}
 export function DriverRequestsScreen(){
-  const {dictionary:t,locale}=useView();const ui=useRideUI();const query=useOwnedQuery<Dispatch>('/driver/requests',true);const router=useRouter();
-  useEffect(()=>{const receipt=ui.receipt;if(!receipt)return;if(receipt.action==='ACCEPT'){const current=window.location.pathname.split('/')[1];ui.clearReceipt();router.push(`/${isLocale(current)?current:locale}/driver/pools/${receipt.resourceId}`);}else if(receipt.action==='SET_AVAILABILITY'){ui.clearReceipt();query.refresh();}},[ui,query,router,locale]);
+  const {dictionary:t,locale}=useView();const ui=useRideUI();const query=useOwnedQuery<Dispatch>('/driver/requests',true);
+  useEffect(()=>{if(ui.receipt?.action==='SET_AVAILABILITY'){ui.clearReceipt();query.refresh();}},[ui,query]);
   const data=query.data;
   return <ProductShell role="DRIVER"><h1 className="text-3xl font-bold">{t.requests}</h1><p className="mt-2 text-muted">{t.dispatchHelp}</p>
     {!query.loaded?<p className="mt-6">{t.loading}</p>:query.error?<p role="alert">{errorText(locale,query.error)} <button onClick={query.refresh} className="control px-4">{t.retry}</button></p>:data&&<>

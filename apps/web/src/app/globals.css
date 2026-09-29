@@ -4,19 +4,21 @@
   color-scheme: dark;
   --bg:#090f10; --surface:#101a1c; --input:#0d1719; --line:#273b3d;
   --text:#eff6f4; --muted:#a5b6b6; --accent:#aff369; --accent-ink:#10270e; --focus:#c1ff78;
+  --sidebar:#0c1315; --accent-soft:#203623;
 }
 [data-theme="light"] {
   color-scheme: light;
   --bg:#f3f6f3; --surface:#fff; --input:#f7faf6; --line:#d7e2d6;
   --text:#172823; --muted:#516861; --accent:#27651f; --accent-ink:#fff; --focus:#286e20;
+  --sidebar:#fff; --accent-soft:#e9f5df;
 }
 @theme inline {
   --color-canvas:var(--bg); --color-panel:var(--surface); --color-ink:var(--text);
   --color-muted:var(--muted); --color-line:var(--line); --color-accent:var(--accent);
 }
 * { box-sizing:border-box; }
-body { margin:0; background:var(--bg); color:var(--text); font-family:Arial,"Nirmala UI","Vrinda",sans-serif; line-height:1.6; }
-html[lang="bn"] body { font-family:"Nirmala UI","Vrinda",Arial,sans-serif; line-height:1.75; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:"Segoe UI",Arial,"Nirmala UI","Vrinda",sans-serif; line-height:1.6; }
+html[lang="bn"] body { font-family:"Noto Sans Bengali","Nirmala UI","Vrinda",Arial,sans-serif; line-height:1.75; }
 button, a, input { -webkit-tap-highlight-color:transparent; }
 button:not(:disabled), a { cursor:pointer; }
 :focus-visible { outline:3px solid var(--focus); outline-offset:4px; }
@@ -28,6 +30,12 @@ button:not(:disabled), a { cursor:pointer; }
 input { display:block; width:100%; min-height:48px; padding:11px 14px; background:var(--input); border:1px solid var(--line); color:var(--text); border-radius:9px; font-size:15px; }
 input::placeholder { color:var(--muted); }
 select, textarea { display:block; width:100%; min-height:48px; padding:11px 14px; background:var(--input); border:1px solid var(--line); color:var(--text); border-radius:9px; font-size:15px; }
+.product-sidebar { background:var(--sidebar); }
+.product-nav-link { min-height:44px; display:flex; align-items:center; padding:10px 13px; border-radius:10px; color:var(--muted); }
+.product-nav-link:hover { background:var(--surface); color:var(--text); }
+.product-nav-link[aria-current="page"] { color:var(--accent); background:var(--accent-soft); font-weight:600; }
+.seat-place { border:1px solid var(--line); border-radius:12px 12px 6px 6px; min-height:58px; background:var(--input); }
+.seat-place[data-occupied="true"] { border-color:var(--accent); background:var(--accent-soft); }
 .primary-action { display:inline-flex; align-items:center; justify-content:center; gap:14px; min-height:48px; padding:12px 20px; border-radius:10px; background:var(--accent); color:var(--accent-ink); font-size:15px; font-weight:600; }
 .primary-action:disabled { opacity:.65; cursor:not-allowed; }
 .auth-layout { display:grid; grid-template-columns:53% 47%; }

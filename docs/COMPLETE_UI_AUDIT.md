@@ -1,0 +1,11 @@
+# Complete product UI checkpoint — 2026-09-29
+
+History/statistics CI run 36532896472 at d10a63b PASS, including thirteen actual browser cases, real PostgreSQL history/aggregates and clean/repeated Docker startup. An earlier immediate DOM count raced asynchronous loading; replacing it with an awaited assertion repaired the test without weakening required graph parity.
+
+This slice restores the supplied design's sidebar, lime/charcoal Bullet hero and mobile navigation in the authenticated product. Overview uses owned current-trip and completed-record aggregates; vehicle uses the authenticated driver's own DB vehicle. Account, guide, unavailable/error states, labels, actions and diagrams have both catalogs. Self-hosted Noto Sans Bengali 5.3.0 supplies Bengali glyphs (OFL-1.1); original reference bytes remain immutable. No synthetic activity, demo selector, revenue claims or ETA claims.
+
+A confirmed recovery gap was repaired: after an uncertain successful command and expired session, reauthentication as the same verified user retains the original command key/body. A different verified account and explicit logout clear private state. Stale authentication generations cannot apply earlier responses. Receipt navigation is centralized so recovery works from the account screen, with no duplicate command.
+
+Local production build, lint and nine unit tests PASS. New browser tests cover real lost-response/session recovery plus passenger/driver principal screens in en/bn and dark/light at 360, 390, 768, 1024 and 1440 px (300 screen/width combinations), overflow, keyboard skip, font loading, page errors and axe WCAG A/AA checks. Execution is PENDING_CI until observed; automated checks do not establish complete WCAG conformance. Screenshots and actual measurements will be retained by CI. Video/trace remain disabled; P38/U11 DEFERRED_BY_USER.
+
+Next acceptance: all native and browser gates pass on this branch; visually inspect actual screenshots, repair confirmed failures, integrate history/UI into master, then independent PDF/extras audit and operating/release documentation. Local extra frontend preview remains BLOCKED by automatic approval review; GitHub Docker/browser verification is the authorized available environment.
