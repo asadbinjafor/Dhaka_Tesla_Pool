@@ -30,3 +30,7 @@ Do not count 4 locale/theme combinations as 4 independent feature implementation
 ## Database continuation evidence - 2026-09-29
 
 DATABASE_AUDIT.md and evidence/runs/2026-09-29-database/ supersede the earlier no-DB blocker. Actual PostgreSQL 18.6 migration/seed/constraint/rollback tests PASS. P20/P23/P28 schema tooling and U04 now PARTIAL with real DB evidence; business transaction tests remain required. D01-D29 baseline adopted as engineering assumptions under current completion request; no migration/old approval overwritten. Docker P24/P25 remains PENDING_CI, not PASS. Video P38/U11 DEFERRED_BY_USER. Next real auth/ownership slice.
+
+## Auth/request/allocation checkpoint — 2026-09-29
+
+U04 real PostgreSQL schema/auth/request/allocated capacity tests PASS. U12 now PARTIAL: actual authenticated account/sign-out/server ownership and role denial PASS, full future resource matrix still pending. U13 auth browser switch/pending login PASS; booking root draft/quote/exact command preservation implemented with gateway E2E pending repaired rerun. U05/U06 remain PARTIAL across expanded passenger/driver screens; U07 graphs MISSING until owned completed lifecycle records/statistics/UI. U09 feature audits recorded, independent final audit pending. U10 tested database and auth features integrated into master (9de6647/f2f2c99); no release claim. U11 DEFERRED_BY_USER retained.

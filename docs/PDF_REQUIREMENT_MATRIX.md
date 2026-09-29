@@ -74,3 +74,7 @@ Initial status column is preserved handoff history, not current completion. Actu
 ## Database continuation evidence - 2026-09-29
 
 DATABASE_AUDIT.md and evidence/runs/2026-09-29-database/ supersede the earlier no-DB blocker. Actual PostgreSQL 18.6 migration/seed/constraint/rollback tests PASS. P20/P23/P28 schema tooling and U04 now PARTIAL with real DB evidence; business transaction tests remain required. D01-D29 baseline adopted as engineering assumptions under current completion request; no migration/old approval overwritten. Docker P24/P25 remains PENDING_CI, not PASS. Video P38/U11 DEFERRED_BY_USER. Next real auth/ownership slice.
+
+## Auth/request/allocation checkpoint — 2026-09-29
+
+AUTH_AUDIT, REQUESTS_AUDIT and ALLOCATION_AUDIT supersede earlier absence claims. Real sessions/roles/owned quotes and request details, quantity reservation, matching and exact fares are implemented. Real PostgreSQL simultaneous last-seat cases for both winner orders, independent same-Jashim API instances, rollback/unknown-COMMIT recovery, private serialization and cancellations PASS. Docker/auth browser run 36528241459 PASS; booking run 36529197693 FAIL solely at an ambiguous test locator, repaired at 257dc32 with rerun pending. Lifecycle/history/full UI/graphs and final/release audit remain incomplete. Required video row remains deferred.

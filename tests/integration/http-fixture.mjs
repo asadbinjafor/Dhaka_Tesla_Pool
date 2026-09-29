@@ -1,4 +1,10 @@
 import { createApplication } from '../../apps/api/dist/bootstrap.js';
+import {randomUUID} from 'node:crypto';
+import assert from 'node:assert/strict';
+export async function book(passenger,seats=1,destinationId='mohakhali'){
+  const q=await passenger.call('/fare-quotes','POST',{pickupId:'banani',destinationId,seats});assert.equal(q.status,201);
+  const response=await passenger.call('/ride-requests','POST',{quoteId:q.data.id,paymentMethod:'CASH'},randomUUID());assert.equal(response.status,201);return response.data.resourceId;
+}
 export async function httpApp(url) {
   const app=await createApplication(url); await app.listen(0,'127.0.0.1');
   const base=await app.getUrl();

@@ -43,6 +43,12 @@ export class RideRepository {
     const pool=found.rows[0];
     const cancelled=r.status==='CANCELLED';
     const price=r.final_fare_snapshot??fare(r.booking_snapshot,pool?.bookings??1);
+    const matching=r.status==='REQUESTED'?(await this.client.query(`SELECT clock_timestamp() AS as_of, EXISTS(
+      SELECT 1 FROM driver_profiles d JOIN vehicles v ON v.driver_id=d.user_id
+      LEFT JOIN pools p ON p.driver_id=d.user_id AND p.ended_at IS NULL
+      WHERE d.online AND $1='banani' AND $2='BANANI_V1' AND $3=1
+        AND (p.id IS NULL OR (p.status='ACCEPTED' AND p.pickup_id=$1 AND p.group_id=$2 AND p.group_version=$3
+          AND $4+(SELECT COALESCE(sum(rr.seats),0) FROM pool_memberships mm JOIN ride_requests rr ON rr.id=mm.ride_request_id WHERE mm.pool_id=p.id AND rr.status IN ('MATCHED','DRIVER_ARRIVED','STARTED'))<=p.capacity_snapshot))) AS eligible`,[r.pickup_id,r.group_id,r.group_version,r.seats])).rows[0]:null;
     // Allowlisted response: no other passenger identifiers/names/statuses/fares or internal events.
     return {id:r.id,status:r.status,seats:r.seats,createdAt:r.created_at,endedAt:r.ended_at,cancellationReason:r.cancellation_reason,
       route:{pickupId:r.pickup_id,destinationId:r.destination_id,isDemoGeography:true},
@@ -50,6 +56,7 @@ export class RideRepository {
       pool:pool?{id:pool.id,capacity:pool.capacity_snapshot,reservedSeats:r.ended_at?0:pool.reserved,ownSeats:r.seats,status:pool.status}:null,
       driver:pool?{displayName:pool.driver_name,vehicleName:pool.vehicle_name}:null,
       allowedActions:['REQUESTED','MATCHED'].includes(r.status)?['CANCEL']:[],
+      matchingHint:matching?{state:matching.eligible?'WAITING_FOR_ACCEPTANCE':'NO_ELIGIBLE_DRIVER',asOf:matching.as_of}:null,
       representationVersion:{request:r.version,pool:pool?.version??0}};
   }
 }
