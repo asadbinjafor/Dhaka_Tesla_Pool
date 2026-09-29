@@ -48,3 +48,18 @@ export function localePath(pathname: string, locale: Locale): string {
   segments[1] = locale;
   return segments.join('/');
 }
+
+export interface Fare {
+  currency:'BDT'; policyVersion:string; seats:number; demoDistanceM:number;
+  basePoysha:number; distancePoysha:number; discountPoysha:number; totalPoysha:number; soloMaximumPoysha:number;
+}
+export interface Quote {id:string;expiresAt:string;seats:number;route:{pickupId:string;destinationId:string;isDemoGeography:boolean};solo:Fare;pooled:Fare}
+export interface Receipt {resourceId:string;action:string;appliedVersion:number}
+export interface RideDetail {
+  id:string;status:string;seats:number;createdAt:string;endedAt:string|null;cancellationReason:string|null;
+  route:{pickupId:string;destinationId:string;isDemoGeography:boolean};
+  fare:Fare & {kind:string;chargePoysha:number|null;collectionStatus:'NOT_TRACKED';historicalFinal:Fare|null};
+  pool:{id:string;capacity:number;reservedSeats:number;ownSeats:number;status:string}|null;
+  driver:{displayName:string;vehicleName:string}|null;allowedActions:string[];
+  representationVersion:{request:number;pool:number};
+}

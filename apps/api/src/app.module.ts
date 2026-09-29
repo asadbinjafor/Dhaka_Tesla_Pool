@@ -7,14 +7,16 @@ import { AuthController, MeController } from './auth/auth.controller.js';
 import { AuthService } from './auth/auth.service.js';
 import { AccessGuard } from './auth/access.guard.js';
 import { VehicleController } from './auth/vehicle.controller.js';
+import { RideService } from './rides/ride.service.js';
+import { CatalogController, RideController } from './rides/ride.controller.js';
 
 @Module({})
 export class AppModule {
   static configure(databaseUrl?: string): DynamicModule {
     return {
       module: AppModule,
-      controllers: [HealthController, AuthController, MeController, VehicleController],
-      providers: [{ provide: DatabaseService, useFactory: () => new DatabaseService(databaseUrl) }, AuthService, {provide:APP_GUARD,useClass:AccessGuard}],
+      controllers: [HealthController, AuthController, MeController, VehicleController, CatalogController, RideController],
+      providers: [{ provide: DatabaseService, useFactory: () => new DatabaseService(databaseUrl) }, AuthService, RideService, {provide:APP_GUARD,useClass:AccessGuard}],
     };
   }
 }

@@ -17,6 +17,7 @@
     "db:seed": "pnpm --filter @dtp/api build && node apps/api/dist/database/seed.js",
     "test:db": "pnpm --filter @dtp/api build && node --test tests/integration/database.test.mjs",
     "test:auth": "pnpm --filter @dtp/api build && node --test tests/integration/auth.test.mjs",
+    "test:requests": "pnpm --filter @dtp/api build && node --test tests/integration/requests.test.mjs",
     "test:e2e": "playwright test",
     "test:i18n": "node --import tsx --test tests/unit/catalog.test.ts",
     "check:reference": "node tools/verify-reference.mjs"
