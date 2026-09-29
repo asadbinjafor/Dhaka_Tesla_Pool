@@ -1,0 +1,2 @@
+$ node tools/verify-reference.mjs
+PASS: 84 immutable reference files

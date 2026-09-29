@@ -23,3 +23,28 @@ invent approval dates or infer every policy was approved from visual design sele
 - PENDING_USER: one consolidated question for D01-D17 and fare/matching/arrival/cancellation baseline. Do not write dependent business implementation before response. D18-D29 safety/presentation mechanisms remain documented engineering decisions, not exact PDF text.
 - Engineering choice: use en default, dark default, explicit cookie preference; validated en/bn routes; canonical IDs and in-memory presentation provider above locale boundary. These affect presentation, not fares/eligibility; no further stack/extra approval requested.
 - Video REQUIRED/DEFERRED_BY_USER; no script/record/upload work now.
+
+## Foundation engineering decisions - 2026-09-29
+
+- Audit documents were committed on feature/ui-requirements-audit before application
+  work. Exact Git transport dry-run and actual pushes succeeded. Public rulesets API
+  returned an empty list; no protection/approval was bypassed. Minimal master bootstrap
+  69a2f55, audit c746707, tested non-fast-forward master integration 65b2fd4. Remote
+  repository/default/visibility settings were not altered.
+- Actual feature/project-foundation retains selected source visuals in modern runtime,
+  fixes F05 skip access and the observed light-pane contrast inheritance. Current forms
+  honestly show auth unavailable; replacing demo account switching remains incomplete
+  until real auth and backend ownership, not accepted as merely hiding a selector.
+- Supported pinned dependency choices/changes are in DEPENDENCIES.md. Registry/latest
+  alone was insufficient: Next plugins need ESLint9 and TS-eslint requires TS<6.1.
+  Identified native builds are explicitly allowlisted; OS security was not changed.
+- Selected technical migration approach for next slice: versioned SQL + pg runner,
+  transactional migration ledger/advisory lock, no destructive seed/reset, opt-in story
+  fixture insertion. No migration has been written/applied while material policy is pending.
+- Selected auth design for next slice: high-entropy opaque server sessions, token hashes
+  and expiry in PostgreSQL, HttpOnly/SameSite cookies (Secure in HTTPS), session-bound
+  CSRF + trusted Origin checks; password Argon2id. These are technical decisions, not
+  claims of implementation. Verify package choices/parameters and tests in that slice.
+- Foundation native builds/HTTP/browser checks are PASS; Docker/PostgreSQL-success
+  checks BLOCKED_ENVIRONMENT. D01-D17 remain PENDING_USER from the single question;
+  all required extras and final audit remain in scope. No release branch or video now.

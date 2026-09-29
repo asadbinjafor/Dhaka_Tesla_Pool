@@ -1,0 +1,17 @@
+$ node --import tsx --test tests/unit/*.test.ts
+✔ all implemented product copy has nonempty en/bn keys and matching placeholders (3.5773ms)
+✔ gateway forwards credential/CSRF/command transport, strips forged trust headers, preserves multiple cookies (63.0953ms)
+✔ oversized bodies without a Content-Length are rejected before contacting upstream (1.3643ms)
+✔ invalid path segments cannot escape the fixed API origin (0.4094ms)
+✔ theme change retains valid form/quote/ride/pending command and session generation (0.7551ms)
+✔ locale display path preserves exact stable ride ID, and cannot rewrite API paths (0.3816ms)
+✔ session boundary clears private drafts/intent while preserving appearance (0.7924ms)
+✔ untrusted locale/theme values are allowlisted (0.2262ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 244.2623

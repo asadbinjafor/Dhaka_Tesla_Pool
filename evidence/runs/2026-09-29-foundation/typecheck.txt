@@ -1,0 +1,3 @@
+$ pnpm --filter @dtp/api typecheck && pnpm --filter @dtp/web typecheck
+$ tsc -p tsconfig.json --noEmit
+$ tsc --noEmit

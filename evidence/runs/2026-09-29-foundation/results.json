@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-29",
+  "branch": "feature/project-foundation",
+  "testedParent": "65b2fd4c00e8b837a524d66001826009064f03a4",
+  "environment": {
+    "node": "24.17.0",
+    "pnpm": "12.6.0",
+    "os": "Windows",
+    "docker": "UNAVAILABLE",
+    "postgresqlRuntime": "UNAVAILABLE"
+  },
+  "scope": "Entry/health foundation only; not full product",
+  "commands": "command-results.json",
+  "productionBuild": {
+    "log": "production-build.txt",
+    "command": "pnpm build",
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "testCounts": {
+    "actualNestHttp": 2,
+    "unit": 8,
+    "failures": 0,
+    "productionSmoke": 3
+  },
+  "browser": {
+    "locales": [
+      "en",
+      "bn"
+    ],
+    "console": "no warnings/errors captured",
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "overflow": "none observed",
+    "controls": ">=44px, fields >=48px measured",
+    "skipFocus": "main-content on sign-in and sign-up",
+    "fullScreenReaderAudit": "NOT_RUN",
+    "widths": [
+      390,
+      1440
+    ],
+    "status": "PASS_SAMPLED_ENTRY_SCREENS",
+    "draftRetention": "VISUALLY_OBSERVED; DOM input values redacted, value-comparison attempts not accepted as PASS",
+    "fullProduct": "NOT_RUN"
+  },
+  "repairs": [
+    "BodyInit TypeScript type corrected to owned ArrayBuffer",
+    "ESLint peer mismatch corrected to maintenance pin",
+    "Pinned Windows launcher and identified unrs-resolver build allowlist fixed",
+    "Story eyebrow contrast 3.03:1 -> 11.06:1 against solid pane token; not blanket WCAG claim",
+    "Relative redirect test parser corrected; production behavior unchanged"
+  ],
+  "blockers": {
+    "materialPolicy": "PENDING_USER; asked once",
+    "businessConcurrency": "MISSING / NOT_RUN",
+    "dbDocker": "BLOCKED_ENVIRONMENT",
+    "completeProductTranslations": "PARTIAL",
+    "realDataGraphs": "MISSING / NOT_RUN",
+    "independentFinalProductAudit": "NOT_RUN",
+    "realAuthOwnership": "MISSING / NOT_RUN"
+  },
+  "referenceIntegrity": {
+    "status": "PASS",
+    "unchangedFiles": 84
+  },
+  "video": "DEFERRED_BY_USER",
+  "implementationReady": false,
+  "fullSubmissionReady": false
+}

@@ -1,0 +1,12 @@
+$ node --test tests/integration/web-smoke.test.mjs
+✔ production SSR validates locale/theme cookies and ignores forged locale headers (243.9053ms)
+✔ production UI rejects unsupported locale and renders localized not-found (41.2002ms)
+✔ production gateway reaches actual Nest without locale rewriting or private caching (58.2537ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 422.1866

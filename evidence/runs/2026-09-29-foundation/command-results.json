@@ -1,0 +1,50 @@
+[
+  {
+    "command": "pnpm install --frozen-lockfile",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "frozen-install.txt"
+  },
+  {
+    "command": "pnpm peers check",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "peer-check.txt"
+  },
+  {
+    "command": "pnpm typecheck",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "typecheck.txt"
+  },
+  {
+    "command": "pnpm lint",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "lint.txt"
+  },
+  {
+    "command": "pnpm test:unit",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "unit.txt"
+  },
+  {
+    "command": "pnpm test:api",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "api-http.txt"
+  },
+  {
+    "command": "pnpm test:smoke",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "production-smoke.txt"
+  },
+  {
+    "command": "pnpm check:reference",
+    "exitCode": 0,
+    "status": "PASS",
+    "log": "reference-integrity.txt"
+  }
+]

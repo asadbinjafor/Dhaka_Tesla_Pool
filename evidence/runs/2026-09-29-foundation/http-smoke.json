@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/api/v1/health/live",
+    "status": 200,
+    "cacheControl": [
+      "no-store, private"
+    ],
+    "contentType": [
+      "application/json; charset=utf-8"
+    ],
+    "body": "{\"data\":{\"status\":\"ok\",\"service\":\"api\"}}"
+  },
+  {
+    "path": "/api/v1/health/ready",
+    "status": 503,
+    "cacheControl": [
+      "no-store, private"
+    ],
+    "contentType": [
+      "application/json; charset=utf-8"
+    ],
+    "body": "{\"error\":{\"code\":\"TEMPORARILY_UNAVAILABLE\",\"requestId\":\"390f5a41-5d3e-40a9-b5f7-5265def1188a\"}}"
+  },
+  {
+    "path": "/api/v1/missing",
+    "status": 404,
+    "cacheControl": [
+      "no-store, private"
+    ],
+    "contentType": [
+      "application/json; charset=utf-8"
+    ],
+    "body": "{\"error\":{\"code\":\"NOT_FOUND\",\"requestId\":\"19fc9ac8-6a33-4a6d-903b-7f00718fbca0\"}}"
+  },
+  {
+    "path": "/bn/missing",
+    "status": 404,
+    "cacheControl": [
+      "no-store, must-revalidate, no-cache, max-age=0, private"
+    ],
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "body": "localized not-found"
+  },
+  {
+    "path": "/xx/sign-in",
+    "status": 404,
+    "cacheControl": [
+      "no-store, must-revalidate, no-cache, max-age=0, private"
+    ],
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "body": "HTML returned; inspect browser"
+  }
+]
