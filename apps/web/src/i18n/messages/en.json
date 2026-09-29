@@ -139,5 +139,15 @@
   "errorREQUEST_UNAVAILABLE": "This request is no longer available. Refresh the list.",
   "errorPOOL_CLOSED": "Your pool is closed to new bookings or this route is incompatible.",
   "errorPOOL_CAPACITY_EXCEEDED": "Not enough seats remain. The request is still waiting.",
-  "errorCANCELLATION_CLOSED": "Passenger cancellation closes when the driver arrives."
+  "errorCANCELLATION_CLOSED": "Passenger cancellation closes when the driver arrives.",
+  "driverArrive": "Mark arrival",
+  "startTrip": "Start trip",
+  "completeTrip": "Complete trip",
+  "cancelPool": "Cancel entire pool",
+  "actionConfirmHelp": "Review before confirming. Arrival fixes fares and closes joins/passenger cancellation; a started trip must finish before going offline.",
+  "goBack": "Go back",
+  "confirmAction": "Confirm action",
+  "noEligibleDriver": "No eligible online driver is currently observed. Your request remains waiting.",
+  "waitingForDriver": "An eligible online driver is observed; acceptance is still required.",
+  "matchingUnknown": "Driver eligibility is temporarily unknown."
 }

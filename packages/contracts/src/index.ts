@@ -61,6 +61,7 @@ export interface RideDetail {
   fare:Fare & {kind:string;chargePoysha:number|null;collectionStatus:'NOT_TRACKED';historicalFinal:Fare|null};
   pool:{id:string;capacity:number;reservedSeats:number;ownSeats:number;status:string}|null;
   driver:{displayName:string;vehicleName:string}|null;allowedActions:string[];
+  matchingHint:{state:'NO_ELIGIBLE_DRIVER'|'WAITING_FOR_ACCEPTANCE'|'UNKNOWN';asOf:string}|null;
   representationVersion:{request:number;pool:number};
 }
 export interface PoolDetail {

@@ -11,7 +11,7 @@ interface SessionContextValue {
   authenticate(mode:'login'|'register',body:Record<string,string>):Promise<void>;
   logout():Promise<void>;
   reportAuthError(code:string|null):void;
-  call<T>(path:string,method?:string,body?:unknown,key?:string):Promise<T>;
+  call<T>(path:string,method?:string,body?:unknown,key?:string,signal?:AbortSignal):Promise<T>;
 }
 const Context=createContext<SessionContextValue|null>(null);
 export function SessionProvider({children,onBoundary}:{children:ReactNode;onBoundary:()=>void}) {
@@ -30,9 +30,10 @@ export function SessionProvider({children,onBoundary}:{children:ReactNode;onBoun
     reads.current.clear();
   },[]);
 
-  const call=useCallback(async <T,>(path:string,method='GET',body?:unknown,key?:string):Promise<T>=>{
+  const call=useCallback(async <T,>(path:string,method='GET',body?:unknown,key?:string,signal?:AbortSignal):Promise<T>=>{
     const captured=generation.current;
     const controller=new AbortController();
+    const abort=()=>controller.abort();signal?.addEventListener('abort',abort,{once:true});if(signal?.aborted)controller.abort();
     if(method==='GET') reads.current.add(controller);
     try {
       if(method!=='GET' && !csrf.current) {
@@ -53,7 +54,7 @@ export function SessionProvider({children,onBoundary}:{children:ReactNode;onBoun
       if(error instanceof ApiError) throw error;
       if(captured!==generation.current) throw new ApiError('STALE_RESPONSE');
       throw new ApiError(method==='GET'?'TEMPORARILY_UNAVAILABLE':'COMMAND_OUTCOME_UNKNOWN');
-    } finally {reads.current.delete(controller);}
+    } finally {reads.current.delete(controller);signal?.removeEventListener('abort',abort);}
   },[]);
 
   useEffect(()=>{

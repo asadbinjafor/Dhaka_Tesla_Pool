@@ -8,6 +8,7 @@ import {useView} from './view-provider';
 import {useSession} from './session-provider';
 import {useRideUI} from './ride-ui-provider';
 import {errorText} from '@/i18n/catalog';
+import {CommandDialog} from './command-dialog';
 
 export function ProductShell({children,role}:{children:ReactNode;role?:'PASSENGER'|'DRIVER'}){
   const {dictionary:t,locale}=useView();const session=useSession();const ui=useRideUI();const router=useRouter();const path=usePathname();
@@ -29,6 +30,7 @@ export function ProductShell({children,role}:{children:ReactNode;role?:'PASSENGE
         {ui.error&&<p role="alert" className="mb-4 rounded-xl border border-line bg-panel p-4">{errorText(locale,ui.error)}</p>}
         {ui.intent&&<section aria-live="polite" className="mb-4 rounded-xl border border-accent p-4"><p>{t.pendingRecovery}</p><button className="control mt-3 px-4" disabled={ui.busy} onClick={()=>void ui.retry()}>{ui.busy?t.working:t.retrySameCommand}</button></section>}
         {children}
+        <CommandDialog/>
       </main>
     </div>
   </div>;

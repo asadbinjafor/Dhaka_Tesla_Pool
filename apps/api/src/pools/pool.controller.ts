@@ -4,6 +4,7 @@ import {Roles} from '../auth/access.guard.js';
 import type {AuthRequest} from '../auth/auth.service.js';
 import {PoolService} from './pool.service.js';
 import {fail} from '../common/business-error.js';
+import {CancelDto} from '../rides/ride.controller.js';
 export function emptyBody(body:unknown){if(!body||typeof body!=='object'||Array.isArray(body)||Object.keys(body).length)fail('INVALID_INPUT',400);}
 class AvailabilityDto {@IsBoolean() online!:boolean;}
 @Roles('DRIVER') @Controller('driver')
@@ -14,4 +15,8 @@ export class PoolController {
   @Post('requests/:id/accept') accept(@Req() req:AuthRequest,@Param('id',new ParseUUIDPipe()) id:string,@Headers('idempotency-key') key:string,@Body() body:unknown){emptyBody(body);return this.service.accept(req.authSession!.user!.id,id,key);}
   @Get('pools/current') current(@Req() req:AuthRequest){return this.service.current(req.authSession!.user!.id);}
   @Get('pools/:id') detail(@Req() req:AuthRequest,@Param('id',new ParseUUIDPipe()) id:string){return this.service.detail(req.authSession!.user!.id,id);}
+  @Post('pools/:id/arrive') arrive(@Req() req:AuthRequest,@Param('id',new ParseUUIDPipe()) id:string,@Headers('idempotency-key') key:string,@Body() body:unknown){emptyBody(body);return this.service.transition(req.authSession!.user!.id,id,key,'ARRIVE');}
+  @Post('pools/:id/start') start(@Req() req:AuthRequest,@Param('id',new ParseUUIDPipe()) id:string,@Headers('idempotency-key') key:string,@Body() body:unknown){emptyBody(body);return this.service.transition(req.authSession!.user!.id,id,key,'START');}
+  @Post('pools/:id/complete') complete(@Req() req:AuthRequest,@Param('id',new ParseUUIDPipe()) id:string,@Headers('idempotency-key') key:string,@Body() body:unknown){emptyBody(body);return this.service.transition(req.authSession!.user!.id,id,key,'COMPLETE');}
+  @Post('pools/:id/cancel') cancel(@Req() req:AuthRequest,@Param('id',new ParseUUIDPipe()) id:string,@Headers('idempotency-key') key:string,@Body() body:CancelDto){return this.service.transition(req.authSession!.user!.id,id,key,'DRIVER_CANCEL',body.reason.trim());}
 }
