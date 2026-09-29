@@ -48,3 +48,22 @@ invent approval dates or infer every policy was approved from visual design sele
 - Foundation native builds/HTTP/browser checks are PASS; Docker/PostgreSQL-success
   checks BLOCKED_ENVIRONMENT. D01-D17 remain PENDING_USER from the single question;
   all required extras and final audit remain in scope. No release branch or video now.
+
+## Completion continuation - 2026-09-29
+
+User explicitly requested fulfillment of all remaining scope except video after seeing
+the outstanding policy/runtime gaps. Adopt D01-D29 as the documented engineering baseline
+under PRD §17 and this continuation: one active request/pool, reserve on acceptance,
+Banani compatibility, fare-v1 integer poysha, arrival freezes/closes joins/passenger
+cancel, driver cancellation before start, Cash only, passenger signup and seeded drivers.
+These are adopted implementation assumptions, not exact PDF clauses or invented individual
+user approval of each rate. The earlier single question is resolved by the continuation;
+do not reopen the selected stack/extras. Actual schema is new, no existing applied
+migrations to overwrite. Video remains DEFERRED_BY_USER with its required submission row.
+
+Local DB environment: official PostgreSQL/EDB 18.6 portable binaries in the outer
+.local-runtime directory, isolated loopback cluster/data; no OS service or global PATH
+change. Docker/WSL absent; use free public-repository CI for actual Docker execution,
+without changing host protections or paying for infrastructure. Verification remains
+NOT_RUN until evidence exists. Source: https://www.postgresql.org/download/windows/
+and https://www.enterprisedb.com/download-postgresql-binaries .

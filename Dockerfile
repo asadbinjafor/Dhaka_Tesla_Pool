@@ -4,6 +4,7 @@ RUN npm install --global pnpm@12.6.0
 COPY package.json pnpm-workspace.yaml pnpm-lock.yaml tsconfig.base.json ./
 COPY packages ./packages
 COPY apps ./apps
+COPY database ./database
 RUN pnpm install --frozen-lockfile && pnpm build
 RUN chown -R node:node /app
 

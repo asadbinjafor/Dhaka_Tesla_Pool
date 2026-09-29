@@ -13,6 +13,9 @@
     "test:unit": "node --import tsx --test tests/unit/*.test.ts",
     "test:api": "pnpm --filter @dtp/api build && node --test tests/integration/health.test.mjs",
     "test:smoke": "node --test tests/integration/web-smoke.test.mjs",
+    "db:migrate": "pnpm --filter @dtp/api build && node apps/api/dist/database/migrate.js",
+    "db:seed": "pnpm --filter @dtp/api build && node apps/api/dist/database/seed.js",
+    "test:db": "pnpm --filter @dtp/api build && node --test tests/integration/database.test.mjs",
     "test:i18n": "node --import tsx --test tests/unit/catalog.test.ts",
     "check:reference": "node tools/verify-reference.mjs"
   },
