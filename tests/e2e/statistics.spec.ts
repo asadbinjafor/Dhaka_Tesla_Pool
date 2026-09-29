@@ -10,6 +10,6 @@ for(const [locale,theme] of [['en','dark'],['en','light'],['bn','dark'],['bn','l
   const bars=page.getByRole('img',{name:locale==='en'?'Completed rides by day':'প্রতিদিনের সম্পন্ন যাত্রা'}).locator('rect');expect(await bars.count()).toBe(stats.daily.length);
   for(let i=0;i<stats.daily.length;i++)expect(Number(await bars.nth(i).getAttribute('height'))>0).toBe(stats.daily[i].trips>0);
   await page.goto(`/${locale}/passenger/history?status=COMPLETED`);await expect(page.getByRole('article').first()).toBeVisible();
-  const history=(await (await page.request.get('/api/v1/ride-history?status=COMPLETED')).json()).data;expect(await page.getByRole('article').count()).toBe(history.items.length);
-  const before=page.url();await page.getByRole('button',{name:locale==='en'?'Change language to Bangla':'ইংরেজি ভাষায় পরিবর্তন করুন',exact:true}).click();await expect(page).toHaveURL(before.replace(`/${locale}/`,`/${locale==='en'?'bn':'en'}/`));expect(await page.getByRole('article').count()).toBe(history.items.length);
+  const history=(await (await page.request.get('/api/v1/ride-history?status=COMPLETED')).json()).data;await expect(page.getByRole('article')).toHaveCount(history.items.length);
+  const before=page.url();await page.getByRole('button',{name:locale==='en'?'Change language to Bangla':'ইংরেজি ভাষায় পরিবর্তন করুন',exact:true}).click();await expect(page).toHaveURL(before.replace(`/${locale}/`,`/${locale==='en'?'bn':'en'}/`));await expect(page.getByRole('article')).toHaveCount(history.items.length);
 });
