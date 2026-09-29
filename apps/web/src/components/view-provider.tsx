@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { isLocale, withTheme, clearPrivateView } from '@dtp/contracts';
 import { SessionProvider } from './session-provider';
+import { PrivateUIBoundary } from './ride-ui-provider';
 import type { Locale, Theme, ViewState } from '@dtp/contracts';
 import { messages } from '@/i18n/catalog';
 
@@ -49,7 +50,7 @@ export function ViewProvider({ children, initialLocale, initialTheme }: {
       setState(current => withTheme(current, theme));
     },
     setAuthDraft: authDraft => setState(current => ({ ...current, authDraft })),
-  }}><SessionProvider onBoundary={onBoundary}>{children}</SessionProvider></ViewContext.Provider>;
+  }}><SessionProvider onBoundary={onBoundary}><PrivateUIBoundary>{children}</PrivateUIBoundary></SessionProvider></ViewContext.Provider>;
 }
 
 export function useView() {
