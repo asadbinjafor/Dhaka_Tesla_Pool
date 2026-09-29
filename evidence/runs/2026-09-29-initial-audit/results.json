@@ -1,0 +1,45 @@
+{
+  "atUtc": "2026-09-29T02:40:43.679416+00:00",
+  "environment": "Windows; Node 24.17.0; bundled Python; CUA actual localhost browser",
+  "testedArtifact": "read-only reference prototype; no modern app",
+  "tests": [
+    {
+      "id": "A02",
+      "command": "node --test tests/domain.test.cjs tests/store.test.cjs",
+      "exitCode": 0,
+      "pass": 58,
+      "result": "PASS"
+    },
+    {
+      "id": "A03",
+      "command": "python tools/check_handoff.py (before working-document edits)",
+      "result": "PASS",
+      "manifestFiles": 130,
+      "glossaryKeys": 155
+    },
+    {
+      "id": "A04",
+      "command": "read-only contrast_audit.py execution without evidence-file write",
+      "result": "PASS",
+      "tokenPairs": 14
+    },
+    {
+      "id": "A08",
+      "method": "CUA actual sign-in DOM / 390x844",
+      "skipTargetExists": false,
+      "horizontalOverflow": false,
+      "skipResult": "FAIL",
+      "overflowResult": "PASS"
+    }
+  ],
+  "blocked": [
+    "Actual PostgreSQL/Compose: tools absent",
+    "Historical Python browser suites: Playwright absent; direct scripts overwrite reference",
+    "GitHub connector not connected; write access not yet verified"
+  ],
+  "notRun": [
+    "Modern lint/typecheck/build/API/DB/E2E",
+    "Full four-combination product review"
+  ],
+  "video": "DEFERRED_BY_USER"
+}
