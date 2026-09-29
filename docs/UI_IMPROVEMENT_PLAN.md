@@ -14,3 +14,13 @@ Source: INITIAL_AUDIT F01-F08, 2026-09-29. Reference bytes and chosen design are
 Preserve deep charcoal #090f10, green surfaces, lime dark actions, clean pale-green light background and dark-green light actions. Preserve card radii, spacious desktop layout, responsive mobile controls, Bullet hero image and quantity seats with driver separate. Increase readable target-screen text/action sizing where source captions are cramped; do not substitute a generic dashboard.
 
 Confirmed F05 reproduces on sign-in: skip link points to #main-content but no target exists. Closure requires a real focusable main on both auth screens; simply removing the skip link is not the fix. Reference dialog already provides focus trapping; preserve it in target rather than falsely claiming it is missing. Full assistive-technology review remains NOT_RUN.
+
+## Implemented entry slice closure
+
+Order 1 is verified for current auth entry screens: Next/Tailwind build, four locale/theme
+combinations, server preference rendering/refresh, theme/language form retention,
+main focus on both screens, sampled 390/1440px overflow/control-size checks and no
+observed console/hydration errors. F05 closed in target source, unchanged in immutable
+prototype. Light-pane story eyebrow contrast inheritance was found/repaired/retested;
+brand caption raised to 12px. FOUNDATION_AUDIT records limits. Orders 2-6 remain open;
+the full product/assistive-technology/actual ride-intent audits are not declared passed.

@@ -10,6 +10,7 @@ playwright-report/
 .env.*
 !.env.example
 *.log
+*.tsbuildinfo
 *.pem
 *.key
 .DS_Store
