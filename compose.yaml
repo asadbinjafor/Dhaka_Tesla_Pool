@@ -19,12 +19,29 @@ services:
       API_HOST: 0.0.0.0
       API_PORT: 3001
     depends_on:
-      db: {condition: service_healthy}
+      migrate: {condition: service_completed_successfully}
     healthcheck:
       test: [CMD, node, -e, "fetch('http://127.0.0.1:3001/api/v1/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 5s
       timeout: 6s
       retries: 12
+  migrate:
+    build: {context: ., target: api}
+    command: [node, apps/api/dist/database/migrate.js]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+    depends_on:
+      db: {condition: service_healthy}
+  seed:
+    profiles: [demo]
+    build: {context: ., target: api}
+    command: [node, apps/api/dist/database/seed.js]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      ENABLE_DEMO_SEED: '1'
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-}
+    depends_on:
+      migrate: {condition: service_completed_successfully}
   web:
     build: {context: ., target: web}
     environment:

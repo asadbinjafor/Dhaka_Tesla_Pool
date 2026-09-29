@@ -1,0 +1,11 @@
+demo_seed_complete_no_existing_records_overwritten
+demo_seed_complete_no_existing_records_overwritten
+✔ real PostgreSQL migrations, repeat non-destructive seeds, constraints and atomic rollback (590.6897ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 967.6748
