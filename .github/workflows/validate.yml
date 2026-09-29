@@ -28,7 +28,8 @@ jobs:
           node-version: 24.17.0
       - run: npm install --global pnpm@12.6.0
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:api && pnpm test:db
+      - run: pnpm build && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:api && pnpm test:db && pnpm test:auth
+      - run: pnpm exec playwright install --with-deps chromium
       - name: Clean Compose initialization and repeat startup
         run: |
           export POSTGRES_USER=dtp_container POSTGRES_DB=dtp_compose_test
@@ -37,5 +38,16 @@ jobs:
           curl --fail http://127.0.0.1:3000/api/v1/health/ready
           docker compose up --wait
           curl --fail http://127.0.0.1:3000/api/v1/health/ready
+          export DEMO_PASSWORD=Browser-test-nonsecret-2026
+          docker compose --profile demo run --rm seed
+          E2E_PASSWORD="$DEMO_PASSWORD" pnpm test:e2e
           docker compose down
         # Fresh runner volume only; never deletes application volumes or user records.
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: browser-evidence
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore

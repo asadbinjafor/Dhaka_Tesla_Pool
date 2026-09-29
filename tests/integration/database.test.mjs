@@ -7,11 +7,11 @@ import { DatabaseService } from '../../apps/api/dist/database/database.service.j
 import { mkdtemp, writeFile, rm } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
-
-const url = process.env.TEST_DATABASE_URL;
-if (!url || !new URL(url).pathname.includes('dtp_test')) throw new Error('Dedicated dtp_test TEST_DATABASE_URL required; never run against application data');
+import { isolatedDatabase } from './isolated-db.mjs';
 
 test('real PostgreSQL migrations, repeat non-destructive seeds, constraints and atomic rollback', async () => {
+  const fixture=await isolatedDatabase();
+  const url=fixture.url;
   await migrate(url); await migrate(url);
   const db = new DatabaseService(url);
   try {
@@ -49,5 +49,5 @@ test('real PostgreSQL migrations, repeat non-destructive seeds, constraints and 
       assert.ok(resolve(path).startsWith(join(resolve(tmpdir()),'dtp-migration-')));
       await rm(path,{recursive:true});
     }
-  } finally { await db.onModuleDestroy(); }
+  } finally { await db.onModuleDestroy(); await fixture.close(); }
 });

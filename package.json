@@ -16,11 +16,14 @@
     "db:migrate": "pnpm --filter @dtp/api build && node apps/api/dist/database/migrate.js",
     "db:seed": "pnpm --filter @dtp/api build && node apps/api/dist/database/seed.js",
     "test:db": "pnpm --filter @dtp/api build && node --test tests/integration/database.test.mjs",
+    "test:auth": "pnpm --filter @dtp/api build && node --test tests/integration/auth.test.mjs",
+    "test:e2e": "playwright test",
     "test:i18n": "node --import tsx --test tests/unit/catalog.test.ts",
     "check:reference": "node tools/verify-reference.mjs"
   },
   "devDependencies": {
     "@types/node": "24.19.0",
+    "@playwright/test": "1.63.0",
     "eslint": "9.39.5",
     "eslint-config-next": "16.3.6",
     "tsx": "4.23.15",

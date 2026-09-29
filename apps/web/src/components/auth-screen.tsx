@@ -3,12 +3,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSession } from './session-provider';
+import { errorText } from '@/i18n/catalog';
+import { isLocale } from '@dtp/contracts';
 import { Preferences } from './preferences';
 import { useView } from './view-provider';
 
 export function AuthScreen({ register = false }: { register?: boolean }) {
   const { dictionary: t, locale, state, setAuthDraft } = useView();
   const [showPassword, setShowPassword] = useState(false);
+  const session=useSession();
+  const router=useRouter();
   const draft = state.authDraft;
   const field = (key: keyof typeof draft, value: string) => setAuthDraft({ ...draft, [key]: value });
   return <main id="main-content" tabIndex={-1} className="auth-layout min-h-dvh outline-none">
@@ -36,7 +42,17 @@ export function AuthScreen({ register = false }: { register?: boolean }) {
         <p className="eyebrow">{register ? t.signupEyebrow : t.welcomeEyebrow}</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight">{register ? t.signupTitle : t.welcome}</h2>
         <p className="mt-3 mb-7 text-sm leading-relaxed text-muted">{register ? t.signupDescription : t.signinDescription}</p>
-        <form noValidate onSubmit={event => event.preventDefault()} className="space-y-5">
+        <form noValidate onSubmit={async event => {
+          event.preventDefault();session.reportAuthError(null);
+          if(!draft.email.trim() || !draft.password || (register && !draft.name.trim())){session.reportAuthError('INVALID_INPUT');return;}
+          if(register && draft.password.length<12){session.reportAuthError('PASSWORD_POLICY');return;}
+          if(register && draft.password!==draft.confirm){session.reportAuthError('PASSWORD_MISMATCH');return;}
+          try {
+            await session.authenticate(register?'register':'login',register?{name:draft.name,email:draft.email,password:draft.password}:{email:draft.email,password:draft.password});
+            const current=window.location.pathname.split('/')[1];
+            router.replace(`/${isLocale(current)?current:locale}/account`);
+          } catch { /* SessionProvider owns the safe localized error across locale routes. */ }
+        }} className="space-y-5">
           {register && <div><label htmlFor="name" className="field-label">{t.name}</label><input id="name" autoComplete="name" maxLength={100} placeholder={t.namePlaceholder} value={draft.name} onChange={e => field('name', e.target.value)}/></div>}
           <div><label htmlFor="email" className="field-label">{t.email}</label><input id="email" type="email" autoComplete="email" maxLength={254} placeholder={t.emailPlaceholder} value={draft.email} onChange={e => field('email', e.target.value)}/></div>
           <div><label htmlFor="password" className="field-label">{t.password}</label><div className="relative">
@@ -44,10 +60,10 @@ export function AuthScreen({ register = false }: { register?: boolean }) {
             <button className="absolute inset-y-0 right-1 min-w-11 rounded-md text-muted" type="button" aria-label={showPassword ? t.hidePassword : t.showPassword} aria-pressed={showPassword} onClick={() => setShowPassword(v => !v)}><span aria-hidden="true">◉</span></button>
           </div></div>
           {register && <div><label htmlFor="confirm" className="field-label">{t.confirmPassword}</label><input id="confirm" type={showPassword ? 'text' : 'password'} autoComplete="new-password" maxLength={128} placeholder={t.confirmPlaceholder} value={draft.confirm} onChange={e => field('confirm', e.target.value)}/></div>}
-          <button type="submit" disabled aria-describedby="auth-service-state" className="primary-action w-full">{register ? t.createAccount : t.signIn} <span aria-hidden="true">→</span></button>
+          <button type="submit" disabled={session.authPending} aria-describedby="auth-service-state" className="primary-action w-full">{session.authPending?t.working:register ? t.createAccount : t.signIn} <span aria-hidden="true">→</span></button>
         </form>
-        <p id="auth-service-state" role="status" className="mt-5 rounded-xl border border-line bg-panel p-4 text-sm leading-relaxed text-muted">{t.serviceUnavailable}</p>
-        <p className="mt-6 text-center text-sm leading-relaxed text-muted">{register ? t.alreadyMember : t.newHere}{' '}<Link className="font-semibold text-accent underline-offset-4 hover:underline" href={`/${locale}/${register ? 'sign-in' : 'sign-up'}`}>{register ? t.signIn : t.createAccount}</Link></p>
+        <p id="auth-service-state" role={session.authError?'alert':'status'} className="mt-5 rounded-xl border border-line bg-panel p-4 text-sm leading-relaxed text-muted">{session.authError ? errorText(locale,session.authError) : register?t.passwordPolicy:t.authSafeNotice}</p>
+        <p className="mt-6 text-center text-sm leading-relaxed text-muted">{register ? t.alreadyMember : t.newHere}{' '}<Link aria-disabled={session.authPending} onClick={event=>{if(session.authPending)event.preventDefault();}} className="font-semibold text-accent underline-offset-4 hover:underline" href={`/${locale}/${register ? 'sign-in' : 'sign-up'}`}>{register ? t.signIn : t.createAccount}</Link></p>
         <p className="mt-8 border-t border-line pt-5 text-xs leading-relaxed text-muted">{t.accountPrivacy}</p>
       </div>
     </section>
