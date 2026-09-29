@@ -67,3 +67,13 @@ change. Docker/WSL absent; use free public-repository CI for actual Docker execu
 without changing host protections or paying for infrastructure. Verification remains
 NOT_RUN until evidence exists. Source: https://www.postgresql.org/download/windows/
 and https://www.enterprisedb.com/download-postgresql-binaries .
+
+## Final engineering/operation reconciliation — 2026-09-29
+
+- Real implemented architecture/ERD/API supersede proposed payload examples; the original proposed documents remain retained. README links implemented contracts. Full en/bn and both themes/owned SQL graphs are implemented required scope, never reclassified optional.
+- Same verified account reauthentication preserves unresolved original command identity; actual identity change/explicit logout remounts private state. This is an engineering recovery correction, not rate/matching/cancel-policy change.
+- Locale-remounted modal trigger focus, localized occupancy numbers/graph description and mobile graph coordinate/font readability are evidence-driven UI corrections preserving selected Bullet design and canonical domain values.
+- Native fixture CREATE/DROP DDL gets a separate bounded15s administrative budget and always-close pool. Production business3s statement/2s lock limits and deterministic actual lock-contention tests remain unchanged. No application data/base DB is deleted by this helper.
+- Operator APP_ORIGIN/Secure-cookie settings explicitly reach Compose API. Local HTTP Docker fallback is actually tested in free public-repository CI; public hosted TLS remains NOT_RUN. No paid infrastructure or host security/reboot change. Local extra frontend preview automatic rejection is respected, not bypassed.
+- Exact repository remains public/default master after ordinary Git publication; no default/visibility setting was manually changed. Contemporary tested feature -> master -> pre-release -> release/v1.0.0 remains the delivery workflow, with no force/reconstruction/unrelated deletion.
+- Video P38/U11 remains required DEFERRED_BY_USER; full human interview/debug ability and complete assistive-technology certification cannot be inferred from automated passes. No new video task/script/recording/upload.

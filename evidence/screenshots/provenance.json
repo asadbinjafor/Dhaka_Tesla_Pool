@@ -1,0 +1,165 @@
+{
+  "ciRun": 36538087317,
+  "commit": "8ff59d89fed9fc94df59d455354e7855496711ae",
+  "environment": "Ubuntu 24.04, production Docker Next/Nest/PostgreSQL, Chromium Playwright 1.63.0",
+  "video": "DEFERRED_BY_USER",
+  "screenshots": [
+    {
+      "file": "actual-active-pool-en-dark.png",
+      "actor": "jashim",
+      "locale": "en",
+      "theme": "dark",
+      "attachment": "actual-active-pool-en-dark",
+      "originalAttachment": "data/350558eb02505d9cc2598939f9741729885031c8.png",
+      "sha256": "ff3ed8a4405bc967cdb778a71c33c9c2bd6e5e6cf6d11162c8290015dd9211eb"
+    },
+    {
+      "file": "actual-active-pool-en-light.png",
+      "actor": "jashim",
+      "locale": "en",
+      "theme": "light",
+      "attachment": "actual-active-pool-en-light",
+      "originalAttachment": "data/0e7a8ad89c37e6123411d5c9a57ca46bed86002b.png",
+      "sha256": "844ae2421ce838e5eaaa089ff6d11adce1206b53c732b67be84fee621947872f"
+    },
+    {
+      "file": "actual-active-pool-bn-dark.png",
+      "actor": "jashim",
+      "locale": "bn",
+      "theme": "dark",
+      "attachment": "actual-active-pool-bn-dark",
+      "originalAttachment": "data/aba3227287f363d5122124b6820504407849940d.png",
+      "sha256": "5da0dad660c114830f2147e100f140090e33e9f1f622a4b87f67610ed1c2f05e"
+    },
+    {
+      "file": "actual-active-pool-bn-light.png",
+      "actor": "jashim",
+      "locale": "bn",
+      "theme": "light",
+      "attachment": "actual-active-pool-bn-light",
+      "originalAttachment": "data/4343a4db1fb187ad0506ec715af20c56dc1afd5a.png",
+      "sha256": "29e624da91b55338b02abcefff902d4dbc70d86307bcd2de2a8ac6fc4f259f75"
+    },
+    {
+      "file": "nusrat-en-dark-1440-_passenger.png",
+      "actor": "nusrat",
+      "locale": "en",
+      "theme": "dark",
+      "attachment": "1440-_passenger",
+      "originalAttachment": "data/d1c6514b12ca5e6e2d6565f89677d1813044c292.png",
+      "sha256": "9002bb0c073d9615fa22078ca43b41884886d0d53553c90065b0bb0342c7e842"
+    },
+    {
+      "file": "nusrat-en-light-1440-_passenger.png",
+      "actor": "nusrat",
+      "locale": "en",
+      "theme": "light",
+      "attachment": "1440-_passenger",
+      "originalAttachment": "data/98b91ca882399dff5cd944c8f64a4b39051307c6.png",
+      "sha256": "708e4deb2d4ec752d2e4cb50e7a93899d4590384393197482a016c28c59d1f65"
+    },
+    {
+      "file": "nusrat-bn-dark-1440-_passenger.png",
+      "actor": "nusrat",
+      "locale": "bn",
+      "theme": "dark",
+      "attachment": "1440-_passenger",
+      "originalAttachment": "data/2caf6a9dbc82bc1cb89fc0a767df2c5a658598a9.png",
+      "sha256": "e73317ff15ec1438bcd3fa3f40853f156dfcb02d6f36991c3c9d397f1ebc44af"
+    },
+    {
+      "file": "nusrat-bn-light-360-_passenger_book.png",
+      "actor": "nusrat",
+      "locale": "bn",
+      "theme": "light",
+      "attachment": "360-_passenger_book",
+      "originalAttachment": "data/ef9c5cad41400e6b5c056d88c3f1819e04ab3df3.png",
+      "sha256": "bd343d7af80b074f4828720aa44c53f10bb4d64f26fedec19086d007fd3aa84a"
+    },
+    {
+      "file": "nusrat-bn-light-360-_passenger_activity.png",
+      "actor": "nusrat",
+      "locale": "bn",
+      "theme": "light",
+      "attachment": "360-_passenger_activity",
+      "originalAttachment": "data/beb28735fd82a80307142288770eae67018032b5.png",
+      "sha256": "6d39a944d2d673c0f44da4bd9aafb1a8f76570b076679d235b8b225d8e63edff"
+    },
+    {
+      "file": "nusrat-bn-light-1440-_passenger.png",
+      "actor": "nusrat",
+      "locale": "bn",
+      "theme": "light",
+      "attachment": "1440-_passenger",
+      "originalAttachment": "data/202a6b91f35f93c0c079dcfa3a158950af7f762a.png",
+      "sha256": "31775820be1697a826bf5e52bae83a815729a05b61a13e649c255174b7061d6a"
+    },
+    {
+      "file": "nusrat-bn-light-1440-_passenger_activity.png",
+      "actor": "nusrat",
+      "locale": "bn",
+      "theme": "light",
+      "attachment": "1440-_passenger_activity",
+      "originalAttachment": "data/edd0e3bad0db7ce720adb731472bd1428e8dd2d7.png",
+      "sha256": "6657d1643985fe19729285c711c8a1f63c6eb083f552ad9e8cb1dcc8854333aa"
+    },
+    {
+      "file": "jashim-en-dark-1440-_driver.png",
+      "actor": "jashim",
+      "locale": "en",
+      "theme": "dark",
+      "attachment": "1440-_driver",
+      "originalAttachment": "data/6dc38527434f115a465942533488b5132103aea5.png",
+      "sha256": "07dc4e9ba2bb213d1624831f778786181d2f4ffb0df614c9b718276177e593b2"
+    },
+    {
+      "file": "jashim-en-dark-1440-_driver_activity.png",
+      "actor": "jashim",
+      "locale": "en",
+      "theme": "dark",
+      "attachment": "1440-_driver_activity",
+      "originalAttachment": "data/93ff8e7086f420cac15d4b6e1d10177c4f2216cb.png",
+      "sha256": "6484574dc1ba379538f618833435f8339c99c6748e7c17835bc1e570fd63a100"
+    },
+    {
+      "file": "jashim-en-light-1440-_driver.png",
+      "actor": "jashim",
+      "locale": "en",
+      "theme": "light",
+      "attachment": "1440-_driver",
+      "originalAttachment": "data/6c40c9d7691a9f5d057d03ee54653205168e39c3.png",
+      "sha256": "a96d0c26fb725e3d3a9a3e92d684824e500f8b7bc242c153a008a68dcac2afe7"
+    },
+    {
+      "file": "jashim-bn-dark-390-_driver_requests.png",
+      "actor": "jashim",
+      "locale": "bn",
+      "theme": "dark",
+      "attachment": "390-_driver_requests",
+      "originalAttachment": "data/ddfb1c67c3a10a4b678f9da340c8117cfec47871.png",
+      "sha256": "6ee204249f0dd0c15b714ef008e3a251724f0dc9f9fb5ebd374661c58691db72"
+    },
+    {
+      "file": "jashim-bn-dark-1440-_driver.png",
+      "actor": "jashim",
+      "locale": "bn",
+      "theme": "dark",
+      "attachment": "1440-_driver",
+      "originalAttachment": "data/c2e8544a796fafe720163da12e496eb61256bca0.png",
+      "sha256": "bbee07dde500c033bbe8655143ec3dc51a509754cf3115003b13cd91e3ed311e"
+    },
+    {
+      "file": "jashim-bn-light-1440-_driver.png",
+      "actor": "jashim",
+      "locale": "bn",
+      "theme": "light",
+      "attachment": "1440-_driver",
+      "originalAttachment": "data/84246ff0ab240464de05371e20e23967158d0af6.png",
+      "sha256": "6cfda03da8ebfe42c684bc24de5e18e11c177baf0e69ea0f149bbe73e246a725"
+    }
+  ],
+  "actualViews": 300,
+  "violations": 0,
+  "maxOuterOverflow": 0,
+  "minimumChartLabelHeight": 14
+}

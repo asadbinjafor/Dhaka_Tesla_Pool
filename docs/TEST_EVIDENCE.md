@@ -1,0 +1,48 @@
+# Executed test evidence — 2026-09-29
+
+This supersedes the original planned-only status of 08-TEST-PLAN.md without deleting that plan. IDs below are acceptance scenarios, not a fabricated number of independent tests. Source test names and actual executed jobs are the proof. Native Windows uses real PostgreSQL18.6; CI uses Ubuntu24.04, Node24.17.0, pnpm12.6.0, PostgreSQL18.6, production Docker Next/Nest and real Chromium. No reference/prototype checks are counted as modern backend tests.
+
+## Actual checkpoints
+
+- [CI36538087317](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36538087317), `8ff59d89fed9fc94df59d455354e7855496711ae`: **PASS** build, typecheck, lint,9unit,24native SQL/HTTP,3SSR/gateway smoke,27browser cases. Browser cases include300 principal screen/width views. Production Compose clean/repeat startup, explicit seed, retained rows after down/up and repeated seed, unavailable DB readiness503 then recovered200 all PASS.
+- [Master CI36539130836](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36539130836), `a6109ac293222f11200845fcf2c87a887ebfd25f`: **PASS** same complete gates after integration.
+- Native complete sequential retest:24/24 **PASS**, `evidence/runs/2026-09-29-final/native-postgresql-http-retest.txt`. Earlier parallel cleanup failure21/22 is retained in `native-postgresql-http.txt`; repair separates administrative15s CREATE/DROP budget from unchanged business3s statement/2s lock deadlines.
+- Native strengthened candidate hardening:9/9 **PASS**, `native-hardening-candidate.txt`, including injected private-read connection failure, safe503 envelope, no private directory/raw diagnostic, restored owned read. This replaces prior8-case hardening suite; the full candidate CI count is25native, pending actual observation.
+- Pre-release `ce17ce50b11bd98c9447548c91205168b0b4b6a8`, [CI36540258465](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36540258465): **PENDING** at this checkpoint. Stronger existing browser cases additionally switch language/theme before lost-response same-key recovery and test localized read503/manual recovery; these are not extra test-count inflation.
+
+## Original planned scenario trace
+
+| IDs | Executed implementation tests | Status / precise limit |
+|---|---|---|
+| I01–I05 | requests.test.mjs: owned quote/request, concurrent creation/replay, expiry, strict DTO/routes/seats, no waiting occupancy | PASS |
+| I06–I14 | allocation.test.mjs: named exact solo/pooled money/quantity, both last-seat winner orders and actual observed PostgreSQL waiting, competing drivers, one active pool, receipts/conflicts, rollback and real COMMIT uncertainty | PASS |
+| I15–I18 | allocation/lifecycle/hardening: own release, duplicate keys, last-member closure, both unassigned/assigned cancel/accept orderings under actual waits | PASS |
+| I19–I25 | lifecycle/hardening: arrival join/cancel boundary, invalid/start/cancel/complete transitions, immutable final roster, after-arrival driver cancellation zero, offline/accept both winner orders | PASS |
+| I26–I29 | auth/requests/allocation/lifecycle: actual guard/session/CSRF/origin/role/owner denials, private DTOs and foreign resources | PASS |
+| I30–I32 | statistics/lifecycle/allocation: Dhaka midnight/cancel/quantity, actual API restart, two separate API instances/sessions contending for the same Jashim/vehicle/pool | PASS |
+| I33–I35 | requests/allocation/lifecycle/hardening: canonical target/body hash conflict, committed original-key replay after terminal state/quote consumption, real quote wall-clock expiry while lock held | PASS |
+| I36–I38 | lifecycle/statistics + booking/lifecycle/state-boundary E2E: stable terminal refresh/current=null, late real older pool-version fare blocked, full-precision equal/submillisecond cursor pagination and filter/owner binding | PASS |
+| I39–I44 | database/requests/allocation/lifecycle/hardening: constraints, rollback/COMMIT ambiguity, post-wait fresh count, catalog version immutability, prior-canceled membership unchanged, original ARRIVE receipt versus fresh key | PASS |
+| I45 | hardening: aggregate offline/full/closed/incompatible hints; latest native9th case safe unknown read failure/recovery | PASS native; stronger browser recovery pending candidate CI |
+| I46 | state-boundary/auth/recovery E2E: real delayed prior-user callback cannot navigate/reveal after logout/new login; root private epoch/draft/intent boundary | PASS |
+| I47 | database native + production Compose after E2E: explicit repeat seed preserves credentials/timestamps and created records/counts | PASS |
+| I48 | auth/gateway native/unit/production E2E: actual HTTP cookies/CSRF/proxy stripping, HTTPS configuration Secure attributes | PASS HTTP/configuration; actual public HTTPS/TLS termination NOT_RUN. Tested HTTP Docker fallback is permitted PDF scope |
+| I49–I50 | lifecycle/hardening + cancellation/recovery E2E: zero canceled charge/frozen evidence/NOT_TRACKED/excluded graphs; expired/foreign identity cannot retrieve receipt, verified same owner can recover | PASS |
+
+## Required extras scenario trace
+
+| IDs | Actual tests and artifacts | Status |
+|---|---|---|
+| X01–X02 | auth/lifecycle/statistics/zz-ui four-mode browser cases; catalog.test.ts key/placeholder parity | PASS |
+| X03–X05 | booking/auth/recovery/lifecycle browser: valid draft/quote, delayed mutation key/body, stable terminal route/refresh; canonical presentation-state units | PASS; strengthened lost-response switch regression pending candidate |
+| X06–X08 | real safe error/strict DTO/auth/owned read; catalog/format/SSR/gateway; Bangla search/digits, ISO canonical dates, preference/locale routing | PASS; native browser date-input chrome follows browser locale, user-entered names are preserved |
+| X09–X11 | zz-ui/lifecycle/statistics: fonts/keyboard/dialog focus/no page errors/reduced motion,300 views; SQL/card/table/SVG parity, canceled/midnight/quantity denominator | PASS; actual min chart-label height14px in CI artifact; no exhaustive assistive-technology certification |
+| X12–X13 | actual Nest guards/filter/repos and Next fixed gateway; production Docker build/SSR/browser/Tailwind assets | PASS |
+| X14–X15 | real old-account callback, unknown command/same-owner recovery, stale pool-version read; initial F01–F08 findings/fix/retest and separate final review | PASS; evidence limits explicit in FINAL_AUDIT |
+| X16 | actual contemporary Git branch graph, tested non-destructive integration/push to supplied remote | Feature/master PASS; final pre-release/release publication checkpoint pending |
+
+## Evidence rules and limits
+
+The actual27browser cases live in9spec files;8role/locale/theme view cases cover300views at360/390/768/1024/1440px. Test-only injected hooks coordinate real database waits or real connection/response faults; they do not add public endpoints or pretend mock locks prove races. Production throttling stays enabled; read-only screenshots reuse real authenticated fixture cookies only in worker memory. SQL fixtures are isolated fictional records, never a reset of the user's local application database.
+
+CI retries0, video/trace off. Configured axe A/AA checks have0violations and some incomplete contrast nodes, supplemented by screenshots/CSS review. Original private PDF/source hashes remain84/84. Local additional preview was automatically rejected (**BLOCKED**, reason “blocked by policy”) and was not bypassed. Public hosted TLS, complete assistive-technology certification and human live explain/debug assessment remain **NOT_RUN**. Video P38/U11 remains **DEFERRED_BY_USER**. Earlier failed CI/assertion/native logs remain factual history; only observed success closes a gate.

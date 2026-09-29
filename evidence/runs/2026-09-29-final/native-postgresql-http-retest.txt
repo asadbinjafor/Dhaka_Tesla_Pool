@@ -1,0 +1,81 @@
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ two real Nest instances, SAME Jashim/Bullet: nusrat wins deterministic last-seat contention (1779.8726ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ two real Nest instances, SAME Jashim/Bullet: shirin wins deterministic last-seat contention (1427.5881ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ two distinct drivers compete for one request with no orphan pool; foreign-driver ownership and dispatch privacy (1259.6482ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+{"event":"request_failed","requestId":"0a579f8b-f6d5-4436-a3b9-c93060fdc0ff","code":"INTERNAL_ERROR"}
+{"event":"request_failed","requestId":"b8d95aed-1c9b-4b17-9b89-ecd99032f05a","code":"COMMAND_OUTCOME_UNKNOWN"}
+✔ accept rollback injection and ambiguous COMMIT acknowledgement recover one effect; no-pool concurrent acceptance and last-member cancellation (1511.4238ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ real HTTP + PostgreSQL auth: CSRF/origin, validation, roles, rotated/expired sessions, logout and safe identity (1754.2238ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+demo_seed_complete_no_existing_records_overwritten
+✔ real PostgreSQL migrations, repeat non-destructive seeds, constraints and atomic rollback (918.7672ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: offline obtains driver lock first (1085.9006ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: accept obtains driver lock first (756.7619ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ arrival first blocks actually contending passenger cancellation without fare/event damage (847.8176ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ completed remaining pool leaves earlier canceled member and event byte-for-byte intact (907.254ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ expired quote and session cannot leak receipt; same verified owner replays completed create once (1766.2542ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ HTTPS-origin configuration issues Secure cookies and rejects untrusted forwarding origin (794.6156ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ waiting hints expose only observed eligibility for offline/full/arrived/incompatible vehicles (950.5064ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation first serializes against acceptance on the real request lock with no orphan membership (765.9343ms)
+{"event":"request_failed","requestId":"b8a0599f-d4a8-4666-933b-f0c18867914e","code":"TEMPORARILY_UNAVAILABLE"}
+✔ real Nest HTTP: liveness is separate from absent database readiness, with safe errors (277.8928ms)
+{"event":"request_failed","requestId":"b225e17f-2ba7-460d-bb51-cf8b2b60d896","code":"TEMPORARILY_UNAVAILABLE"}
+✔ unreachable PostgreSQL returns safe not-ready, never false success or DSN (27.9391ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ real lifecycle: allowed transitions, immutable quoted/final fares, terminal receipt replay, ownership and API restart persistence (1471.4196ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ driver cancellation after arrival: zero charge and retained final evidence; previously cancelled member/time/event never rewritten (936.2635ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: join acquires driver before competing command (1011.0384ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: arrive acquires driver before competing command (983.0797ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: cancel acquires driver before competing command (1080.783ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation discovers committed acceptance after request-lock wait and retries driver-first without partial effects (936.2737ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ owned quotes/requests: exact fare, typed validation, private detail, concurrent active constraint, terminal replay and expiry after lock wait (1909.4108ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ owned SQL graphs: Dhaka midnight, completed-only money/quantity and one capacity per pool; precise filtered keyset history (1687.5449ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33313.1885

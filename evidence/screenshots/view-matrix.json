@@ -1,0 +1,2402 @@
+[
+  {
+    "path": "/passenger",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/en/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/dark"
+  },
+  {
+    "path": "/passenger",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/book",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/ride",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/passenger/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "nusrat/bn/light"
+  },
+  {
+    "path": "/driver",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 14,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/en/light"
+  },
+  {
+    "path": "/driver",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/dark"
+  },
+  {
+    "path": "/driver",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 360,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 390,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 768,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1024,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/requests",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/pool",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/history",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/activity",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": 16,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/account",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/guide",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  },
+  {
+    "path": "/driver/vehicle",
+    "width": 1440,
+    "overflow": 0,
+    "violations": 0,
+    "chartLabelMinHeight": null,
+    "mode": "jashim/bn/light"
+  }
+]
