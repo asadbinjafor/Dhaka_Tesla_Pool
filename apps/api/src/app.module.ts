@@ -11,14 +11,17 @@ import { RideService } from './rides/ride.service.js';
 import { CatalogController, RideController } from './rides/ride.controller.js';
 import {PoolService} from './pools/pool.service.js';
 import {PoolController} from './pools/pool.controller.js';
+import {HistoryService} from './history/history.service.js';
+import {StatisticsService} from './history/statistics.service.js';
+import {PassengerHistoryController,DriverHistoryController} from './history/history.controller.js';
 
 @Module({})
 export class AppModule {
   static configure(databaseUrl?: string): DynamicModule {
     return {
       module: AppModule,
-      controllers: [HealthController, AuthController, MeController, VehicleController, CatalogController, RideController, PoolController],
-      providers: [{ provide: DatabaseService, useFactory: () => new DatabaseService(databaseUrl) }, AuthService, RideService, PoolService, {provide:APP_GUARD,useClass:AccessGuard}],
+      controllers: [HealthController, AuthController, MeController, VehicleController, CatalogController, RideController, PoolController, PassengerHistoryController, DriverHistoryController],
+      providers: [{ provide: DatabaseService, useFactory: () => new DatabaseService(databaseUrl) }, AuthService, RideService, PoolService, HistoryService, StatisticsService, {provide:APP_GUARD,useClass:AccessGuard}],
     };
   }
 }

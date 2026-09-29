@@ -9,6 +9,8 @@ interface Confirmation {target:string;label:'cancelRide'|'driverArrive'|'startTr
 interface UI {
   draft:{pickupId:string;destinationId:string;seats:number};quote:Quote|null;intent:Intent|null;busy:boolean;error:string|null;receipt:Receipt|null;
   confirmation:Confirmation|null;reason:string;setReason(reason:string):void;confirm(value:Confirmation):void;closeConfirmation():void;
+  historyDraft:{status:string;search:string}|null;setHistoryDraft(value:{status:string;search:string}):void;
+  statsDraft:{from:string;to:string}|null;setStatsDraft(value:{from:string;to:string}):void;
   change(draft:UI['draft']):void;getQuote():Promise<void>;
   execute(target:string,body:Record<string,unknown>,method?:string):Promise<Receipt|undefined>;
   retry():Promise<Receipt|undefined>;clearReceipt():void;
@@ -20,6 +22,7 @@ export function RideUIProvider({children}:{children:ReactNode}) {
   const [quote,setQuote]=useState<Quote|null>(null);const [intent,setIntent]=useState<Intent|null>(null);
   const [busy,setBusy]=useState(false);const [error,setError]=useState<string|null>(null);const [receipt,setReceipt]=useState<Receipt|null>(null);
   const [confirmation,setConfirmation]=useState<Confirmation|null>(null);const [reason,setReason]=useState('');
+  const [historyDraft,setHistoryDraft]=useState<UI['historyDraft']>(null);const [statsDraft,setStatsDraft]=useState<UI['statsDraft']>(null);
   const running=useRef(false);const mounted=useRef(true);
   useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;};},[]);
   async function run(next:Intent) {
@@ -28,10 +31,10 @@ export function RideUIProvider({children}:{children:ReactNode}) {
     try {const result=await session.call<Receipt>(next.target,next.method,next.body,next.key);if(!mounted.current)return;setReceipt(result);setIntent(null);setConfirmation(null);setReason('');return result;}
     catch(cause){if(!mounted.current)return;const code=cause instanceof ApiError?cause.code:'INTERNAL_ERROR';setError(code);
       // Unknown/temporary/auth outcomes retain this exact key/body for reconciliation.
-      if(!['COMMAND_OUTCOME_UNKNOWN','TEMPORARILY_UNAVAILABLE','AUTH_REQUIRED','CSRF_REJECTED'].includes(code))setIntent(null);
+      if(!['COMMAND_OUTCOME_UNKNOWN','TEMPORARILY_UNAVAILABLE','AUTH_REQUIRED','CSRF_REJECTED','RATE_LIMITED'].includes(code))setIntent(null);
     } finally {if(mounted.current){running.current=false;setBusy(false);}}
   }
-  return <Context.Provider value={{draft,quote,intent,busy,error,receipt,confirmation,reason,setReason,
+  return <Context.Provider value={{draft,quote,intent,busy,error,receipt,confirmation,reason,setReason,historyDraft,setHistoryDraft,statsDraft,setStatsDraft,
     confirm(value){if(busy||intent)return;setReason('');setConfirmation(value);},closeConfirmation:()=>setConfirmation(null),
     change(next){if(busy||intent)return;setDraft(next);setQuote(null);setError(null);},
     async getQuote(){if(running.current||intent)return;running.current=true;setBusy(true);setError(null);

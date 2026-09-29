@@ -69,3 +69,9 @@ export interface PoolDetail {
   members:{id:string;displayName:string;status:string;seats:number;pickupId:string;destinationId:string;fare:number;fareKind:string;historicalFinal:Fare|null}[];
   allowedActions:string[];
 }
+export interface Statistics {
+  actorRole:'PASSENGER'|'DRIVER';timeZone:'Asia/Dhaka';currency:'BDT';population:'COMPLETED_ONLY';from:string;to:string;
+  daily:{date:string;trips:number;seats?:number;capacity?:number;farePoysha?:number;discountPoysha?:number}[];
+  totals:{trips:number;seats?:number;capacity?:number;farePoysha?:number;discountPoysha?:number;utilization?:number};
+}
+export interface HistoryPage<T> {items:T[];nextCursor:string|null;filters:{status:string;search:string};limit:number}
