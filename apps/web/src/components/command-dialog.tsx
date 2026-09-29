@@ -2,8 +2,8 @@
 import {useEffect,useRef,useState} from 'react';import {useView} from './view-provider';import {useRideUI} from './ride-ui-provider';
 import {Preferences} from './preferences';
 export function CommandDialog(){
-  const {dictionary:t}=useView();const ui=useRideUI();const dialog=useRef<HTMLDialogElement>(null);const [invalid,setInvalid]=useState(false);
-  useEffect(()=>{if(ui.confirmation&&!dialog.current?.open)dialog.current?.showModal();else if(!ui.confirmation)dialog.current?.close();},[ui.confirmation]);
+  const {dictionary:t}=useView();const ui=useRideUI();const dialog=useRef<HTMLDialogElement>(null);const returnTarget=useRef<string|null>(null);const [invalid,setInvalid]=useState(false);
+  useEffect(()=>{if(ui.confirmation){returnTarget.current=ui.confirmation.target;if(!dialog.current?.open)dialog.current?.showModal();}else{dialog.current?.close();if(returnTarget.current){const target=returnTarget.current;returnTarget.current=null;const frame=requestAnimationFrame(()=>{const trigger=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-command-target]')).find(button=>button.dataset.commandTarget===target&&!button.disabled);(trigger??document.getElementById('main-content'))?.focus();});return()=>cancelAnimationFrame(frame);}}},[ui.confirmation]);
   return <dialog ref={dialog} aria-labelledby="command-dialog-title" onCancel={()=>ui.closeConfirmation()} className="w-[calc(100%-32px)] max-w-lg rounded-2xl border border-line bg-panel p-6 text-ink backdrop:bg-black/70">
     {ui.confirmation&&<form noValidate onSubmit={e=>{e.preventDefault();if(ui.confirmation!.needsReason&&(!ui.reason.trim()||ui.reason.trim().length>200)){setInvalid(true);return;}setInvalid(false);void ui.execute(ui.confirmation!.target,ui.confirmation!.needsReason?{reason:ui.reason.trim()}:{});}}>
       <Preferences/><h2 id="command-dialog-title" className="mt-4 text-xl font-bold">{t[ui.confirmation.label]}</h2><p className="mt-3 text-muted">{t.actionConfirmHelp}</p>
