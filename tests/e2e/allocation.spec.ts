@@ -6,7 +6,8 @@ test('separate real passenger/driver accounts reserve quantity, keep private far
     await page.goto('/en/passenger/book');await page.getByLabel('Passenger seats',{exact:true}).selectOption('2');await page.getByRole('button',{name:'Calculate fare',exact:true}).click();await expect(page.getByRole('heading',{name:'Your fare quote'})).toBeVisible();await page.getByRole('button',{name:'Confirm ride request',exact:true}).click();await expect(page).toHaveURL(/\/passenger\/rides\/[0-9a-f-]+$/);
     const rideId=page.url().split('/').pop();
     await driver.goto('/en/sign-in');await driver.getByLabel('Email address',{exact:true}).fill('jashim@demo.dhaka.test');await driver.getByLabel('Password',{exact:true}).fill(process.env.E2E_PASSWORD!);await driver.getByRole('button',{name:'Sign in',exact:true}).click();await expect(driver).toHaveURL('/en/account');
-    await driver.goto('/en/driver/requests');if(await driver.getByRole('button',{name:'Go online',exact:true}).isVisible())await driver.getByRole('button',{name:'Go online',exact:true}).click();
+    await driver.goto('/en/driver/requests');await expect(driver.getByRole('button',{name:/^Go (on|off)line$/})).toBeVisible();if(await driver.getByRole('button',{name:'Go online',exact:true}).isVisible())await driver.getByRole('button',{name:'Go online',exact:true}).click();
+    await expect(driver.getByRole('button',{name:'Go offline',exact:true})).toBeVisible();
     await driver.getByRole('article').filter({has:driver.getByRole('heading',{name:'Quantity passenger',exact:true})}).getByRole('button',{name:'Accept request',exact:true}).click();await expect(driver).toHaveURL(/\/driver\/pools\/[0-9a-f-]+$/);
     const poolId=driver.url().split('/').pop();await expect(driver.getByText('Reserved passenger seats: 2/3',{exact:true})).toBeVisible();
     await expect(page.getByText('Driver accepted',{exact:true})).toBeVisible();
@@ -15,5 +16,5 @@ test('separate real passenger/driver accounts reserve quantity, keep private far
     await page.getByRole('button',{name:'Cancel ride',exact:true}).click();await page.getByLabel('Cancellation reason',{exact:true}).fill('No longer needed');await page.getByRole('button',{name:'Confirm cancellation',exact:true}).click();await expect(page.getByText('Cancelled',{exact:true})).toBeVisible();
     await expect(driver.getByRole('heading',{name:'Bullet · Cancelled',exact:true})).toBeVisible();await driver.reload();await expect(driver.getByRole('heading',{name:'Bullet · Cancelled',exact:true})).toBeVisible();
     expect((await (await driver.request.get('/api/v1/driver/pools/current')).json()).data).toBeNull();
-  }finally{await driverContext.close();}
+  }finally{await driverContext.close().catch(()=>{});}
 });
