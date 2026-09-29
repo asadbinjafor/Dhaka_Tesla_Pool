@@ -24,7 +24,9 @@ test('real gateway quote and pending booking survive locale/theme switches; owne
   await expect.poll(()=>requests).toBe(1);
   await page.getByRole('button',{name:'ইংরেজি ভাষায় পরিবর্তন করুন',exact:true}).click();
   await page.getByRole('button',{name:'Switch to light mode',exact:true}).click();
-  await expect(page.getByRole('button',{name:'Working…',exact:true})).toBeDisabled();
+  const working=page.getByRole('button',{name:'Working…',exact:true});
+  await expect(working).toHaveCount(3);
+  for(const button of await working.all())await expect(button).toBeDisabled();
   release();
   await expect(page).toHaveURL(/\/en\/passenger\/rides\/[0-9a-f-]+$/);
   expect(requests).toBe(1);
