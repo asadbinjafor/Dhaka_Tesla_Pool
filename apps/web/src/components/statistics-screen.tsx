@@ -1,11 +1,11 @@
 'use client';
 import {useRouter,useSearchParams} from 'next/navigation';import type {Statistics,Locale} from '@dtp/contracts';
-import {ProductShell} from './product-shell';import {useView} from './view-provider';import {useOwnedQuery} from './use-owned-query';import {useRideUI} from './ride-ui-provider';import {errorText} from '@/i18n/catalog';import {money} from '@/i18n/format';
+import {ProductShell} from './product-shell';import {useView} from './view-provider';import {useOwnedQuery} from './use-owned-query';import {useRideUI} from './ride-ui-provider';import {errorText,messages} from '@/i18n/catalog';import {money} from '@/i18n/format';
 function day(locale:Locale,value:string){return new Intl.DateTimeFormat(locale==='bn'?'bn-BD':'en-BD',{day:'numeric',month:'short',timeZone:'Asia/Dhaka'}).format(new Date(value+'T00:00:00+06:00'));}
 function CountChart({stats,metric,label,locale}:{stats:Statistics;metric:'trips'|'farePoysha'|'seats';label:string;locale:Locale}){
   const largest=Math.max(1,...stats.daily.map(row=>row[metric]??0));const width=600/stats.daily.length;const ticks=[0,largest/2,largest];
   return <figure className="rounded-2xl border border-line bg-panel p-5"><figcaption className="text-xl font-bold">{label}</figcaption>
-    <svg role="img" aria-label={label} viewBox="0 0 680 245" className="mt-5 w-full"><title>{label}</title><desc>{stats.from} — {stats.to} · Asia/Dhaka</desc>
+    <svg role="img" aria-label={label} viewBox="0 0 680 245" className="mt-5 w-full"><title>{label}</title><desc>{day(locale,stats.from)} — {day(locale,stats.to)} · {messages(locale).dhakaTime}</desc>
       {ticks.map((n,i)=><g key={i}><line x1="60" x2="660" y1={200-i*85} y2={200-i*85} stroke="var(--line)"/><text x="52" y={204-i*85} textAnchor="end" fill="var(--muted)" fontSize="12">{new Intl.NumberFormat(locale==='bn'?'bn-BD':'en-BD',{maximumFractionDigits:1}).format(metric==='farePoysha'?n/100:n)}</text></g>)}
       {stats.daily.map((row,i)=>{const value=row[metric]??0,height=value/largest*170;return <rect key={row.date} x={60+i*width+width*.2} y={200-height} width={Math.max(1,width*.6)} height={height} rx="3" fill="var(--accent)"><title>{day(locale,row.date)}: {metric==='farePoysha'?money(locale,value):new Intl.NumberFormat(locale==='bn'?'bn-BD':'en-BD').format(value)}</title></rect>;})}
       {[0,Math.floor((stats.daily.length-1)/2),stats.daily.length-1].filter((n,i,a)=>a.indexOf(n)===i).map(i=><text key={i} x={60+(i+.5)*width} y="225" textAnchor="middle" fill="var(--muted)" fontSize="12">{day(locale,stats.daily[i]!.date)}</text>)}
