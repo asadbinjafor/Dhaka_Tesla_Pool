@@ -1,9 +1,10 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
-import { isLocale, withTheme } from '@dtp/contracts';
+import { isLocale, withTheme, clearPrivateView } from '@dtp/contracts';
+import { SessionProvider } from './session-provider';
 import type { Locale, Theme, ViewState } from '@dtp/contracts';
 import { messages } from '@/i18n/catalog';
 
@@ -39,6 +40,7 @@ export function ViewProvider({ children, initialLocale, initialTheme }: {
 
   useEffect(() => { document.documentElement.lang = locale; }, [locale]);
   useEffect(() => { document.documentElement.dataset.theme = state.theme; }, [state.theme]);
+  const onBoundary=useCallback(()=>setState(current=>clearPrivateView(current)),[]);
 
   return <ViewContext.Provider value={{
     locale, state, dictionary: messages(locale),
@@ -47,7 +49,7 @@ export function ViewProvider({ children, initialLocale, initialTheme }: {
       setState(current => withTheme(current, theme));
     },
     setAuthDraft: authDraft => setState(current => ({ ...current, authDraft })),
-  }}>{children}</ViewContext.Provider>;
+  }}><SessionProvider onBoundary={onBoundary}>{children}</SessionProvider></ViewContext.Provider>;
 }
 
 export function useView() {

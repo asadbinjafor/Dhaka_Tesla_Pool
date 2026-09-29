@@ -57,3 +57,6 @@ Final exact integration refs are observable in Git history, not reconstructed la
 ## Database continuation evidence - 2026-09-29
 
 DATABASE_AUDIT.md and evidence/runs/2026-09-29-database/ supersede the earlier no-DB blocker. Actual PostgreSQL 18.6 migration/seed/constraint/rollback tests PASS. P20/P23/P28 schema tooling and U04 now PARTIAL with real DB evidence; business transaction tests remain required. D01-D29 baseline adopted as engineering assumptions under current completion request; no migration/old approval overwritten. Docker P24/P25 remains PENDING_CI, not PASS. Video P38/U11 DEFERRED_BY_USER. Next real auth/ownership slice.
+# 2026-09-29 authentication checkpoint
+
+Authentication backend/account UI implemented; real PostgreSQL/HTTP tests and build/lint/typecheck/unit/reference checks PASS. Full product remains IN_PROGRESS. Auth browser suite pending isolated CI; local additional frontend preview was rejected by automatic approval review (blocked by policy). Database Docker CI run 36526747393 PASS. Next: owned quotes/requests, then shared-driver allocation/lifecycle, history/graphs/full UI. See AUTH_AUDIT.md; historical board entries below remain intact.
