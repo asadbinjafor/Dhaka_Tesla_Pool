@@ -63,3 +63,8 @@ export interface RideDetail {
   driver:{displayName:string;vehicleName:string}|null;allowedActions:string[];
   representationVersion:{request:number;pool:number};
 }
+export interface PoolDetail {
+  id:string;status:string;capacity:number;reservedSeats:number;version:number;createdAt:string;endedAt:string|null;cancellationReason:string|null;
+  members:{id:string;displayName:string;status:string;seats:number;pickupId:string;destinationId:string;fare:number;fareKind:string;historicalFinal:Fare|null}[];
+  allowedActions:string[];
+}
