@@ -7,7 +7,7 @@ export class ApiError extends Error {
   constructor(public readonly code:string, public readonly status=0) {super(code);}
 }
 interface SessionContextValue {
-  user:User|null; loading:boolean; authPending:boolean; authError:string|null; epoch:number;
+  user:User|null; loading:boolean; authPending:boolean; authError:string|null; epoch:number;reauthRequired:boolean;
   authenticate(mode:'login'|'register',body:Record<string,string>):Promise<void>;
   logout():Promise<void>;
   reportAuthError(code:string|null):void;
@@ -20,12 +20,13 @@ export function SessionProvider({children,onBoundary}:{children:ReactNode;onBoun
   const [authPending,setAuthPending]=useState(false);
   const [authError,setAuthError]=useState<string|null>(null);
   const [epoch,setEpoch]=useState(0);
+  const [reauthRequired,setReauthRequired]=useState(false);
   const generation=useRef(0);
   const csrf=useRef<string|null>(null);
   const reads=useRef(new Set<AbortController>());
   const activeAuth=useRef(false);
-  const boundary=useCallback(()=>{
-    generation.current++;setEpoch(generation.current);
+  const boundary=useCallback((clearPrivate=true)=>{
+    generation.current++;if(clearPrivate)setEpoch(generation.current);
     for(const controller of reads.current) controller.abort();
     reads.current.clear();
   },[]);
@@ -48,7 +49,7 @@ export function SessionProvider({children,onBoundary}:{children:ReactNode;onBoun
         body:body===undefined?undefined:JSON.stringify(body)});
       const payload=await response.json();
       if(captured!==generation.current) throw new ApiError('STALE_RESPONSE');
-      if(!response.ok) {if(response.status===403 && payload.error?.code==='CSRF_REJECTED') csrf.current=null;throw new ApiError(payload.error?.code ?? 'INTERNAL_ERROR',response.status);}
+      if(!response.ok) {if(response.status===403 && payload.error?.code==='CSRF_REJECTED') csrf.current=null;if(response.status===401&&payload.error?.code==='AUTH_REQUIRED'){csrf.current=null;setReauthRequired(true);}throw new ApiError(payload.error?.code ?? 'INTERNAL_ERROR',response.status);}
       return payload.data as T;
     } catch(error) {
       if(error instanceof ApiError) throw error;
@@ -60,26 +61,30 @@ export function SessionProvider({children,onBoundary}:{children:ReactNode;onBoun
   useEffect(()=>{
     let mounted=true;
     const activeReads=reads.current;
-    call<User>('/me').then(value=>{if(mounted)setUser(value);}).catch(error=>{if(mounted && error.code!=='AUTH_REQUIRED' && error.code!=='STALE_RESPONSE')setAuthError(error.code);}).finally(()=>{if(mounted)setLoading(false);});
+    Promise.resolve().then(()=>call<User>('/me')).then(value=>{if(mounted)setUser(value);}).catch(error=>{if(mounted && error.code!=='AUTH_REQUIRED' && error.code!=='STALE_RESPONSE')setAuthError(error.code);}).finally(()=>{if(mounted)setLoading(false);});
     return()=>{mounted=false;for(const controller of activeReads)controller.abort();};
   },[call]);
 
   async function authenticate(mode:'login'|'register',body:Record<string,string>) {
     if(activeAuth.current) return;
-    activeAuth.current=true;setAuthPending(true);setAuthError(null);boundary();
+    activeAuth.current=true;setAuthPending(true);setAuthError(null);boundary(false);
     try {
       const result=await call<{user:User;csrfToken:string}>(`/auth/${mode}`,'POST',body);
-      csrf.current=result.csrfToken;onBoundary();setUser(result.user);
+      csrf.current=result.csrfToken;
+      // Same verified account can reconcile its unresolved command after session expiry.
+      // A different account always remounts and clears all private state.
+      if(!user||user.id!==result.user.id)setEpoch(generation.current);
+      setReauthRequired(false);onBoundary();setUser(result.user);
     } catch(error) {const code=error instanceof ApiError?error.code:'INTERNAL_ERROR';setAuthError(code);throw error;}
     finally {activeAuth.current=false;setAuthPending(false);}
   }
   async function logout() {
     if(activeAuth.current)return;
     activeAuth.current=true;setAuthPending(true);setAuthError(null);boundary();onBoundary();
-    try {await call('/auth/logout','POST',{});csrf.current=null;setUser(null);}
+    try {await call('/auth/logout','POST',{});csrf.current=null;setReauthRequired(false);setUser(null);}
     catch(error){setAuthError(error instanceof ApiError?error.code:'INTERNAL_ERROR');throw error;}
     finally{activeAuth.current=false;setAuthPending(false);}
   }
-  return <Context.Provider value={{user,loading,authPending,authError,epoch,authenticate,logout,call,reportAuthError:setAuthError}}>{children}</Context.Provider>;
+  return <Context.Provider value={{user,loading,authPending,authError,epoch,reauthRequired,authenticate,logout,call,reportAuthError:setAuthError}}>{children}</Context.Provider>;
 }
 export function useSession(){const session=useContext(Context);if(!session)throw new Error('SessionProvider required');return session;}

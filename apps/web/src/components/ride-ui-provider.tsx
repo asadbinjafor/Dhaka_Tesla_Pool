@@ -26,12 +26,12 @@ export function RideUIProvider({children}:{children:ReactNode}) {
   const running=useRef(false);const mounted=useRef(true);
   useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;};},[]);
   async function run(next:Intent) {
-    if(running.current)return;
+    if(running.current||session.authPending)return;
     running.current=true;setBusy(true);setError(null);setIntent(next);
     try {const result=await session.call<Receipt>(next.target,next.method,next.body,next.key);if(!mounted.current)return;setReceipt(result);setIntent(null);setConfirmation(null);setReason('');return result;}
     catch(cause){if(!mounted.current)return;const code=cause instanceof ApiError?cause.code:'INTERNAL_ERROR';setError(code);
       // Unknown/temporary/auth outcomes retain this exact key/body for reconciliation.
-      if(!['COMMAND_OUTCOME_UNKNOWN','TEMPORARILY_UNAVAILABLE','AUTH_REQUIRED','CSRF_REJECTED','RATE_LIMITED'].includes(code))setIntent(null);
+      if(!['COMMAND_OUTCOME_UNKNOWN','TEMPORARILY_UNAVAILABLE','AUTH_REQUIRED','CSRF_REJECTED','RATE_LIMITED','STALE_RESPONSE'].includes(code))setIntent(null);
     } finally {if(mounted.current){running.current=false;setBusy(false);}}
   }
   return <Context.Provider value={{draft,quote,intent,busy,error,receipt,confirmation,reason,setReason,historyDraft,setHistoryDraft,statsDraft,setStatsDraft,

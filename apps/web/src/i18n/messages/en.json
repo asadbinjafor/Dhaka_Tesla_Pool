@@ -179,5 +179,16 @@
   "exactData": "Exact graph data",
   "date": "Date",
   "capacityDenominator": "Completed pool capacity",
-  "utilizationHelp": "Utilization = completed passenger seats / capacity of distinct completed pools. Cancelled members count as zero."
+  "utilizationHelp": "Utilization = completed passenger seats / capacity of distinct completed pools. Cancelled members count as zero.",
+  "passengerWorkspace": "PASSENGER WORKSPACE",
+  "driverWorkspace": "DRIVER WORKSPACE",
+  "hello": "Hello,",
+  "driverOverviewHelp": "Keep Bullet's three passenger seats consistent, from acceptance to completion.",
+  "passengerOverviewHelp": "Your own journey, fare and history. Share a ride through the configured Dhaka zones.",
+  "weekSummary": "Your last seven days",
+  "passengerCapacity": "Passenger capacity",
+  "driverSeparate": "Three passenger seats; the driver's place is separate.",
+  "vehicleImmutable": "Vehicle ownership and capacity are fixed for this service. This page shows your actual assigned vehicle.",
+  "pendingGuide": "If confirmation is lost, retry the original command. Do not begin another booking while its result is unresolved. Open the current trip to discover an existing request after a reload.",
+  "pageRecovery": "Try loading this page again. If a command was pending, open your current trip before starting another booking."
 }

@@ -5,6 +5,9 @@ import { isLocale, isTheme } from '@dtp/contracts';
 import { ViewProvider } from '@/components/view-provider';
 import { SkipLink } from '@/components/skip-link';
 import './globals.css';
+import '@fontsource/noto-sans-bengali/400.css';
+import '@fontsource/noto-sans-bengali/600.css';
+import '@fontsource/noto-sans-bengali/700.css';
 
 export const metadata: Metadata = { title: 'Dhaka Tesla Pool' };
 
