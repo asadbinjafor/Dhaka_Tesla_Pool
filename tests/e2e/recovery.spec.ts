@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-import bn from '../../apps/web/src/i18n/messages/bn.json';
+import bn from '../../dhaka-tesla-pool-frontend/src/i18n/messages/bn.json';
 test('lost successful booking reconciles original key after same-account reauthentication; logout clears all prior private intent',async({page,context})=>{
   const email=`recovery-${Date.now()}@test.invalid`,password='Recovery-fixture-password-2026';
   await page.goto('/en/sign-up');await page.getByLabel('Your name',{exact:true}).fill('Recovery passenger');await page.getByLabel('Email address',{exact:true}).fill(email);await page.getByLabel('Password',{exact:true}).fill(password);await page.getByLabel('Confirm password',{exact:true}).fill(password);await page.getByRole('button',{name:'Create an account',exact:true}).click();await expect(page).toHaveURL('/en/account');

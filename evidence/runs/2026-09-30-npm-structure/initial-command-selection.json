@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "command": "npm run test:integration (initial wildcard suite list)",
+  "tests": 30,
+  "pass": 27,
+  "fail": 3,
+  "failures": "Three unchanged web-smoke tests ran before a frontend existed: ECONNREFUSED 127.0.0.1:3000",
+  "correction": "Explicit self-contained native list; retain smoke suite separately after actual dev startup and again after production Compose",
+  "finalNativeResult": "28/28 PASS including three new setup/watch cases"
+}

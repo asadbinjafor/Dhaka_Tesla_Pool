@@ -47,3 +47,19 @@ This supersedes the original planned-only status of 08-TEST-PLAN.md without dele
 The actual27browser cases live in9spec files;8role/locale/theme view cases cover300views at360/390/768/1024/1440px. Test-only injected hooks coordinate real database waits or real connection/response faults; they do not add public endpoints or pretend mock locks prove races. Production throttling stays enabled; read-only screenshots reuse real authenticated fixture cookies only in worker memory. SQL fixtures are isolated fictional records, never a reset of the user's local application database.
 
 CI retries0, video/trace off. Configured axe A/AA checks have0violations and some incomplete contrast nodes, supplemented by screenshots/CSS review. Original private PDF/source hashes remain84/84. Local additional preview was automatically rejected (**BLOCKED**, reason “blocked by policy”) and was not bypassed. Public hosted TLS, complete assistive-technology certification and human live explain/debug assessment remain **NOT_RUN**. Video P38/U11 remains **DEFERRED_BY_USER**. Earlier failed CI/assertion/native logs remain factual history; only observed success closes a gate.
+
+## npm conversion execution — 2026-09-30
+
+[CI36745538316](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/36745538316),
+code564118fb8188469233b63856bf01bca7716e3b0f: SUCCESS. Original64cases preserved;
+new3cases verify cwd-independent real migrations, local/root/explicit env precedence
+and real source compilation/restart/readiness/child cleanup. Native28/28, unit9/9,
+production smoke3/3, browser27/27 =67distinct. Existing smoke3 also runs against actual
+per-folder npm dev commands, making70executions.300views remain inside8browser cases.
+No skips/retries/flaky results;14px minimum labels, zero outer overflow/axe violations;
+color-contrast incomplete retained. Docker fresh/repeat start, explicit seed, persistent
+restart/reseed/outage recovery PASS. New evidence directory:
+`evidence/runs/2026-09-30-npm-structure/`: original16new PNG attachments/provenance,
+browser view matrix, native-final/initial failure logs, data preservation, source/lock
+review and exact candidate CI summary. Older evidence remains unchanged. Latest npm
+commands are README/RUN_NPM_BN; no old pnpm workspace dependency.

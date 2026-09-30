@@ -1,0 +1,630 @@
+{
+  "baselineCommit": "d3e339d18d26ab9d080ae280909b1c38e65089ee",
+  "sourceFiles": [
+    {
+      "before": "apps/web/src/proxy.ts",
+      "after": "dhaka-tesla-pool-frontend/src/proxy.ts",
+      "beforeSha256": "8a30e158d02d1e3a05476189309b0c39ee387bead4bc5081c8b4c47bbb63aca1",
+      "afterSha256": "100b563bd149af3e5c19869db319d47a633de31cd69f0f0e9a0225fa6e1543d3",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/error.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/error.tsx",
+      "beforeSha256": "149b1391a1fdd61cc172b8549dfa1793b58f0cfdb086d8a0a6459fd3a55739a6",
+      "afterSha256": "149b1391a1fdd61cc172b8549dfa1793b58f0cfdb086d8a0a6459fd3a55739a6",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/app/globals.css",
+      "after": "dhaka-tesla-pool-frontend/src/app/globals.css",
+      "beforeSha256": "8edbda574a7c4a845255f843ae5e00f87737b3d4503d12f63af7982507aed42a",
+      "afterSha256": "8edbda574a7c4a845255f843ae5e00f87737b3d4503d12f63af7982507aed42a",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/app/layout.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/layout.tsx",
+      "beforeSha256": "3498561ec43b3f7f10e3026f0937aba07efb86d1b92d0bfde706a9a31933ba83",
+      "afterSha256": "cb94325a5e53d528988d374fcd6575c83fc9cc16623e8e7fd893d4ea0b98751b",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/not-found.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/not-found.tsx",
+      "beforeSha256": "948734dde1ee5aad02aa1bd2da6b387b5f203225c7279bdfc4b6a7bb565de1a3",
+      "afterSha256": "948734dde1ee5aad02aa1bd2da6b387b5f203225c7279bdfc4b6a7bb565de1a3",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/account-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/account-screen.tsx",
+      "beforeSha256": "c6f0095b66db8b10e10dae6897e7984b6288bb9ba5869351b139115b98b7ef90",
+      "afterSha256": "b9a74880aaf635397e01c5c0df82362ef38e4e17079563ef9920150ece168ae6",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/auth-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/auth-screen.tsx",
+      "beforeSha256": "0cd39bf3a6fad3616f3e35c8184c48d18cdfbc3c26f0890f9db50091ec7e93bd",
+      "afterSha256": "a6b80780715b80c63b5197ef5ab962949c225c102fe42b11689a0d9c7de57fa5",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/booking-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/booking-screen.tsx",
+      "beforeSha256": "6015c582444b32851b73502f82e14ff512a3e3c791829339e00b231172446a96",
+      "afterSha256": "6015c582444b32851b73502f82e14ff512a3e3c791829339e00b231172446a96",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/command-dialog.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/command-dialog.tsx",
+      "beforeSha256": "116b7193b6eac8c4e1de9d882ca979757fd21b562001343ced995f49a10af41a",
+      "afterSha256": "116b7193b6eac8c4e1de9d882ca979757fd21b562001343ced995f49a10af41a",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/driver-requests-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/driver-requests-screen.tsx",
+      "beforeSha256": "529328451e2ba748ac34f1ca234dcd0f62b9874205353f8640024644afa46838",
+      "afterSha256": "529328451e2ba748ac34f1ca234dcd0f62b9874205353f8640024644afa46838",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/guide-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/guide-screen.tsx",
+      "beforeSha256": "b79cae5b7c6b09f2d7bbf8affe0798997bc60072ea20aa97076137ee2c2ef7df",
+      "afterSha256": "b79cae5b7c6b09f2d7bbf8affe0798997bc60072ea20aa97076137ee2c2ef7df",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/history-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/history-screen.tsx",
+      "beforeSha256": "3de1f2cb0f9dc9a0236b49485a8b32a75175d508645c9b2b6537a21ebdd866aa",
+      "afterSha256": "a2eb31e47deb1c486b648b2ce0e11537e4875c0ab4e77c73d160415e823df668",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/not-found-view.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/not-found-view.tsx",
+      "beforeSha256": "d73f4fd6c92cd83661fdbc2a0a7e624dcb9183a06ae9e41e649e8ae7bb472778",
+      "afterSha256": "d73f4fd6c92cd83661fdbc2a0a7e624dcb9183a06ae9e41e649e8ae7bb472778",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/overview-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/overview-screen.tsx",
+      "beforeSha256": "5f64961f3273dc23c148000a29e8b74450710bcac9a23058e05ccb5d6b1ba42d",
+      "afterSha256": "55f1893f759133cd689f2acc2b40a4a3e2cb1eb07f09912070e050a95c20b82e",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/pool-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/pool-screen.tsx",
+      "beforeSha256": "5e700b11807b77803ed61e913a3ace8fa9883865136f24f43c45411ed5c2ab46",
+      "afterSha256": "329a52d6a8c50c20c34cedacfd15f01d91a44c693536d222584f1b040ed01af3",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/preferences.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/preferences.tsx",
+      "beforeSha256": "7fa41f32f7cb74c236ab680ea1f8ba1dbfe5655be245dc5fc2c16072a0a32e6a",
+      "afterSha256": "fc49ef341adac28545ddec2e578ddc570d2925deea1363e78a492e7257cb5ffe",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/product-shell.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/product-shell.tsx",
+      "beforeSha256": "f73a465a1436f6d8027f5e08e5846697cd18c8ad071715c49c3ae70d6ec82120",
+      "afterSha256": "f73a465a1436f6d8027f5e08e5846697cd18c8ad071715c49c3ae70d6ec82120",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/ride-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/ride-screen.tsx",
+      "beforeSha256": "efce968e9aff3dd4d3545e8b6bd2f82d891eb7da7c55217549435df8c0c5e662",
+      "afterSha256": "38055b9592c16419b9566b419df160f00890cab28ef7aafbfa8e60e9037aeb5d",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/ride-ui-provider.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/ride-ui-provider.tsx",
+      "beforeSha256": "d2b59ad1c65e21c9e1ed05aca803dd4ce10b86d368ce84dce8339fe4dc966a77",
+      "afterSha256": "010bcb36fbea8b0e5611ae6249622a8af388cb95465eec1e5b4f87012d3d1e3e",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/session-provider.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/session-provider.tsx",
+      "beforeSha256": "9a8ca91cc47acfa326ae107019d6af099f79285fa434c069072ce82b0d5f0da5",
+      "afterSha256": "9a8ca91cc47acfa326ae107019d6af099f79285fa434c069072ce82b0d5f0da5",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/skip-link.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/skip-link.tsx",
+      "beforeSha256": "3181bfbcc2ae9768fe4b78a608e2e4330336f23d4d9ddff2ed32c54e47554f4a",
+      "afterSha256": "3181bfbcc2ae9768fe4b78a608e2e4330336f23d4d9ddff2ed32c54e47554f4a",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/statistics-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/statistics-screen.tsx",
+      "beforeSha256": "e3aee0edd1232e1bf929ae827f6907a7cda2f304b777aec865db7ca2c3e4f7eb",
+      "afterSha256": "fdfa9bd59f904734fc1291d030b60ddf53af5e3a12896fe82443de8c544674d4",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/components/use-owned-query.ts",
+      "after": "dhaka-tesla-pool-frontend/src/components/use-owned-query.ts",
+      "beforeSha256": "453cf74db24b86527b221ff73814d3a081fec6de08518ba30b5482a7f26c90c7",
+      "afterSha256": "453cf74db24b86527b221ff73814d3a081fec6de08518ba30b5482a7f26c90c7",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/vehicle-screen.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/vehicle-screen.tsx",
+      "beforeSha256": "b67fd1e45218839a7c3883fef95b4275a9cd4e48e1b0017adb9d2f372c9209df",
+      "afterSha256": "b67fd1e45218839a7c3883fef95b4275a9cd4e48e1b0017adb9d2f372c9209df",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/components/view-provider.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/components/view-provider.tsx",
+      "beforeSha256": "fb627d34f97249bd722bb3d11bdb2a5c0b771dffeceb3682986363a442080640",
+      "afterSha256": "be345077dc2544e70cf727c00974ea7079d170d2c7f551947665d5e00abe0b0a",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/i18n/catalog.ts",
+      "after": "dhaka-tesla-pool-frontend/src/i18n/catalog.ts",
+      "beforeSha256": "e76aff3e6f5667ae05e380cba97ab90b87040353c5e31f3b8b1c6d79b2dc1837",
+      "afterSha256": "ec3a0571660d727f0328b32e39c1f4a3d97c5b2e9a5f00d920bc39b66e6e9a7e",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/i18n/format.ts",
+      "after": "dhaka-tesla-pool-frontend/src/i18n/format.ts",
+      "beforeSha256": "0ea0ffc30ed2030e3e3370a4898d6caa36e8920b9a2bed228e438759b22b4640",
+      "afterSha256": "def73af920ef7a2f5fb6b87395a8ad10cbdbe1dbc8f5daad3c7bbe064db45b7f",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/lib/gateway.ts",
+      "after": "dhaka-tesla-pool-frontend/src/lib/gateway.ts",
+      "beforeSha256": "dbc6872c3d01e6b69cb6cba94381684907be439fd168b2447c6a11812f77be18",
+      "afterSha256": "dbc6872c3d01e6b69cb6cba94381684907be439fd168b2447c6a11812f77be18",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/page.tsx",
+      "beforeSha256": "394ea78415a080e0a2fd427a3f01ce90d3e4f7d41570ab43b355ff8431f5eacf",
+      "afterSha256": "40dcaa15e7db7713f0d4b05f0f0c152f1d461c5df2d1666b7d602bd1a2753c65",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/api/v1/[...path]/route.ts",
+      "after": "dhaka-tesla-pool-frontend/src/app/api/v1/[...path]/route.ts",
+      "beforeSha256": "f0de4d0ab93cbced578fb0d0cc1a9fc81e021aad0cfc952bb6e085fe062b8dce",
+      "afterSha256": "f0de4d0ab93cbced578fb0d0cc1a9fc81e021aad0cfc952bb6e085fe062b8dce",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/account/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/account/page.tsx",
+      "beforeSha256": "87ee6e5d1fd45e1392926574f0ecd428e3550b8ff24c71c39776efb82ca627a9",
+      "afterSha256": "a751ad4fa83314e3dc5c20d957e3e7cc3a8a7f1b7785d5bd955417ead5fed5ea",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/page.tsx",
+      "beforeSha256": "079efcc2f44bf814019b75b90b4527038ed5addda93f0554e110b6051c5988d9",
+      "afterSha256": "3188e4b4d1fbd4c47f0bc8f68596bb32e66f1f4c5217817e2e0004a405b718de",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/guide/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/guide/page.tsx",
+      "beforeSha256": "304d014a67f58ecc5c0199398a80647a38535d1239f2c40f33c6cc36a07fe985",
+      "afterSha256": "82dc01b4f2ca7f35dd191ea43df88f9869414e8fa7af8d914c109b9c4b29b475",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/passenger/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/passenger/page.tsx",
+      "beforeSha256": "b574fa968259e9f4679f559e2ec6a8d8b580e19dc25799ce96e25ec75b77329e",
+      "afterSha256": "6d9c42c465d2696badb175fc95d503a9bc2d42ab666c8c9237c62ebe4419a3b6",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/sign-in/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/sign-in/page.tsx",
+      "beforeSha256": "9d953575a347f929beae1209051c548c291e1c5277b4e450731bd70baaabb122",
+      "afterSha256": "247658768a1b73a2751882f616f1fca75dbe78143a403ee345dd87eed767bef4",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/sign-up/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/sign-up/page.tsx",
+      "beforeSha256": "3d900847b1037603b4c2fe52115693171146f9040dcc571c4459d299adca9765",
+      "afterSha256": "6584ea1e0768ab1e25e0ec6743e326bc5ab5c288fdbd388593592aa615fdf214",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/activity/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/activity/page.tsx",
+      "beforeSha256": "9ea953128d3d19a27646d45e1608d3b473613ae49b1f1e6eb80071ddbf8696d5",
+      "afterSha256": "ae1a9e14a0c30a4d8edba40dc721a1f80dce8c41b95b4c6eef08da88453c207e",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/history/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/history/page.tsx",
+      "beforeSha256": "e698e61aab8ced3c5da4c32d30a182be22cff339e1f906e6928c628f83d56607",
+      "afterSha256": "423a12935e969eaa02bf960314f4fce3f408811a1486523bd12abca31f320e99",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/pool/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/pool/page.tsx",
+      "beforeSha256": "bb4d79e4c14fc1fb5b162604544f998121bb77b6b4a9885fbd7baefb550a798c",
+      "afterSha256": "cb209ef506335367f5eb5fe60764c45a3b59fdd6fffca0093742f3d0fae4e952",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/requests/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/requests/page.tsx",
+      "beforeSha256": "02bfd2290032349c61adae1e6e92062fdb541c75bf39d1ec04fa7edef48aaaf8",
+      "afterSha256": "d374151a1abbfb65e9356ad60176b5eaab356d78ba30ec5f7ee36fc2a681a927",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/vehicle/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/vehicle/page.tsx",
+      "beforeSha256": "3aa91f659c6bc56922726e54d312d5aee0e95e963556882181278ac6d782ed3a",
+      "afterSha256": "34e80fdfc71d59324e9f2ef59dbb94260cb3b8b33d3ced124e70d3c92ef77998",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/driver/pools/[id]/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/driver/pools/[id]/page.tsx",
+      "beforeSha256": "49010fc048dade8fea2c4c03784a23725f9616c928e8cd3f243cbb3a69d8549e",
+      "afterSha256": "5b95da7623e8144a523ccc70d97e20fc52008df550ecadff93a364ec9e81d258",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/passenger/activity/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/passenger/activity/page.tsx",
+      "beforeSha256": "0709d40270a19716e96cac542a8af6669df685a35cd9b9854043c9df4a96bb88",
+      "afterSha256": "8a5443f0ff1fa0d8860d2e23dbd0667dc8e59ebdd87f89858fa1b17d14225954",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/passenger/book/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/passenger/book/page.tsx",
+      "beforeSha256": "db50ad19b231cb8367cb37f058b494f7f1cea6a2a9242228aaf91ebefa7d9442",
+      "afterSha256": "a9b59c858d134da9326e55163b86535466d961f614784465f439bdf2e23d7c7a",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/passenger/history/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/passenger/history/page.tsx",
+      "beforeSha256": "91f67e701d88e87ddae2a2eb9388602dbb77b50ea8dadee6fbfff2e60cd502a1",
+      "afterSha256": "3dd0650593e328d30df424991a6536312cb950b5ebbad2d53a71a2e2c6044b3c",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/passenger/ride/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/passenger/ride/page.tsx",
+      "beforeSha256": "9b161b94e128c13472c8d29b9391c2c0da0919535a1fec03e454bede16551d61",
+      "afterSha256": "58959c84b174b469582248e13b174c33962da39b830189a0993ef8b24b0f195b",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/app/[locale]/passenger/rides/[id]/page.tsx",
+      "after": "dhaka-tesla-pool-frontend/src/app/[locale]/passenger/rides/[id]/page.tsx",
+      "beforeSha256": "25be2b588a9227901073e44d73d397921d509a9d07076f76c2e35bb0c7436fe9",
+      "afterSha256": "827a16b113462fd4064354aaa08450e2705085ecf6ef5c2933b202e849d17056",
+      "status": "IMPORT_PATH_ONLY"
+    },
+    {
+      "before": "apps/web/src/i18n/messages/bn.json",
+      "after": "dhaka-tesla-pool-frontend/src/i18n/messages/bn.json",
+      "beforeSha256": "aa40b9bc3fc5ae3734bec5f1738fe50989195bf4ae1b131574ab99dc64a2a6d0",
+      "afterSha256": "aa40b9bc3fc5ae3734bec5f1738fe50989195bf4ae1b131574ab99dc64a2a6d0",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/src/i18n/messages/en.json",
+      "after": "dhaka-tesla-pool-frontend/src/i18n/messages/en.json",
+      "beforeSha256": "35c1e140365ae2cf190d62e32d402a597408b766eab5a4a8d7bdd84e6037c881",
+      "afterSha256": "35c1e140365ae2cf190d62e32d402a597408b766eab5a4a8d7bdd84e6037c881",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/public/images/bullet-hero.webp",
+      "after": "dhaka-tesla-pool-frontend/public/images/bullet-hero.webp",
+      "beforeSha256": "2450f291fb539108d820261701a18a8f088b6614fb9098d1799180a762241312",
+      "afterSha256": "2450f291fb539108d820261701a18a8f088b6614fb9098d1799180a762241312",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/public/images/PROVENANCE.md",
+      "after": "dhaka-tesla-pool-frontend/public/images/PROVENANCE.md",
+      "beforeSha256": "95c1bf63bd4d73e9c91267304a68a8fa57a132d3e61ea0b0e3b14c6316681522",
+      "afterSha256": "95c1bf63bd4d73e9c91267304a68a8fa57a132d3e61ea0b0e3b14c6316681522",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/web/public/licenses/NotoSansBengali-OFL.txt",
+      "after": "dhaka-tesla-pool-frontend/public/licenses/NotoSansBengali-OFL.txt",
+      "beforeSha256": "934a9f4eaeb30df67672d949cb899a0122975a7ab91b0aabdc049e86937eab70",
+      "afterSha256": "934a9f4eaeb30df67672d949cb899a0122975a7ab91b0aabdc049e86937eab70",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/app.module.ts",
+      "after": "dhaka-tesla-pool-backend/src/app.module.ts",
+      "beforeSha256": "974a4367fa1f550ed5e063d7728fea1026301ec7fff9c8c29cfdf6e6b40e0bb4",
+      "afterSha256": "974a4367fa1f550ed5e063d7728fea1026301ec7fff9c8c29cfdf6e6b40e0bb4",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/bootstrap.ts",
+      "after": "dhaka-tesla-pool-backend/src/bootstrap.ts",
+      "beforeSha256": "f44ba1a67c2762b7a1ec4633db49494b4a08f1d36d6445ff71b9abe421064e09",
+      "afterSha256": "f44ba1a67c2762b7a1ec4633db49494b4a08f1d36d6445ff71b9abe421064e09",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/main.ts",
+      "after": "dhaka-tesla-pool-backend/src/main.ts",
+      "beforeSha256": "9f292f0f90c23887648d8614065765864ff4a3d5b76d67b01aea6521f0ed2400",
+      "afterSha256": "f9e9c9f85f857cd1969d4dda7227f134dd55a41596a4029fed464283396330bd",
+      "status": "ENV_OR_MIGRATION_PATH_ADAPTER"
+    },
+    {
+      "before": "apps/api/src/auth/access.guard.ts",
+      "after": "dhaka-tesla-pool-backend/src/auth/access.guard.ts",
+      "beforeSha256": "1820acabce3de1177d1876030d9c69e9c13e0584a2582d3f13d5bb525b44536b",
+      "afterSha256": "1820acabce3de1177d1876030d9c69e9c13e0584a2582d3f13d5bb525b44536b",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/auth/auth.controller.ts",
+      "after": "dhaka-tesla-pool-backend/src/auth/auth.controller.ts",
+      "beforeSha256": "2ece978d6261c377479b0b134430c102f5a39f0897e9baa349563fa1cf4b4865",
+      "afterSha256": "2ece978d6261c377479b0b134430c102f5a39f0897e9baa349563fa1cf4b4865",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/auth/auth.service.ts",
+      "after": "dhaka-tesla-pool-backend/src/auth/auth.service.ts",
+      "beforeSha256": "e7f0e2c9829f2d38947a135f6e6c7c468e4124763c2a5a22cc13e0663483885c",
+      "afterSha256": "e7f0e2c9829f2d38947a135f6e6c7c468e4124763c2a5a22cc13e0663483885c",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/auth/vehicle.controller.ts",
+      "after": "dhaka-tesla-pool-backend/src/auth/vehicle.controller.ts",
+      "beforeSha256": "8e1a76899477a04cb2e3d67be38eb8338281f72c3cb3ba231c2052495a3bd2e8",
+      "afterSha256": "8e1a76899477a04cb2e3d67be38eb8338281f72c3cb3ba231c2052495a3bd2e8",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/common/business-error.ts",
+      "after": "dhaka-tesla-pool-backend/src/common/business-error.ts",
+      "beforeSha256": "3444ee3076f608884972ee337ddb7122b27aa173f2345830ef0164c3e76d90db",
+      "afterSha256": "3444ee3076f608884972ee337ddb7122b27aa173f2345830ef0164c3e76d90db",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/common/command.ts",
+      "after": "dhaka-tesla-pool-backend/src/common/command.ts",
+      "beforeSha256": "a37c6c471c02fa342d44e704cf02a434ba2a083d0645a90ea34118292072a26f",
+      "afterSha256": "a37c6c471c02fa342d44e704cf02a434ba2a083d0645a90ea34118292072a26f",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/common/safe-error.filter.ts",
+      "after": "dhaka-tesla-pool-backend/src/common/safe-error.filter.ts",
+      "beforeSha256": "903eca8cfd8d7405b79dc76f3c3422f14bac3dc684a90d0e50308b4ad36e05d4",
+      "afterSha256": "903eca8cfd8d7405b79dc76f3c3422f14bac3dc684a90d0e50308b4ad36e05d4",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/database/database.service.ts",
+      "after": "dhaka-tesla-pool-backend/src/database/database.service.ts",
+      "beforeSha256": "346583f521c923cc9da12dcb150298581f635da8f7d0dd2a79db63dbd5675063",
+      "afterSha256": "346583f521c923cc9da12dcb150298581f635da8f7d0dd2a79db63dbd5675063",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/database/migrate.ts",
+      "after": "dhaka-tesla-pool-backend/src/database/migrate.ts",
+      "beforeSha256": "dca7b0a9ff23316cadd09da302588e5d7caab4a251f36c8c1396c9ce97a61501",
+      "afterSha256": "c4f32846ae7b952b1e08bd7803dae55587079b54ab266f40ca5e07b13e861fed",
+      "status": "ENV_OR_MIGRATION_PATH_ADAPTER"
+    },
+    {
+      "before": "apps/api/src/database/seed.ts",
+      "after": "dhaka-tesla-pool-backend/src/database/seed.ts",
+      "beforeSha256": "680b9d817f38ff5ceb532bd7d557a0a177451728630ac495ca46764bf93c09d4",
+      "afterSha256": "ed1a856c01276cdf0b00c3bdab4acf6a71539697f46a847b9adb1ea2cf3c3698",
+      "status": "ENV_OR_MIGRATION_PATH_ADAPTER"
+    },
+    {
+      "before": "apps/api/src/health/health.controller.ts",
+      "after": "dhaka-tesla-pool-backend/src/health/health.controller.ts",
+      "beforeSha256": "0ff625e63626ab100eb4e47a3350ea3967060b6b1e57db01a22e9cbe22a44a8e",
+      "afterSha256": "0ff625e63626ab100eb4e47a3350ea3967060b6b1e57db01a22e9cbe22a44a8e",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/history/history.controller.ts",
+      "after": "dhaka-tesla-pool-backend/src/history/history.controller.ts",
+      "beforeSha256": "066b334358158d36722ddb012165b7d0f8ad4daece5ea2bd307231a2fd1e9ea3",
+      "afterSha256": "066b334358158d36722ddb012165b7d0f8ad4daece5ea2bd307231a2fd1e9ea3",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/history/history.service.ts",
+      "after": "dhaka-tesla-pool-backend/src/history/history.service.ts",
+      "beforeSha256": "3f7709c661404222726426798943f4a73563b1562fa70883b232e9a82b5eb2e4",
+      "afterSha256": "3f7709c661404222726426798943f4a73563b1562fa70883b232e9a82b5eb2e4",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/history/statistics.service.ts",
+      "after": "dhaka-tesla-pool-backend/src/history/statistics.service.ts",
+      "beforeSha256": "ceee1cdd8da28a229a26f14e93ad17a5910f5915fc061b4a84698f7deb08626b",
+      "afterSha256": "ceee1cdd8da28a229a26f14e93ad17a5910f5915fc061b4a84698f7deb08626b",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/pools/pool.controller.ts",
+      "after": "dhaka-tesla-pool-backend/src/pools/pool.controller.ts",
+      "beforeSha256": "ffa02157ed9f4de0fe0551ccf49f7a2dbe893680699fe65fec73792cb51b0f21",
+      "afterSha256": "ffa02157ed9f4de0fe0551ccf49f7a2dbe893680699fe65fec73792cb51b0f21",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/pools/pool.repository.ts",
+      "after": "dhaka-tesla-pool-backend/src/pools/pool.repository.ts",
+      "beforeSha256": "4b1cf945ac3c1342c027997ef60e14439d0e3bfb28d9a729d9d9be5cbbed3ab8",
+      "afterSha256": "4b1cf945ac3c1342c027997ef60e14439d0e3bfb28d9a729d9d9be5cbbed3ab8",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/pools/pool.service.ts",
+      "after": "dhaka-tesla-pool-backend/src/pools/pool.service.ts",
+      "beforeSha256": "e912bd87d46e892158c75fb963d34e1af6bbe222fdc29829944db623293c64b3",
+      "afterSha256": "e912bd87d46e892158c75fb963d34e1af6bbe222fdc29829944db623293c64b3",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/rides/ride.controller.ts",
+      "after": "dhaka-tesla-pool-backend/src/rides/ride.controller.ts",
+      "beforeSha256": "b7572d0ad711fb6a4ab1e7405965da24abcbf40515b973519a8beea201c92861",
+      "afterSha256": "b7572d0ad711fb6a4ab1e7405965da24abcbf40515b973519a8beea201c92861",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/rides/ride.repository.ts",
+      "after": "dhaka-tesla-pool-backend/src/rides/ride.repository.ts",
+      "beforeSha256": "b6f15297ac64cfb9817f15317c448e32ab731c75500c53f23cf86ffa1868fa8f",
+      "afterSha256": "b6f15297ac64cfb9817f15317c448e32ab731c75500c53f23cf86ffa1868fa8f",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "apps/api/src/rides/ride.service.ts",
+      "after": "dhaka-tesla-pool-backend/src/rides/ride.service.ts",
+      "beforeSha256": "ecfed6b272a6114841b3f5b33b0c5b6354cc7d883a72cd40c399bba4bf9bee80",
+      "afterSha256": "ecfed6b272a6114841b3f5b33b0c5b6354cc7d883a72cd40c399bba4bf9bee80",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "database/migrations/001_initial.sql",
+      "after": "dhaka-tesla-pool-backend/migrations/001_initial.sql",
+      "beforeSha256": "82fae015419cf4c2629c93c02664682f27d49ab3ef72e22323bdc51469211abe",
+      "afterSha256": "82fae015419cf4c2629c93c02664682f27d49ab3ef72e22323bdc51469211abe",
+      "status": "BYTE_IDENTICAL"
+    },
+    {
+      "before": "packages/contracts/src/index.ts",
+      "after": "dhaka-tesla-pool-frontend/src/lib/contracts.ts",
+      "beforeSha256": "491a9d58e34305a738ed4cf394982b01a60a7b1ffba30ffde0c77fee229ac538",
+      "afterSha256": "491a9d58e34305a738ed4cf394982b01a60a7b1ffba30ffde0c77fee229ac538",
+      "status": "BYTE_IDENTICAL"
+    }
+  ],
+  "dependencyResolutionChanges": [
+    {
+      "name": "browserslist",
+      "before": [
+        "4.29.1"
+      ],
+      "after": [
+        "4.29.3"
+      ]
+    },
+    {
+      "name": "caniuse-lite",
+      "before": [
+        "1.0.30001812"
+      ],
+      "after": [
+        "1.0.30001814"
+      ]
+    },
+    {
+      "name": "electron-to-chromium",
+      "before": [
+        "1.5.439"
+      ],
+      "after": [
+        "1.5.443"
+      ]
+    },
+    {
+      "name": "enhanced-resolve",
+      "before": [
+        "5.25.1"
+      ],
+      "after": [
+        "5.26.0"
+      ]
+    },
+    {
+      "name": "ignore",
+      "before": [
+        "5.3.2",
+        "7.0.10"
+      ],
+      "after": [
+        "5.3.2",
+        "7.0.11"
+      ]
+    },
+    {
+      "name": "pg-cloudflare",
+      "before": [
+        "1.4.0"
+      ],
+      "after": [
+        "1.4.1"
+      ]
+    },
+    {
+      "name": "pg-connection-string",
+      "before": [
+        "2.14.0"
+      ],
+      "after": [
+        "2.14.1"
+      ]
+    },
+    {
+      "name": "pg-protocol",
+      "before": [
+        "1.16.0"
+      ],
+      "after": [
+        "1.16.1"
+      ]
+    },
+    {
+      "name": "source-map-js",
+      "before": [
+        "1.2.1"
+      ],
+      "after": [
+        "1.2.2"
+      ]
+    }
+  ],
+  "dependencyComparisonNote": "Actual prior pnpm lock.yaml versus the union of three independent npm lockfiles, including optional-platform resolutions; prior lock preserved in local backup. Stale pnpm store entries excluded."
+}

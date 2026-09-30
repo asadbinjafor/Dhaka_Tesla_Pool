@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { migrate } from '../../apps/api/dist/database/migrate.js';
-import { seed } from '../../apps/api/dist/database/seed.js';
-import { DatabaseService } from '../../apps/api/dist/database/database.service.js';
+import { migrate } from '../../dhaka-tesla-pool-backend/dist/database/migrate.js';
+import { seed } from '../../dhaka-tesla-pool-backend/dist/database/seed.js';
+import { DatabaseService } from '../../dhaka-tesla-pool-backend/dist/database/database.service.js';
 import { mkdtemp, writeFile, rm } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';

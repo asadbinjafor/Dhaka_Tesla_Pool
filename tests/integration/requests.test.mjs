@@ -2,10 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { createRequire } from 'node:module';
-const pg=createRequire(new URL('../../apps/api/package.json',import.meta.url))('pg');
+const pg=createRequire(new URL('../../dhaka-tesla-pool-backend/package.json',import.meta.url))('pg');
 import { isolatedDatabase } from './isolated-db.mjs';
 import { httpApp } from './http-fixture.mjs';
-import { seed } from '../../apps/api/dist/database/seed.js';
+import { seed } from '../../dhaka-tesla-pool-backend/dist/database/seed.js';
 
 test('owned quotes/requests: exact fare, typed validation, private detail, concurrent active constraint, terminal replay and expiry after lock wait',async()=>{
   const fixture=await isolatedDatabase(); await seed(fixture.url,'Nonsecret-test-fixture-2026');

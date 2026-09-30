@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createApplication } from '../../apps/api/dist/bootstrap.js';
+import { createApplication } from '../../dhaka-tesla-pool-backend/dist/bootstrap.js';
 
 test('real Nest HTTP: liveness is separate from absent database readiness, with safe errors', async () => {
   const app = await createApplication();

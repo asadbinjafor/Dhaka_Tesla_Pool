@@ -1,0 +1,170 @@
+npm notice run dhaka-tesla-pool@1.0.0 build
+npm notice run npm --prefix dhaka-tesla-pool-backend run build && npm --prefix dhaka-tesla-pool-frontend run build
+npm notice run dhaka-tesla-pool-backend@1.0.0 build
+npm notice run tsc -p tsconfig.json
+npm notice run dhaka-tesla-pool-frontend@1.0.0 build
+npm notice run next build
+▲ Next.js 16.3.6 (Turbopack)
+✓ Running next.config.ts took 67ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.2s
+  Running TypeScript ...
+  Finished TypeScript in 2.9s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/2) ...
+✓ Generating static pages using 15 workers (2/2) in 117ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /_not-found
+├ ƒ /[locale]
+├ ƒ /[locale]/account
+├ ƒ /[locale]/driver
+├ ƒ /[locale]/driver/activity
+├ ƒ /[locale]/driver/history
+├ ƒ /[locale]/driver/pool
+├ ƒ /[locale]/driver/pools/[id]
+├ ƒ /[locale]/driver/requests
+├ ƒ /[locale]/driver/vehicle
+├ ƒ /[locale]/guide
+├ ƒ /[locale]/passenger
+├ ƒ /[locale]/passenger/activity
+├ ƒ /[locale]/passenger/book
+├ ƒ /[locale]/passenger/history
+├ ƒ /[locale]/passenger/ride
+├ ƒ /[locale]/passenger/rides/[id]
+├ ƒ /[locale]/sign-in
+├ ƒ /[locale]/sign-up
+└ ƒ /api/v1/[...path]
+
+
+ƒ Proxy (Middleware)
+
+ƒ  (Dynamic)  server-rendered on demand
+
+npm notice run dhaka-tesla-pool@1.0.0 typecheck
+npm notice run npm --prefix dhaka-tesla-pool-backend run typecheck && npm --prefix dhaka-tesla-pool-frontend run typecheck
+npm notice run dhaka-tesla-pool-backend@1.0.0 typecheck
+npm notice run tsc -p tsconfig.json --noEmit
+npm notice run dhaka-tesla-pool-frontend@1.0.0 typecheck
+npm notice run tsc --noEmit
+npm notice run dhaka-tesla-pool@1.0.0 lint
+npm notice run npm --prefix dhaka-tesla-pool-frontend run lint && npm --prefix dhaka-tesla-pool-backend run lint && eslint tests tools
+npm notice run dhaka-tesla-pool-frontend@1.0.0 lint
+npm notice run eslint src next.config.ts
+npm notice run dhaka-tesla-pool-backend@1.0.0 lint
+npm notice run eslint src
+npm notice run dhaka-tesla-pool@1.0.0 test:unit
+npm notice run node --import tsx --test tests/unit/*.test.ts
+✔ all implemented product copy has nonempty en/bn keys and matching placeholders (4.1254ms)
+✔ BDT uses exact poysha, Bangla numerals and the same canonical value; Dhaka date crosses UTC midnight correctly (75.0297ms)
+✔ gateway forwards credential/CSRF/command transport, strips forged trust headers, preserves multiple cookies (90.3713ms)
+✔ oversized bodies without a Content-Length are rejected before contacting upstream (2.0298ms)
+✔ invalid path segments cannot escape the fixed API origin (0.6562ms)
+✔ theme change retains valid form/quote/ride/pending command and session generation (1.4886ms)
+✔ locale display path preserves exact stable ride ID, and cannot rewrite API paths (0.4118ms)
+✔ session boundary clears private drafts/intent while preserving appearance (0.8166ms)
+✔ untrusted locale/theme values are allowlisted (0.2603ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 570.9495
+npm notice run dhaka-tesla-pool@1.0.0 test:integration
+npm notice run npm --prefix dhaka-tesla-pool-backend run build && node --env-file-if-exists=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs tests/integration/packaging.test.mjs tests/integration/dev-watch.test.mjs
+npm notice run dhaka-tesla-pool-backend@1.0.0 build
+npm notice run tsc -p tsconfig.json
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ two real Nest instances, SAME Jashim/Bullet: nusrat wins deterministic last-seat contention (6685.2566ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ two real Nest instances, SAME Jashim/Bullet: shirin wins deterministic last-seat contention (1252.8591ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ two distinct drivers compete for one request with no orphan pool; foreign-driver ownership and dispatch privacy (1013.3786ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+{"event":"request_failed","requestId":"76f5f635-2681-472a-a833-7e47d80f2742","code":"INTERNAL_ERROR"}
+{"event":"request_failed","requestId":"16c4f331-0790-41d7-9b68-6162d2b6ad46","code":"COMMAND_OUTCOME_UNKNOWN"}
+✔ accept rollback injection and ambiguous COMMIT acknowledgement recover one effect; no-pool concurrent acceptance and last-member cancellation (1232.2284ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ real HTTP + PostgreSQL auth: CSRF/origin, validation, roles, rotated/expired sessions, logout and safe identity (1684.3612ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+demo_seed_complete_no_existing_records_overwritten
+✔ real PostgreSQL migrations, repeat non-destructive seeds, constraints and atomic rollback (1223.6302ms)
+migration_applied 001_initial.sql
+✔ backend app-directory dev command compiles source, restarts once changed, serves migrated DB and stops its children (6895.6644ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: offline obtains driver lock first (1219.9986ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: accept obtains driver lock first (863.4762ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ arrival first blocks actually contending passenger cancellation without fare/event damage (908.8346ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ completed remaining pool leaves earlier canceled member and event byte-for-byte intact (1097.5826ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ expired quote and session cannot leak receipt; same verified owner replays completed create once (1924.1862ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ HTTPS-origin configuration issues Secure cookies and rejects untrusted forwarding origin (822.554ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ waiting hints expose only observed eligibility for offline/full/arrived/incompatible vehicles (1131.8961ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation first serializes against acceptance on the real request lock with no orphan membership (898.4467ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+{"event":"request_failed","requestId":"d34fa155-8018-4ecf-a7cd-8918ec35f585","code":"TEMPORARILY_UNAVAILABLE"}
+✔ owned read database failure returns safe unknown outcome without directory/hint/private diagnostic, then recovers (709.0332ms)
+{"event":"request_failed","requestId":"db3b7f27-e41c-4516-90f4-dd551e049c69","code":"TEMPORARILY_UNAVAILABLE"}
+✔ real Nest HTTP: liveness is separate from absent database readiness, with safe errors (252.9425ms)
+{"event":"request_failed","requestId":"855bdcb5-1ad2-47cf-902e-e379377e1937","code":"TEMPORARILY_UNAVAILABLE"}
+✔ unreachable PostgreSQL returns safe not-ready, never false success or DSN (24.4512ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ real lifecycle: allowed transitions, immutable quoted/final fares, terminal receipt replay, ownership and API restart persistence (1533.8128ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ driver cancellation after arrival: zero charge and retained final evidence; previously cancelled member/time/event never rewritten (1058.9685ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: join acquires driver before competing command (959.5288ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: arrive acquires driver before competing command (1021.6277ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: cancel acquires driver before competing command (1083.4436ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation discovers committed acceptance after request-lock wait and retries driver-first without partial effects (954.6005ms)
+✔ backend env is cwd-independent, local-first, and respects explicit process variables (233.5366ms)
+migration_applied 001_initial.sql
+✔ real migration resolves unchanged SQL from an unrelated working directory (422.5074ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ owned quotes/requests: exact fare, typed validation, private detail, concurrent active constraint, terminal replay and expiry after lock wait (2273.942ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ owned SQL graphs: Dhaka midnight, completed-only money/quantity and one capacity per pool; precise filtered keyset history (1663.4504ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 66599.0117

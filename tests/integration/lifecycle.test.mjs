@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {createRequire} from 'node:module';
-const pg=createRequire(new URL('../../apps/api/package.json',import.meta.url))('pg');
-import {isolatedDatabase} from './isolated-db.mjs';import {httpApp,book} from './http-fixture.mjs';import {seed} from '../../apps/api/dist/database/seed.js';import {DatabaseService} from '../../apps/api/dist/database/database.service.js';
+const pg=createRequire(new URL('../../dhaka-tesla-pool-backend/package.json',import.meta.url))('pg');
+import {isolatedDatabase} from './isolated-db.mjs';import {httpApp,book} from './http-fixture.mjs';import {seed} from '../../dhaka-tesla-pool-backend/dist/database/seed.js';import {DatabaseService} from '../../dhaka-tesla-pool-backend/dist/database/database.service.js';
 async function setup(){const fixture=await isolatedDatabase();await seed(fixture.url,'Nonsecret-test-fixture-2026');const db=new pg.Pool({connectionString:fixture.url});const http=await httpApp(fixture.url);const j=await http.login('jashim'),n=await http.login('nusrat'),r=await http.login('rafiq'),s=await http.login('shirin');await j.call('/driver/availability','PATCH',{online:true},randomUUID());const state={fixture,db,http,j,n,r,s,async close(){await state.http.close();await db.end();await fixture.close();}};return state;}
 async function accept(j,id){const response=await j.call(`/driver/requests/${id}/accept`,'POST',{},randomUUID());assert.equal(response.status,201);return response.data.resourceId;}
 async function action(j,id,verb,key=randomUUID(),body={}){return j.call(`/driver/pools/${id}/${verb}`,'POST',body,key);}

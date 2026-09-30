@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createApplication } from '../../apps/api/dist/bootstrap.js';
-import { DatabaseService } from '../../apps/api/dist/database/database.service.js';
-import { seed } from '../../apps/api/dist/database/seed.js';
+import { createApplication } from '../../dhaka-tesla-pool-backend/dist/bootstrap.js';
+import { DatabaseService } from '../../dhaka-tesla-pool-backend/dist/database/database.service.js';
+import { seed } from '../../dhaka-tesla-pool-backend/dist/database/seed.js';
 import { isolatedDatabase } from './isolated-db.mjs';
 
 test('real HTTP + PostgreSQL auth: CSRF/origin, validation, roles, rotated/expired sessions, logout and safe identity',async()=>{

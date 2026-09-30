@@ -58,3 +58,16 @@ These remain user REQUIRED scope, separate from original PDF clauses. CI36534145
 | U13 | VERIFIED | Root state retains actual identity/ride ID/draft/quote/command UUID/body across presentation switches; lost response/reauth same-key recovery, old-account callback and pool-version freshness E2E |
 
 Draft/intent preservation is across language/theme switches and same verified-account reauthentication within the live tab; full reload/tab loss of unfinished in-memory intent is an explicitly documented limitation, not a false durable-browser-storage claim. Automated accessibility reports0configured violations with some incomplete contrast nodes; screenshot/CSS review supplements it, no complete WCAG certification.
+
+## npm structure re-audit — 2026-09-30
+
+U01–U07/U12/U13 retained and actual re-execution PASS in CI36745538316/564118f: all
+selected technologies, owned SQL graphs, both themes/full catalogs, real accounts/
+ownership and stable identity/draft/quote/command recovery.28native+9unit+27browser
++3production smoke =67distinct tests; dev smoke runs3again (70executions).300views,
+14px minimum graph labels, zero overflow/configured axe violations; incomplete
+color-contrast retained without formal certification. U08/U09 before-edit audit and
+separate final review PASS; U10 ordinary final Git integrations/actual published SHA
+checks are part of delivery. U11 remains required DEFERRED_BY_USER. No extra removed
+or reclassified optional. Source/environment/lock preservation and limitations are
+in NPM_STRUCTURE_AUDIT.md; original reference and approval/task history preserved.

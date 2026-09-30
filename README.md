@@ -8,6 +8,9 @@ Implemented: real signup/login/logout and server ownership; owned quotes and sea
 
 ## Run
 
+**VS Code with npm:** use the two native terminal commands below or the
+[step-by-step Bangla guide](RUN_NPM_BN.md). Docker is an alternative.
+
 From the directory containing this README, package.json and compose.yaml:
 
 ```powershell
@@ -22,19 +25,20 @@ Open **http://127.0.0.1:3000/en/sign-in** or **http://127.0.0.1:3000/bn/sign-in*
 
 Docker Engine/Compose v2 are prerequisites for this path. API/database ports remain private; only loopback web 3000 is published. **Tested Docker fallback** fulfills PDF §6 when no free public backend is available. No hosted deployment URL or paid infrastructure is claimed. [Actual CI runs](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions), [operating instructions, native Windows setup, env fields, migration/seed/run/tests and troubleshooting](docs/OPERATIONS.md).
 
-For this already prepared native workspace, retain its .env and isolated PostgreSQL data. Node **24.17.x**, pnpm **12.6.0**, PostgreSQL **18.x**:
+For this already prepared native workspace, retain its private root .env and isolated PostgreSQL data. Node **24.17.x**, npm **12.0.2 or compatible 12.x**, PostgreSQL **18.x**. Each app installs independently, like Tech-Trolley:
 
 ```powershell
-pnpm install --frozen-lockfile
-pnpm build
-node --env-file=.env apps/api/dist/database/migrate.js
-# Terminal 1:
-node --env-file=.env apps/api/dist/main.js
-# Terminal 2:
-node --env-file=.env apps/web/node_modules/next/dist/bin/next start apps/web --hostname 127.0.0.1
+# Terminal 1, from the repository directory:
+cd dhaka-tesla-pool-backend
+npm install
+npm run start:dev
+# Terminal 2, from the repository directory:
+cd dhaka-tesla-pool-frontend
+npm install
+npm run dev
 ```
 
-Native `.env` needs DATABASE_URL, exact APP_ORIGIN, API_HOST/API_PORT and API_INTERNAL_ORIGIN; the prepared workspace uses loopback PostgreSQL port 15432. Details and optional explicit seed are in OPERATIONS. `docker compose down` retains records; do not delete persistent volumes to fix a problem. Existing applied migrations and application data are preserved.
+Backend automatically loads its own `.env` or the retained root `.env`; explicit process variables win. This prepared workspace uses PostgreSQL15432, backend3001 and frontend3000. Source edits compile/restart the backend automatically. Root npm install is only for regression tooling, not an app prerequisite. Fresh checkouts configure backend `.env` from its example; frontend may use `.env.local` for its private gateway origin. Backend `npm run db:migrate` and explicit `npm run db:seed` retain existing records. Production: build each app, then backend `npm run start:prod`, frontend `npm start`. [Bangla guide](RUN_NPM_BN.md), [conversion audit](docs/NPM_STRUCTURE_AUDIT.md). `docker compose down` retains records; never delete persistent volumes to fix a problem.
 
 ## Actual screenshots
 
@@ -66,13 +70,13 @@ erDiagram
   users ||--o{ idempotency_keys : owns_receipts
 ```
 
-[Full implemented architecture and debugging explanation](docs/IMPLEMENTED_ARCHITECTURE.md), [actual ERD/constraints/indexes](docs/ERD.md), [implemented API](docs/IMPLEMENTED_API.md). Source authority: `database/migrations/001_initial.sql`, never rewritten after application. Relations enforce driver/vehicle and quote/passenger pairing; partial unique indexes enforce one active resource. Fare/terminal snapshots are immutable. Capacity is a cross-row invariant enforced by coordinated transaction locks, not a misleading row CHECK.
+[Full implemented architecture and debugging explanation](docs/IMPLEMENTED_ARCHITECTURE.md), [actual ERD/constraints/indexes](docs/ERD.md), [implemented API](docs/IMPLEMENTED_API.md). Source authority: `dhaka-tesla-pool-backend/migrations/001_initial.sql`, moved unchanged from the former database/migrations path. Relations enforce driver/vehicle and quote/passenger pairing; partial unique indexes enforce one active resource. Fare/terminal snapshots are immutable. Capacity is a cross-row invariant enforced by coordinated transaction locks, not a misleading row CHECK.
 
 ```text
-apps/web              Next pages, shared providers, bilingual catalogs, Tailwind, gateway
-apps/api              Nest auth/guards/DTOs/services, transaction repositories, safe errors
-packages/contracts    Canonical types, presentation route/state helpers
-database/migrations   Numbered SQL; checksum/advisory-lock runner
+dhaka-tesla-pool-frontend     Own npm package/lock, Next pages, providers, catalogs, Tailwind, gateway
+  src/lib/contracts.ts      Canonical types and presentation route/state helpers
+dhaka-tesla-pool-backend      Own npm package/lock, Nest guards/DTOs/services, repositories
+  migrations                Unchanged numbered SQL; checksum/advisory-lock runner
  tests/unit           Catalog/format/transport/presentation checks
  tests/integration    Actual PostgreSQL/Nest HTTP, contention, rollback/replay
  tests/e2e            Real production gateway/browser journeys and UI/a11y evidence
@@ -100,7 +104,7 @@ The selected Next/Nest/Tailwind/PostgreSQL stack is required by the user. Additi
 | Typed en/bn JSON catalogs | Two fixed languages, canonical values and root state persistence | next-intl/ICU if plural rules or locale count outgrow catalogs |
 | Tailwind semantic tokens + supplied Bullet art | User-required styling with consistent selected dark/light identity | Extend the current design system when more components warrant it |
 | Node test runner + Playwright + axe | Actual SQL/HTTP lock waits and separate browser actors; layout/data/keyboard assertions | Vitest/Jest for richer unit needs; manual accessibility review remains complementary |
-| pnpm pinned workspace | Reproducible one-lockfile app/contracts workspace and known native build approvals | npm workspaces if workspace/tool needs change; no mixed lockfiles |
+| Independent npm packages/locks | User-selected per-folder install/run, exact direct pins and version-pinned build approvals | Workspace if shared runtime packages later justify it; currently contracts are frontend-only |
 | Self-hosted Noto Sans Bengali | Reliable Bangla glyphs without third-party font requests | Another locally licensed font after verified glyph/layout review |
 | Docker + free GitHub CI | Reproducible DB/migration/API/web and independently executed Linux runtime proof without paid hosting | Free managed host when account/resources are available; actual deployment/TLS must be verified |
 
@@ -109,15 +113,17 @@ The selected Next/Nest/Tailwind/PostgreSQL stack is required by the user. Additi
 ## Tests, evidence and process
 
 ```powershell
-pnpm build
-pnpm typecheck
-pnpm lint
-pnpm test:unit
+# Optional root regression tooling, after app installs:
+npm ci
+npm run build
+npm run typecheck
+npm run lint
+npm run test:unit
 # Against a separate isolated PostgreSQL fixture base, as documented:
-node --env-file=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs
+npm run test:integration
 # Running production app, isolated fixture for E2E:
-pnpm test:smoke
-pnpm test:e2e
+npm run test:smoke
+npm run test:e2e
 ```
 
 CI installs the pinned dependencies, builds, typechecks/lints, executes native real-DB suites, starts production containers and executes browser tests. Tests prove both last-seat winner orderings under actual PostgreSQL contention across two API instances, rollback/unknown-COMMIT recovery, ownership/CSRF/session boundaries, lifecycle cutoffs, immutable fares, cancellation, precise history pagination and completed-only Dhaka-day SQL aggregates. Four theme/language combinations and 300 principal-screen/width views include overflow, keyboard, fonts, screenshots and configured axe checks. This is no WCAG certification or production load benchmark. [Final audit](docs/FINAL_AUDIT.md), [executed scenario evidence](docs/TEST_EVIDENCE.md), [submission checklist](docs/RELEASE_CHECKLIST.md), [PDF matrix](docs/PDF_REQUIREMENT_MATRIX.md), [separate user extras](docs/EXTRA_REQUIREMENT_MATRIX.md), [actual progress/history](docs/TASK_BOARD.md). Review actual PASS/FAIL/BLOCKED/NOT_RUN evidence, not test-file presence.
