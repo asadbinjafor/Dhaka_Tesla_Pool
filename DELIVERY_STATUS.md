@@ -28,3 +28,14 @@ The packaging-only statements above are preserved historical provenance. A real 
 Exact supplied public repository and ordinary tested contemporary feature/master publication are verified. Final pre-releasece17ce5/a470f72 gates PASS36540258465/36540724158; release/v1.0.0 was actually created and pushed from verifieda470f72. Final doc-only closure is distinct from these observed tested candidate checkpoints. Operating README/ERD/API/choices/AI disclosure/screenshots are actual working documents, not starter plans. Private original PDF/reference bytes, existing approvals/progress, applied001 migration and actual Git history remain preserved. No private credential/PDF, paid hosting, force/history rewrite or unrelated deletion.
 
 Deployment is the original-PDF-permitted tested reproducible Docker fallback; no public hosted backend/TLS URL claimed. Local extra frontend start was automatically rejected (blocked by policy); no alternate bypass. Human live explain/debug ability and complete assistive-technology certification are NOT_RUN, with factual preparation/evidence limits stated. Video P38/U11 remains REQUIRED/DEFERRED_BY_USER; no script/record/upload or invented link. Implementation readiness is distinct from complete human assessment submission.
+
+## Current npm conversion — 2026-09-30
+
+Independent frontend/backend npm install/run now implemented and tested; familiar
+user reference inspected read-only, not copied as a different auth/ORM/port policy.
+Current guide RUN_NPM_BN.md. Complete CI36745538316/564118f SUCCESS,67distinct tests/
+70executions/300views, actual Docker/dev/production gates.13existing local tables and
+84references unchanged. New final audit NPM_STRUCTURE_AUDIT.md retains exact limits
+and failure/repair evidence; original handoff/progress/history preserved. Normal
+master/pre-release/release publication is verified against actual refs/checks in
+Actions; not inferred from older runs. Required video remains DEFERRED_BY_USER.

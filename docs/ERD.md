@@ -1,6 +1,6 @@
 # Implemented relational model
 
-Source of truth: database/migrations/001_initial.sql. Integer poysha, timestamptz,
+Source of truth: dhaka-tesla-pool-backend/migrations/001_initial.sql. Integer poysha, timestamptz,
 version-bound JSON fare facts, immutable terminal records. Capacity is three passengers;
 driver is separate. Occupancy requires coordinated transactional parent locks, not
 an invalid cross-row CHECK. No duplicate history or payment ledger.

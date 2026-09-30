@@ -1,5 +1,9 @@
 # Final Handoff v3 — কীভাবে Codex-এ দেবে
 
+> বর্তমান অ্যাপ npm দিয়ে চালানোর নির্দেশনা: [RUN_NPM_BN.md](RUN_NPM_BN.md)।
+> নিচের অংশ original handoff-এর ইতিহাস; frontend/backend-এর নতুন npm structure ও
+> বর্তমান verification ফল README এবং docs/NPM_STRUCTURE_AUDIT.md-এ আছে।
+
 ## এবার যা চূড়ান্তভাবে যুক্ত হয়েছে
 Frontend Next.js, backend NestJS, Tailwind CSS এবং PostgreSQL। Original PDF-এর পাশাপাশি
 আপনার তিনটি extra বাধ্যতামূলক: graph, Dark/Light, Bangla/English। প্রথম কাজ source UI

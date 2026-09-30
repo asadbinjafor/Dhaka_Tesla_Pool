@@ -28,3 +28,15 @@ Changed/rejected suggestions with actual evidence: latest-only ESLint10/TypeScri
 A confirmed product gap was changed: uncertain command identity survived presentation switches but not same-account reauthentication. Epoch changes now clear private state on actual identity change/explicit logout, retaining the original verified user's pending key for safe recovery; real lost-response/expired-cookie E2E passed. Compose originally omitted operator APP_ORIGIN/Secure-cookie configuration; it now forwards both and receives real attribute/origin/outage/persistence checks.
 
 Actual failures, fixes and reruns are in slice/final audits and CI links. A separate final review pass rereads the actual original PDF/pages/tables and traces implemented paths. This is the same agent reviewing its work, not a fabricated independent human/subagent approval. The user still must be able to explain, defend, debug and modify the result live; that assessment is NOT_RUN. IMPLEMENTED_ARCHITECTURE contains specific debugging/change explanations for preparation. Video alone remains DEFERRED_BY_USER; no script/record/upload created.
+
+## npm conversion — 2026-09-30
+
+Codex read the actual Tech-Trolley structure/manifests read-only, re-read all5PDFpages/
+tables/reference interactions and audited before conversion. Accepted: independently
+installable npm apps with local configs and no unnecessary frontend-only workspace
+package. Changed: initial native wildcard mistakenly included smoke before startup;
+watch supervisor IPC kept process alive and test fork inherited a cwd-sensitive env
+flag. Fixed actual setup/lifecycle and retained full assertions/failure evidence.
+Native clean gates and complete CI36745538316 SUCCESS; current screenshots and source/
+DB preservation reviewed separately. Original source, decisions, SQL and records retained.
+No invented human assessment/video, no private PDF/reference/credentials published.

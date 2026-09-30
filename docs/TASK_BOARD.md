@@ -1,5 +1,17 @@
 > Current application evidence is in [FINAL_AUDIT.md](FINAL_AUDIT.md) and the dated complete-product checkpoint below. Earlier starter/foundation tables are preserved history, not current missing-feature claims.
 
+> 2026-09-30 npm conversion: audit recorded before edits; independent npm frontend/
+> backend packages, moved unchanged migration/frontend-only contracts, env/cwd/source
+> watcher and Docker/CI mappings implemented. Clean npm installs and focused gates PASS;
+> full fresh regression/integration and final requirement audit pending. See
+> NPM_STRUCTURE_AUDIT.md for actual failures/repairs/status. No video work.
+
+> Completed npm regression checkpoint: clean native build/type/lint/9unit/28native
+> PASS; CI36745538316/564118f SUCCESS with actual npm dev commands, production Docker,
+> 67distinct cases/70executions/300views.13local tables and84references unchanged;
+> final independent PDF/extras/source/screenshot review recorded. Normal final branch
+> integrations and their actual SHA checks are verified in Actions; video still deferred.
+
 # Task board template — NOT an application completion report
 Do not overwrite an existing project's progress with this starter. Keep HANDOFF evidence
 separate from actual application evidence. Only packaging/template checks have run here.

@@ -1,6 +1,6 @@
 # Implemented architecture and engineering explanation
 
-The initial proposed architecture preceded implementation. This document describes the actual code; [ERD](ERD.md) reflects applied database/migrations/001_initial.sql.
+The initial proposed architecture preceded implementation. This document describes the actual code; [ERD](ERD.md) reflects applied dhaka-tesla-pool-backend/migrations/001_initial.sql.
 
 ```mermaid
 flowchart LR

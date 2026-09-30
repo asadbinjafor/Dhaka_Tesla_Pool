@@ -1,6 +1,12 @@
 # Run and maintain the application
 
-Run commands from the repository root (the directory containing package.json and compose.yaml). Node 24.17.x, pnpm 12.6.0 and PostgreSQL 18.x are required for native execution. Docker Engine with Compose v2 is the tested reproducible alternative. Ports 3000/3001 must be free; preserve and stop your own previous processes intentionally before starting this version.
+> 2026-09-30: use [RUN_NPM_BN](../RUN_NPM_BN.md) and the current [README](../README.md)
+> for independent npm/frontend/backend commands. Older pnpm/apps instructions in
+> prior commits and original handoff files are superseded. Backend loads its .env or the existing
+> root fallback; SQL is unchanged in dhaka-tesla-pool-backend/migrations. Docker
+> commands, secrets handling, exact origins and persistent-volume rules still apply.
+
+Docker/shared test commands run from the repository root; native app commands run inside their respective app folder. Node 24.17.x, npm 12.0.2/compatible12.x and PostgreSQL 18.x are required for native execution. Docker Engine with Compose v2 is the tested reproducible alternative. Ports 3000/3001 must be free; preserve and stop your own previous processes intentionally before starting this version.
 
 ## Docker fallback
 
@@ -23,37 +29,38 @@ HTTPS deployment requires an operator-controlled TLS reverse proxy, exact HTTPS 
 
 ## Native setup and execution
 
-```powershell
-npm install --global pnpm@12.6.0
-pnpm install --frozen-lockfile
-pnpm build
-```
+Use the independent npm commands in [README](../README.md) or [Bangla guide](../RUN_NPM_BN.md).
+Node24.17.x, npm12.0.2/compatible12.x, PostgreSQL18.x. Backend and frontend each
+have their own complete dependencies/lock/config; root npm is optional test tooling.
 
-Use your own PostgreSQL database and private .env DATABASE_URL. For this already prepared workspace, an isolated local PostgreSQL 18.6 cluster and application database exist; **retain the existing .env and data**. Its loopback port is 15432. Native API reads process environment, not Next's directory-local .env automatically:
+From backend: `npm install`, then `npm run start:dev`. From another terminal in
+frontend: `npm install`, then `npm run dev`. Backend source changes compile/restart;
+frontend uses Next's development refresh. Existing ports are web3000/API3001.
+Use127.0.0.1 consistently for the documented APP_ORIGIN and cookies.
 
-If this prepared local cluster is stopped after reboot, inspect its status and start that same data directory (do not initialize another cluster):
+Prepared workspace: preserve private root .env and .local-runtime/data. Backend
+loads its app-local .env if present, otherwise the root fallback; explicit process
+variables take precedence, including Docker/CI. Frontend loads its .env.local and
+only reads the root private API_INTERNAL_ORIGIN fallback when needed. DB credentials
+never become NEXT_PUBLIC values. A fresh checkout must supply its own backend .env
+from the local .env.example and its own existing PostgreSQL database.
+
+If the prepared PostgreSQL cluster is stopped, start the same data (never init/reset):
 
 ```powershell
 & 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' status
-# Only if status reports stopped:
-& 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' -l 'E:\Dhaka_Tesla_Pool\.local-runtime\postgres.log' start
+# Only if stopped; this prepared cluster uses explicit port15432:
+& 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' -l 'E:\Dhaka_Tesla_Pool\.local-runtime\postgres.log' -o '-h 127.0.0.1 -p 15432' start
 ```
 
-These paths belong to this prepared workspace, not prerequisites for a new public checkout.
-
-```powershell
-node --env-file=.env apps/api/dist/database/migrate.js
-# Opt-in named seed, if desired; no existing records are overwritten:
-$env:ENABLE_DEMO_SEED = '1'
-node --env-file=.env apps/api/dist/database/seed.js
-Remove-Item Env:ENABLE_DEMO_SEED
-# Terminal 1:
-node --env-file=.env apps/api/dist/main.js
-# Terminal 2, from repository root:
-node --env-file=.env apps/web/node_modules/next/dist/bin/next start apps/web --hostname 127.0.0.1
-```
-
-For development, compile API after API source edits (`pnpm --filter @dtp/api build`) and use Node --watch on its compiled main; `pnpm dev:web` runs Next development. Production build/start is the verified delivery mode. Native TEST_DATABASE_URL must point to a separate loopback base database whose name begins dtp_test; the test helper creates/drops only its own unique generated databases. Never point tests at application records.
+From backend, `npm run db:migrate` validates/applies numbered SQL in migrations
+independently of working directory. The conversion moves001 unchanged and needs no
+new schema or reseed. Fresh database named seed is explicit: ENABLE_DEMO_SEED=1 and
+private DEMO_PASSWORD, then `npm run db:seed`. Never seed/reset automatically on start.
+Repeated seed preserves records/passwords. For production build both apps, run backend
+`npm run start:prod`, frontend `npm start`. Stop your own terminals with Ctrl+C.
+If a port is occupied, inspect its owning process; do not kill an unknown process.
+Use `npm ci` for exact clean lockfile installs; no pnpm workspace is required.
 
 ## Demo accounts
 
@@ -71,19 +78,21 @@ Use separate browser profiles/private contexts for simultaneous actors. Sign out
 ## Verification and troubleshooting
 
 ```powershell
-pnpm typecheck
-pnpm lint
-pnpm test:unit
-pnpm build
+# Optional root regression tooling; install apps separately first.
+npm ci
+npm run typecheck
+npm run lint
+npm run test:unit
+npm run build
 # Native real PostgreSQL/HTTP suites; root private .env provides TEST_DATABASE_URL:
-node --env-file=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs
+npm run test:integration
 # Against already running production app:
-pnpm test:smoke
+npm run test:smoke
 # Against an isolated freshly migrated/seeded Docker fixture only:
-# set E2E_PASSWORD to that fixture's DEMO_PASSWORD, install Chromium, then pnpm test:e2e
-pnpm audit
+# set E2E_PASSWORD to that fixture's DEMO_PASSWORD, install Chromium, then npm run test:e2e
+npm audit
 ```
 
-Full E2E tests create/complete/cancel records and are for an isolated test deployment, not your live local application database. CI provisions that fixture automatically. Playwright video and traces are disabled; screenshots and reports are retained. Optional `pnpm check:reference` verifies 84 handoff reference files locally; a clean public checkout intentionally omits private/reference files and must not depend on them to run.
+Full E2E tests create/complete/cancel records and are for an isolated test deployment, not your live local application database. CI provisions that fixture automatically. Playwright video and traces are disabled; screenshots and reports are retained. Optional `npm run check:reference` verifies 84 handoff reference files locally; a clean public checkout intentionally omits private/reference files and must not depend on them to run.
 
 `GET /api/v1/health/live` returns 200 independently of DB. `GET /api/v1/health/ready` returns 200 after reachable migrated DB or safe 503 when unavailable. CSRF failures: check exact APP_ORIGIN/cookie host; don't disable CSRF. Database unavailable: verify DB/credentials/migration, don't reset volumes. An uncertain command: use **Retry original command** with the retained key; reauthenticate as the same account if prompted. Confirmed business conflicts are localized and require a fresh valid user decision. History/stable IDs continue to explain terminal outcomes even when /current is null. No raw SQL, credentials or cookie values are emitted by application error responses/logs.

@@ -1,5 +1,12 @@
 # Delivery and submission checklist — 2026-09-29
 
+> 2026-09-30 npm conversion candidate564118f/CI36745538316 SUCCESS: independent apps,
+> actual npm dev, complete67distinct cases/70executions/300views and Docker operational
+> checks; native/source/data/reference preservation PASS. RUN_NPM_BN and
+> NPM_STRUCTURE_AUDIT supersede older run/path instructions. Final normal publication
+> refs are verified against their own latest SHA checks in Actions. Video P38/U11 stays
+> required DEFERRED_BY_USER; no human assessment or public TLS claim.
+
 Implementation readiness is verified against the original five-page PDF plus the separately required extras. This is no invented evaluation score or claim that the author's human assessment has already happened.
 
 | Submission item | Actual status | Artifact / evidence |

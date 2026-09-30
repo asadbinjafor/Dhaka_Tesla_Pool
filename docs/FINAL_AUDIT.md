@@ -68,3 +68,18 @@ CI links use https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/<id>.
 No unresolved confirmed required code/UI/operation defect remains after independent review, repairs and actual full candidate retest. Implementation/extras and source-permitted Docker fallback are verified. Required release branch was created from and pushed at the verified pre-release candidate; final documentation closure is a separate conventional commit with unchanged runtime. Its published heads are verified in Actions, never inferred from an earlier run. See RELEASE_CHECKLIST and verified-candidate.json. Human assessment/video readiness stays separate.
 
 Planned I01–I50/X01–X16 are mapped to actual executed suites and their precise limits in [TEST_EVIDENCE.md](TEST_EVIDENCE.md). Current screenshots/provenance come unchanged from verified8ff59d8 CI, not the old prototype or an untested candidate.
+
+## Superseding npm packaging audit — 2026-09-30
+
+Current standalone npm/frontend/backend conversion is independently reviewed in
+[NPM_STRUCTURE_AUDIT](NPM_STRUCTURE_AUDIT.md). Code564118f/CI36745538316 SUCCESS:
+9unit+28native+3production-smoke+27browser=67 distinct cases;3smoke additionally run
+under actual npm dev commands (70executions).300views, zero outer overflow/configured
+axe violations,14px minimum graph labels. Both clean native/CI app installs/builds,
+Docker persistence/reseed/outage recovery PASS.13existing local tables and84reference
+files unchanged; source preservation/lock review/current16PNG attachments retained.
+Old failed command selection/watch attempts and successful repairs remain evidence.
+No source-policy weakening or visual redesign; original requirements and extras retained.
+Final publication refs are checked in Actions for their actual SHA, not inferred from
+a previous run. Formal WCAG/public TLS/live human assessment limits remain; video
+P38/U11 still DEFERRED_BY_USER. Original dated audit above remains historical evidence.

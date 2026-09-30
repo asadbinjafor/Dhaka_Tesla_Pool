@@ -25,3 +25,12 @@
 ### Verified 1.0.0 candidate publication — 2026-09-29
 
 Pre-releasece17ce5/a470f72 full64-case CI PASS36540258465/36540724158. Actual release/v1.0.0 created/pushed from verifieda470f72 after master ancestry/remote checks. Final audit matrices supersede starter blockers; confirmed required implementation gaps closed. Video alone remains explicitly deferred; human live assessment/TLS/certification limits remain truthful, not a fabricated score or deployment.
+
+## 2026-09-30 — standalone npm application structure
+
+- User-selected Tech-Trolley-style frontend/backend install/run folders with independent
+  npm lockfiles/configs; preserve Next/Nest/Tailwind/PostgreSQL and existing design.
+- Move unchanged SQL/frontend-only contracts; load native env safely; source-watch compile/
+  restart/cleanup; map production Docker/CI/current operating docs to actual paths.
+- Preserve67distinct full cases, run70executions including dev smoke;300views and existing
+  DB/reference/source preservation audit. Failures and repairs retained; video deferred.

@@ -1,4 +1,17 @@
 # Working decision log template
+
+## User-authorized npm structure conversion — 2026-09-30
+
+Latest explicit request selects the actual Tech-Trolley-style per-folder npm setup.
+Use dhaka-tesla-pool-frontend and dhaka-tesla-pool-backend as independent packages,
+each with its own package-lock, dependencies and TS/lint config. Root package is only
+optional shared regression tooling. Former frontend-only contracts move unchanged
+inside frontend/src/lib/contracts.ts; unchanged numbered SQL lives in backend/migrations.
+This supersedes proposed pnpm/apps/packages directory choices, not domain policies.
+Keep the actual Git root/history, original handoff/reference files, .env, PostgreSQL
+records, stack, visuals, current ports and every required extra. No new schema migration
+or material business-rule choice. Details and fresh PASS/FAIL/BLOCKED/NOT_RUN gates are
+in NPM_STRUCTURE_AUDIT.md. Original approval/decision history below remains preserved.
 Reconcile existing approvals; don't replace history. User's current stack/extras/Git
 choices are selected, but detailed unspecified business assumptions are not silently approved.
 

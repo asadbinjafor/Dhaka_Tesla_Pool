@@ -26,3 +26,17 @@ Install initially stopped at pnpm's unapproved native `unrs-resolver` build. Aft
 Earlier foundation-only descriptions above are preserved history. pg now provides actual parameterized one-client business transactions/read snapshots; numbered SQL migration/ledger and opt-in non-destructive story seed are implemented. Argon2 0.45.1 provides Argon2id (19MiB, time2, parallelism1); csrf-sync4.2.1 uses server-session state with exact Origin. Both library licenses/registry engines were checked when adopted. Playwright1.63.0 runs actual production gateway journeys; Node test runner covers real PostgreSQL and HTTP, including deterministic real lock contention. axe-core/playwright4.13.0 adds automated accessibility checks (MPL-2.0, no certification claim). Noto Sans Bengali5.3.0 is locally bundled OFL-1.1, not downloaded at runtime; source fallback fonts remain available. README records alternatives and concrete change triggers.
 
 Actual frozen installs/builds/peer checks pass in native Windows and CI Linux. Docker build currently retains workspace dev dependencies; no false slim-runtime claim. Complete UI is verified with production CSS/font assets. On2026-09-29 `pnpm audit --json` reported0 info/low/moderate/high/critical advisories across593 dependencies (runtime187/dev354/optional129 as registry metadata reported; these counts overlap). All results reviewed; no suppressions or blanket audit exclusions. ESLint9.39.5 remains a documented maintenance/deprecation trade-off because current Next plugins exclude10; no peer-check bypass is used. Review supported upgrade/security advisories before later deployments.
+
+## npm conversion — 2026-09-30
+
+Three independent npm12.0.2 lockfiles: frontend/backend plus optional root test tooling.
+Direct version pins retained; app-local TS/lint deps remove root-hoisting assumptions.
+Frontend-only contracts now src/lib/contracts.ts, without workspace:* or file links.
+.npmrc enforces compatible Node/npm engines and strict lifecycle approval; version-pinned
+allowScripts preserves reviewed Nest/Argon2/oxide/sharp/esbuild/unrs approvals. No
+unreviewed scripts pending, no peer/engine bypass. Independent install/ci/build gates
+PASS Windows and clean Linux/Docker. npm install/ci audits report0advisories; both
+runtime-only audits report0. Prior lock versus new union has9reviewed transitive
+resolution changes, listed in preservation-and-lock-review.json, not falsely claimed
+byte-identical. Full SQL/HTTP/browser proof covers new locks. Existing Next-compatible
+ESLint9 deprecation rationale remains; no unrelated library/framework upgrade.

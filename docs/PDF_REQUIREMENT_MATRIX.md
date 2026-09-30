@@ -133,3 +133,16 @@ Authority: all five actual PDF pages and role/stack/evaluation tables reread ind
 | P44 | PARTIAL | Understand/design/build/commit/test/ship/debug/change artifacts observable; live human assessment NOT_RUN |
 
 VERIFIED refers to actual artifact/tests in the stated environment, never a future production guarantee or evaluation score. P27/P44 human live ability is an assessment responsibility, not silently converted to PASS. Complete submission still includes the user-deferred required video. See FINAL_AUDIT for gate details and actual candidate result.
+
+## npm structure re-audit — 2026-09-30
+
+All five original pages/three tables and44original IDs independently reviewed after
+the user-authorized conversion. Directory names/pnpm were not PDF requirements.
+P24/P26/P28/P33/P34/P36 reverified: current npm docs/paths, independent app installs,
+actual dev commands, production Docker, migrations and complete67distinct-case CI
+36745538316/564118f SUCCESS (70executions including repeated dev smoke). Existing
+product/DB/security tests and300view/four-mode UI checks PASS; SQL/assets/catalogs/
+styles unchanged,13local tables/84references preserved. P30/P31/P39 follow actual
+normal tested integration, with latest published SHA checks in Actions. P27/P44 human
+assessment remains NOT_RUN; P38 required video DEFERRED_BY_USER. Detailed source
+mapping and actual PASS/FAIL/BLOCKED/NOT_RUN limitations: NPM_STRUCTURE_AUDIT.md.
