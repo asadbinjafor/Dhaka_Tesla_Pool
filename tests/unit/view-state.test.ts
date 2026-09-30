@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { clearPrivateView, isLocale, isTheme, localePath, withTheme } from '../../packages/contracts/src/index';
-import type { ViewState } from '../../packages/contracts/src/index';
+import { clearPrivateView, isLocale, isTheme, localePath, withTheme } from '../../dhaka-tesla-pool-frontend/src/lib/contracts';
+import type { ViewState } from '../../dhaka-tesla-pool-frontend/src/lib/contracts';
 
 const state: ViewState = {
   theme: 'dark', authDraft: { name: 'Nusrat', email: 'fixture@example.com', password: 'memory-only-fixture', confirm: '' },

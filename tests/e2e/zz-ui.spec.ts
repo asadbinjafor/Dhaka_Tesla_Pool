@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';import AxeBuilder from '@axe-core/playwright';
-import en from '../../apps/web/src/i18n/messages/en.json';import bn from '../../apps/web/src/i18n/messages/bn.json';
+import en from '../../dhaka-tesla-pool-frontend/src/i18n/messages/en.json';import bn from '../../dhaka-tesla-pool-frontend/src/i18n/messages/bn.json';
 import {fixtureSession} from './fixture-session';
 for(const actor of ['nusrat','jashim'] as const)for(const [locale,theme] of [['en','dark'],['en','light'],['bn','dark'],['bn','light']] as const)test(`principal views, widths, accessibility and screenshots ${actor}/${locale}/${theme}`,async({page},info)=>{
   test.setTimeout(240000);const t=locale==='bn'?bn:en;const role=actor==='jashim'?'driver':'passenger';const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));await page.emulateMedia({reducedMotion:'reduce'});

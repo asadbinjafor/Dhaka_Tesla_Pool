@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import {createRequire} from 'node:module';
-const pg=createRequire(new URL('../../apps/api/package.json',import.meta.url))('pg');
-import { migrate } from '../../apps/api/dist/database/migrate.js';
+const pg=createRequire(new URL('../../dhaka-tesla-pool-backend/package.json',import.meta.url))('pg');
+import { migrate } from '../../dhaka-tesla-pool-backend/dist/database/migrate.js';
 
 export async function isolatedDatabase() {
   const source=process.env.TEST_DATABASE_URL;

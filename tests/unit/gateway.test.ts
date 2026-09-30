@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { once } from 'node:events';
-import { GET, POST } from '../../apps/web/src/app/api/v1/[...path]/route';
+import { GET, POST } from '../../dhaka-tesla-pool-frontend/src/app/api/v1/[...path]/route';
 
 test('gateway forwards credential/CSRF/command transport, strips forged trust headers, preserves multiple cookies', async () => {
   let observed: Record<string, string | string[] | undefined> = {};

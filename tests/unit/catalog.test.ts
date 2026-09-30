@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import en from '../../apps/web/src/i18n/messages/en.json';
-import bn from '../../apps/web/src/i18n/messages/bn.json';
+import en from '../../dhaka-tesla-pool-frontend/src/i18n/messages/en.json';
+import bn from '../../dhaka-tesla-pool-frontend/src/i18n/messages/bn.json';
 
 test('all implemented product copy has nonempty en/bn keys and matching placeholders', () => {
   assert.deepEqual(Object.keys(en).sort(), Object.keys(bn).sort());

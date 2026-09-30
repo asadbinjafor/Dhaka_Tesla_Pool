@@ -1,4 +1,4 @@
-import { createApplication } from '../../apps/api/dist/bootstrap.js';
+import { createApplication } from '../../dhaka-tesla-pool-backend/dist/bootstrap.js';
 import {randomUUID} from 'node:crypto';
 import assert from 'node:assert/strict';
 export async function book(passenger,seats=1,destinationId='mohakhali'){

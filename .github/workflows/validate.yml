@@ -26,10 +26,26 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24.17.0
-      - run: npm install --global pnpm@12.6.0
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build && pnpm typecheck && pnpm lint && pnpm test:unit && pnpm test:api && pnpm test:db && pnpm test:auth && pnpm test:requests && pnpm test:allocation && pnpm test:lifecycle && pnpm test:statistics && pnpm test:hardening
-      - run: pnpm exec playwright install --with-deps chromium
+      - run: npm install --global npm@12.0.2
+      - run: npm ci && npm run install:apps
+      - run: npm run build && npm run typecheck && npm run lint && npm run test:unit && npm run test:integration
+      - name: Actual independent npm development commands
+        run: |
+          npm --prefix dhaka-tesla-pool-backend run db:migrate
+          setsid npm --prefix dhaka-tesla-pool-backend run start:dev > /tmp/dtp-api-dev.log 2>&1 &
+          api_task_pid=$!
+          setsid npm --prefix dhaka-tesla-pool-frontend run dev > /tmp/dtp-web-dev.log 2>&1 &
+          web_task_pid=$!
+          trap 'kill -- -"$api_task_pid" -"$web_task_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl --silent --fail http://127.0.0.1:3001/api/v1/health/ready > /dev/null && curl --silent --fail http://127.0.0.1:3000/en/sign-in > /dev/null; then break; fi
+            sleep 1
+          done
+          curl --fail http://127.0.0.1:3001/api/v1/health/ready
+          npm run test:smoke
+        # Dedicated disposable CI PostgreSQL only; the two created process groups are
+        # stopped before production Compose. No user process/database is touched.
+      - run: npm exec -- playwright install --with-deps chromium
       - name: Clean Compose initialization and repeat startup
         run: |
           export POSTGRES_USER=dtp_container POSTGRES_DB=dtp_compose_test
@@ -38,10 +54,10 @@ jobs:
           curl --fail http://127.0.0.1:3000/api/v1/health/ready
           docker compose up --wait
           curl --fail http://127.0.0.1:3000/api/v1/health/ready
-          pnpm test:smoke
+          npm run test:smoke
           export DEMO_PASSWORD=Browser-test-nonsecret-2026
           docker compose --profile demo run --rm seed
-          E2E_PASSWORD="$DEMO_PASSWORD" pnpm test:e2e
+          E2E_PASSWORD="$DEMO_PASSWORD" npm run test:e2e
           before=$(docker compose exec -T db psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Atc 'SELECT count(*) FROM ride_requests')
           test "$before" -gt 0
           docker compose down

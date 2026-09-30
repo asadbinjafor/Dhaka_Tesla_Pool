@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';
-import {createRequire} from 'node:module';const pg=createRequire(new URL('../../apps/api/package.json',import.meta.url))('pg');
+import {createRequire} from 'node:module';const pg=createRequire(new URL('../../dhaka-tesla-pool-backend/package.json',import.meta.url))('pg');
 import {isolatedDatabase} from './isolated-db.mjs';import {httpApp,book} from './http-fixture.mjs';
-import {seed} from '../../apps/api/dist/database/seed.js';import {DatabaseService} from '../../apps/api/dist/database/database.service.js';
+import {seed} from '../../dhaka-tesla-pool-backend/dist/database/seed.js';import {DatabaseService} from '../../dhaka-tesla-pool-backend/dist/database/database.service.js';
 async function observedWait(db,fragment){const deadline=Date.now()+1500;while(Date.now()<deadline){if((await db.query("SELECT 1 FROM pg_stat_activity WHERE datname=current_database() AND wait_event_type='Lock' AND query LIKE $1",['%'+fragment+'%'])).rowCount)return;await new Promise(resolve=>setTimeout(resolve,10));}assert.fail('No actual PostgreSQL lock wait observed');}
 for(const firstName of ['nusrat','shirin'])test(`two real Nest instances, SAME Jashim/Bullet: ${firstName} wins deterministic last-seat contention`,async()=>{
   const fixture=await isolatedDatabase();await seed(fixture.url,'Nonsecret-test-fixture-2026');

@@ -2,31 +2,34 @@
   "name": "dhaka-tesla-pool",
   "private": true,
   "version": "1.0.0",
-  "packageManager": "pnpm@12.6.0",
+  "packageManager": "npm@12.0.2",
   "engines": {
-    "node": ">=24.17.0 <25"
+    "node": ">=24.17.0 <25",
+    "npm": ">=12.0.2 <13"
   },
   "scripts": {
-    "dev:web": "pnpm --filter @dtp/web dev",
-    "dev:api": "pnpm --filter @dtp/api dev",
-    "build": "pnpm --filter @dtp/api build && pnpm --filter @dtp/web build",
-    "typecheck": "pnpm --filter @dtp/api typecheck && pnpm --filter @dtp/web typecheck",
-    "lint": "eslint apps packages tests tools/verify-reference.mjs",
+    "dev:web": "npm --prefix dhaka-tesla-pool-frontend run dev",
+    "dev:api": "npm --prefix dhaka-tesla-pool-backend run dev",
+    "build": "npm --prefix dhaka-tesla-pool-backend run build && npm --prefix dhaka-tesla-pool-frontend run build",
+    "typecheck": "npm --prefix dhaka-tesla-pool-backend run typecheck && npm --prefix dhaka-tesla-pool-frontend run typecheck",
+    "lint": "npm --prefix dhaka-tesla-pool-frontend run lint && npm --prefix dhaka-tesla-pool-backend run lint && eslint tests tools",
     "test:unit": "node --import tsx --test tests/unit/*.test.ts",
-    "test:api": "pnpm --filter @dtp/api build && node --test tests/integration/health.test.mjs",
+    "test:api": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/health.test.mjs",
     "test:smoke": "node --test tests/integration/web-smoke.test.mjs",
-    "db:migrate": "pnpm --filter @dtp/api build && node apps/api/dist/database/migrate.js",
-    "db:seed": "pnpm --filter @dtp/api build && node apps/api/dist/database/seed.js",
-    "test:db": "pnpm --filter @dtp/api build && node --test tests/integration/database.test.mjs",
-    "test:auth": "pnpm --filter @dtp/api build && node --test tests/integration/auth.test.mjs",
-    "test:requests": "pnpm --filter @dtp/api build && node --test tests/integration/requests.test.mjs",
-    "test:allocation": "pnpm --filter @dtp/api build && node --test tests/integration/allocation.test.mjs",
-    "test:lifecycle": "pnpm --filter @dtp/api build && node --test tests/integration/lifecycle.test.mjs",
-    "test:statistics": "pnpm --filter @dtp/api build && node --test tests/integration/statistics.test.mjs",
-    "test:hardening": "pnpm --filter @dtp/api build && node --test tests/integration/hardening.test.mjs",
+    "db:migrate": "npm --prefix dhaka-tesla-pool-backend run db:migrate",
+    "db:seed": "npm --prefix dhaka-tesla-pool-backend run db:seed",
+    "test:db": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/database.test.mjs",
+    "test:auth": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/auth.test.mjs",
+    "test:requests": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/requests.test.mjs",
+    "test:allocation": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/allocation.test.mjs",
+    "test:lifecycle": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/lifecycle.test.mjs",
+    "test:statistics": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/statistics.test.mjs",
+    "test:hardening": "npm --prefix dhaka-tesla-pool-backend run build && node --test tests/integration/hardening.test.mjs",
     "test:e2e": "playwright test",
     "test:i18n": "node --import tsx --test tests/unit/catalog.test.ts",
-    "check:reference": "node tools/verify-reference.mjs"
+    "check:reference": "node tools/verify-reference.mjs",
+    "test:integration": "npm --prefix dhaka-tesla-pool-backend run build && node --env-file-if-exists=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs tests/integration/packaging.test.mjs tests/integration/dev-watch.test.mjs",
+    "install:apps": "npm --prefix dhaka-tesla-pool-backend ci && npm --prefix dhaka-tesla-pool-frontend ci"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
@@ -37,5 +40,9 @@
     "tsx": "4.23.15",
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true
   }
 }
