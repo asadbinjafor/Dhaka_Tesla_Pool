@@ -28,7 +28,8 @@
     "test:e2e": "playwright test",
     "test:i18n": "node --import tsx --test tests/unit/catalog.test.ts",
     "check:reference": "node tools/verify-reference.mjs",
-    "test:integration": "npm --prefix dhaka-tesla-pool-backend run build && node --env-file-if-exists=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs tests/integration/packaging.test.mjs tests/integration/dev-watch.test.mjs",
+    "test:integration": "npm --prefix dhaka-tesla-pool-backend run build && node --env-file-if-exists=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs tests/integration/packaging.test.mjs tests/integration/dev-watch.test.mjs tests/integration/typeorm.test.mjs",
+    "test:typeorm": "npm --prefix dhaka-tesla-pool-backend run build && node --env-file-if-exists=.env --test tests/integration/typeorm.test.mjs",
     "install:apps": "npm --prefix dhaka-tesla-pool-backend ci && npm --prefix dhaka-tesla-pool-frontend ci"
   },
   "devDependencies": {

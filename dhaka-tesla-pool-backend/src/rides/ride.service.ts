@@ -4,13 +4,19 @@ import { fail } from '../common/business-error.js';
 import { command } from '../common/command.js';
 import { RideRepository, fare } from './ride.repository.js';
 import type { Booking, Ride } from './ride.repository.js';
+import { InjectRepository } from '@nestjs/typeorm';
+import type { Repository } from 'typeorm';
+import { Zone } from './entities/zone.entity.js';
+import { RouteRule } from './entities/route-rule.entity.js';
 
 @Injectable()
 export class RideService {
-  constructor(@Inject(DatabaseService) readonly db:DatabaseService) {}
+  constructor(@Inject(DatabaseService) readonly db:DatabaseService,
+    @InjectRepository(Zone) private readonly zoneRepository:Repository<Zone>,
+    @InjectRepository(RouteRule) private readonly routeRepository:Repository<RouteRule>) {}
   async zones() {
-    const zones=(await this.db.query('SELECT id,label_en AS "labelEn",label_bn AS "labelBn" FROM zones ORDER BY id')).rows;
-    const routes=(await this.db.query('SELECT pickup_id AS "pickupId",destination_id AS "destinationId" FROM route_rules WHERE active ORDER BY pickup_id,destination_id')).rows;
+    const zones=await this.db.orm(()=>this.zoneRepository.find({order:{id:'ASC'}}));
+    const routes=await this.db.orm(()=>this.routeRepository.find({select:{pickupId:true,destinationId:true},where:{active:true},order:{pickupId:'ASC',destinationId:'ASC'}}));
     return {data:{zones,routes}};
   }
   async quote(owner:string,body:{pickupId:string;destinationId:string;seats:number}) {
@@ -28,7 +34,7 @@ export class RideService {
         await repo.ownQuote(body.quoteId,owner); // durable ownership before any stored receipt
         return command(client,owner,'CREATE_REQUEST',key,'collection:ride_requests',body,async()=>{
           const b=await repo.ownQuote(body.quoteId,owner,true);
-          const valid=(await client.query('SELECT $1::timestamptz>clock_timestamp() AS valid',[b.expires_at])).rows[0].valid;
+          const valid=(await client.query('SELECT $1::timestamptz>clock_timestamp() AS valid',[b.expires_at])).rows[0]!.valid;
           if(!valid) fail('QUOTE_EXPIRED');
           if((await client.query('SELECT id FROM ride_requests WHERE quote_id=$1',[b.id])).rowCount) fail('QUOTE_ALREADY_USED');
           if((await client.query("SELECT id FROM ride_requests WHERE passenger_id=$1 AND ended_at IS NULL",[owner])).rowCount) fail('ACTIVE_RIDE_EXISTS');

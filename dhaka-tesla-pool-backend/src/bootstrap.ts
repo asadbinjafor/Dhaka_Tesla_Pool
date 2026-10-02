@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import { AppModule } from './app.module.js';
 import { SafeErrorFilter } from './common/safe-error.filter.js';
 
-export async function createApplication(databaseUrl?: string) {
+export async function createApplication(databaseUrl?: string | null) {
   const app = await NestFactory.create(AppModule.configure(databaseUrl), { logger: ['error', 'warn'] });
   app.setGlobalPrefix('api/v1');
   app.use(helmet());
