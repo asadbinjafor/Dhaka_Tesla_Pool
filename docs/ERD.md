@@ -30,3 +30,13 @@ constraints reject invalid owner pairs, driver roles, quantities, lifecycle term
 timestamps and unlinked events. Immutable triggers protect quotes, booking facts,
 vehicle capacity/owner and finalized/terminal evidence. Application services enforce
 cross-row state/capacity, copy consistency and event associations under one client.
+
+## ORM mapping — 2026-10-02
+
+This unchanged relational schema is mapped by feature-local TypeORM entity classes
+under backend src/{auth,rides,pools,history}/entities and src/database/entities.
+Camel-case entity properties explicitly map to existing snake-case columns.
+Generated ended_at is read-only; user passwordHash/session csrfToken are excluded
+from default repository selection. Quote/passenger and vehicle/driver relations
+retain composite join columns. SQL migrations/triggers/indexes remain authoritative;
+no TypeORM synchronize or schema recreation is permitted.

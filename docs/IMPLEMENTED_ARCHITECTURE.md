@@ -8,11 +8,11 @@ flowchart LR
   W --> G[Same-origin /api/v1 gateway]
   G --> A[Nest guards, validation, safe errors]
   A --> S[Auth / rides / pools / history services]
-  S --> R[pg parameterized repositories / one transaction client]
+  S --> R[TypeORM entities, injected repositories, one QueryRunner per transaction]
   R --> D[(PostgreSQL 18: relationships, constraints, snapshots, events, receipts)]
 ```
 
-Next is the UI/transport, never fare/role/capacity authority. The gateway uses a fixed API origin, bounded bodies/timeouts, credential/CSRF/idempotency forwarding and multiple Set-Cookie preservation; forged user/role/forwarding headers cannot establish identity. Nest's Express adapter serves one business API; no independent Express application exists. Server session user/role and durable resource ownership precede response/replay. Controllers/DTOs stay thin; services own policy, repositories own parameterized SQL, one pg client owns each business transaction.
+Next is the UI/transport, never fare/role/capacity authority. The gateway uses a fixed API origin, bounded bodies/timeouts, credential/CSRF/idempotency forwarding and multiple Set-Cookie preservation; forged user/role/forwarding headers cannot establish identity. Nest's Express adapter serves one business API; no independent Express application exists. Server session user/role and durable resource ownership precede response/replay. Controllers/DTOs stay thin; services own policy, injected TypeORM repositories own ordinary entity access; transaction repositories execute parameterized SQL through one TypeORM QueryRunner. Its transaction manager and SQL share the same checked-out PostgreSQL connection.
 
 ## Explain the critical transaction
 
@@ -35,3 +35,22 @@ The root View/Session/PrivateUI providers sit above locale routes. Locale/theme 
 For a capacity conflict, correlate safe requestId/code with the relevant owned stable ID, inspect parent lock order and active member seat sum, then reproduce with allocation.test.mjs against an isolated DB. For wrong fare, compare immutable booking_snapshot, distinct active booking count at arrival and final_fare_snapshot; don't change historical catalog snapshots. For duplicate actions, inspect actor/action/key receipt and target/body binding; preserve the original intent on unknown outcomes. For an old UI fare, compare both request and pool versions, account generation and current route scope. For statistics, verify completed-only population, Dhaka half-open UTC bounds and per-pool denominator before changing charts.
 
 New schema changes get a **new numbered migration**, never edits to applied files. New lifecycle transitions require same parent locks, guards, ownership, event/receipt atomicity, both catalog keys and real transition/race tests. New route/rate policy needs versioned immutable quote basis and a documented product decision. No direct database reset or public debugging hook is part of these flows. This explanation is preparation material; it cannot certify the author's live interview understanding.
+
+## Current TypeORM data access — 2026-10-02
+
+The user selected the actual Tech-Trolley ORM/configuration style. DatabaseModule
+uses ConfigModule and TypeOrmModule.forRootAsync/forFeature; entity classes map all
+13 existing tables without renaming fields or changing schema. Auth user access,
+zone/route catalog reads and vehicle relations use injected repositories. Ordered
+allocation/lifecycle/history SQL runs through DatabaseClient backed by QueryRunner;
+its manager is available for transactional ORM work on that same connection.
+
+TypeORM initializes on the first database operation so liveness remains independent
+of absent/unreachable PostgreSQL. Readiness requires connectivity and the migration
+ledger. Initialization attempts coalesce and can retry after a connection failure.
+Native driver errors are normalized for existing safe classification. Unknown COMMIT
+acknowledgements close the ambiguous checked-out socket, retain the original command
+key and reconcile through its durable receipt. Explicit numbered SQL continues to
+own generated columns, partial/composite constraints and immutable triggers;
+synchronize/dropSchema/migrationsRun are disabled. Configuration accepts split
+connection fields and retained DATABASE_URL. Local .env/root fallback behavior stays.

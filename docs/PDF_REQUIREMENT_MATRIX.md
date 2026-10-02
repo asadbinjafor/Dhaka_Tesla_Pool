@@ -146,3 +146,20 @@ styles unchanged,13local tables/84references preserved. P30/P31/P39 follow actua
 normal tested integration, with latest published SHA checks in Actions. P27/P44 human
 assessment remains NOT_RUN; P38 required video DEFERRED_BY_USER. Detailed source
 mapping and actual PASS/FAIL/BLOCKED/NOT_RUN limitations: NPM_STRUCTURE_AUDIT.md.
+
+## TypeORM conversion review — 2026-10-02
+
+User-requested database setup replaces pg-only access with TypeORM entities,
+repositories, QueryRunner and split connection settings. Original product/privacy/
+capacity/fare/lifecycle and all required UI extras remain in scope. P19–P26/P28/
+P33–P36 and U01/U08–U10/U12–U13 require new access-layer regression evidence;
+historical PASS does not certify this conversion. Current results and remaining
+checks are tracked in TYPEORM_DATABASE_AUDIT.md. P38/U11 video remains deferred.
+
+### TypeORM gate closure
+
+Fresh complete CI37025204031/813008e SUCCESS verifies all previously pending Docker/
+browser/access-layer checks above, including all four modes/300views and owned graphs/
+recovery.72distinct tests/75executions. Native13table and84reference hash preservation
+PASS; original SQL unchanged. Exact evidence/limitations: TYPEORM_DATABASE_AUDIT.md.
+Human/video/TLS/formal certification statuses remain as previously classified.

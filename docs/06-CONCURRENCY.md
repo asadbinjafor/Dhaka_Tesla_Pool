@@ -108,3 +108,12 @@ Accept-Language, theme, translated status/zone labels or UI page language. Test 
 language switch during an unresolved successful command: one stored effect/receipt.
 Reference markers T3/T13/T14/T16 above refer to primary PostgreSQL/pg explanations
 retained in SOURCE_REFERENCES.md; they are not claims of a newly run database test.
+
+## Implemented access-layer update — 2026-10-02
+
+The user requested Tech-Trolley-style TypeORM database integration. The existing
+schema and invariants above remain; the same-connection contract is now implemented
+by a TypeORM QueryRunner and transaction EntityManager instead of a standalone
+pg.PoolClient. Ordered lock statements, later occupancy reads, receipts and fare/
+history snapshots are retained. Numbered SQL/checksums remain authoritative; schema
+synchronization is disabled. See IMPLEMENTED_ARCHITECTURE/TYPEORM_DATABASE_AUDIT.

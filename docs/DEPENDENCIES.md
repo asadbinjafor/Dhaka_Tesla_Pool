@@ -40,3 +40,15 @@ runtime-only audits report0. Prior lock versus new union has9reviewed transitive
 resolution changes, listed in preservation-and-lock-review.json, not falsely claimed
 byte-identical. Full SQL/HTTP/browser proof covers new locks. Existing Next-compatible
 ESLint9 deprecation rationale remains; no unrelated library/framework upgrade.
+
+## User-selected TypeORM database — 2026-10-02
+
+Pinned TypeORM1.1.1, @nestjs/typeorm12.0.2 and @nestjs/config12.0.1 after inspecting
+actual reference code, npm engines/peer metadata and official Nest/TypeORM APIs.
+The integration supports current Nest12.1.1 and Node24.17.0 without peer bypass.
+pg8.23.0 remains TypeORM's PostgreSQL driver and isolated-test administrative tooling.
+Repositories handle ordinary entity access; QueryRunner preserves ordered SQL locks
+and one-connection atomicity. This supersedes the old pg-only choice. Schema sync
+is disabled; applied SQL migrations/checksums/constraints remain unchanged.
+Sources: https://docs.nestjs.com/techniques/database and
+https://typeorm.io/docs/data-source/data-source-options/ .

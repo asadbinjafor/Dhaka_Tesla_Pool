@@ -1,10 +1,11 @@
-import type {PoolClient,QueryResultRow} from 'pg';
+import type {QueryResultRow} from 'pg';
+import type {DatabaseClient} from '../database/database.service.js';
 import {fail} from '../common/business-error.js';
 import {fare} from '../rides/ride.repository.js';
 import type {Ride} from '../rides/ride.repository.js';
 export interface TripPool extends QueryResultRow {id:string;driver_id:string;vehicle_id:string;pickup_id:string;group_id:string;group_version:number;capacity_snapshot:number;status:string;version:number;created_at:Date;ended_at:Date|null;cancellation_reason:string|null}
 export class PoolRepository {
-  constructor(readonly client:PoolClient){}
+  constructor(readonly client:DatabaseClient){}
   async parent(driver:string) {
     const profile=(await this.client.query('SELECT * FROM driver_profiles WHERE user_id=$1 FOR UPDATE',[driver])).rows[0]??fail('NOT_FOUND',404);
     const vehicle=(await this.client.query('SELECT * FROM vehicles WHERE driver_id=$1 FOR UPDATE',[driver])).rows[0]??fail('NOT_FOUND',404);

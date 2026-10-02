@@ -1,0 +1,41 @@
+{
+  "id": 37025204031,
+  "sha": "813008e7c6cfb864cc5ff823e79369d61031212b",
+  "branch": "feature/typeorm-database",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/37025204031",
+  "counts": {
+    "unit": 9,
+    "native": 33,
+    "developmentSmoke": 3,
+    "productionSmoke": 3,
+    "browser": 27,
+    "distinctTests": 72,
+    "executions": 75,
+    "views": 300
+  },
+  "testTotals": [
+    "2026-10-02T15:12:42.3270457Z ℹ tests 9",
+    "2026-10-02T15:12:42.3272296Z ℹ pass 9",
+    "2026-10-02T15:12:42.3273074Z ℹ fail 0",
+    "2026-10-02T15:12:42.3275031Z ℹ cancelled 0",
+    "2026-10-02T15:12:42.3275837Z ℹ skipped 0",
+    "2026-10-02T15:13:15.5050557Z ℹ tests 33",
+    "2026-10-02T15:13:15.5051258Z ℹ pass 33",
+    "2026-10-02T15:13:15.5052023Z ℹ fail 0",
+    "2026-10-02T15:13:15.5052326Z ℹ cancelled 0",
+    "2026-10-02T15:13:15.5052648Z ℹ skipped 0",
+    "2026-10-02T15:13:26.9170038Z ℹ tests 3",
+    "2026-10-02T15:13:26.9204862Z ℹ pass 3",
+    "2026-10-02T15:13:26.9206111Z ℹ fail 0",
+    "2026-10-02T15:13:26.9207434Z ℹ cancelled 0",
+    "2026-10-02T15:13:26.9208280Z ℹ skipped 0",
+    "2026-10-02T15:15:21.9760837Z ℹ tests 3",
+    "2026-10-02T15:15:21.9761484Z ℹ pass 3",
+    "2026-10-02T15:15:21.9761766Z ℹ fail 0",
+    "2026-10-02T15:15:21.9762080Z ℹ cancelled 0",
+    "2026-10-02T15:15:21.9762343Z ℹ skipped 0",
+    "2026-10-02T15:19:07.6718461Z   27 passed (3.7m)"
+  ]
+}

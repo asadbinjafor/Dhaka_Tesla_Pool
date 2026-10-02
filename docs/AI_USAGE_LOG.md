@@ -40,3 +40,16 @@ flag. Fixed actual setup/lifecycle and retained full assertions/failure evidence
 Native clean gates and complete CI36745538316 SUCCESS; current screenshots and source/
 DB preservation reviewed separately. Original source, decisions, SQL and records retained.
 No invented human assessment/video, no private PDF/reference/credentials published.
+
+## TypeORM conversion — 2026-10-02
+
+Codex inspected actual Tech-Trolley ORM/configuration code read-only, audited the
+original PDF/current code, implemented feature entities/Nest repository integration,
+split configuration and QueryRunner-backed transactions, and ran native/CI checks.
+Accepted: one QueryRunner manager/SQL connection retains parent locks and atomicity.
+Changed: public TypeORM1 API differences needed Extract<DataSourceOptions>, orIgnore
+and assignment-safe readonly options. Rejected automatic schema synchronization;
+existing composite constraints/partial indexes/triggers/records remain intact through
+unchanged migrations. Existing JWT/inventory policies were not imported into rides.
+Actual33native+9unit and complete72distinct-case CI37025204031 SUCCESS; no fabricated
+human assessment/video/public deployment. Private data/reference preservation verified.

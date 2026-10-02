@@ -97,3 +97,20 @@ This dated table supersedes historical starter/foundation blockers above; those 
 | Human live explanation/debug assessment | NOT_RUN | Factual AI disclosure and engineering/debug notes provided; no automatic human-ability certification |
 
 A parallel-file native run had21PASS/1FAIL from owned test DB cleanup's3s timeout. The failed log is retained; separate administrative15s budget/always-close guard plus sequential full retest PASS24/24. Business3s statement/2s lock deadlines and real overlapping race tests stay unchanged. UI assertion failures were repaired or exposed/fixed actual defects, never weakened. Local additional preview remains BLOCKED by automatic approval review (blocked by policy); real browser/Docker proof uses CI. Original user processes/private app DB data remain preserved.
+
+## TypeORM conversion — 2026-10-02
+
+Audit-first commit7a9fdbf on feature/typeorm-database. Existing tracked work was clean;
+original untracked handoff files remain untouched. Entity/Nest/config/QueryRunner
+conversion is implemented. Focused native real PostgreSQL gate10/10 PASS (original
+allocation, rollback, unknown-COMMIT, absent/unreachable readiness plus4new ORM/config
+cases). Full native/build/CI gates pending; see TYPEORM_DATABASE_AUDIT.md for updates.
+
+## TypeORM complete verification — 2026-10-02
+
+Feature audit7a9fdbf, implementation93904d0, docs813008e. CI37025204031 SUCCESS on
+813008e:33native+9unit+27production browser+3production smoke =72distinct tests;
+3development smoke repeats (75executions).300views and actual Compose persistence/
+reseed/outage/recovery PASS. Existing13local-table/84reference hashes unchanged.
+Final docs/integration retain the exact verified runtime/tests; ordinary publication
+to master/pre-release/release follows. See TYPEORM_DATABASE_AUDIT for actual evidence.

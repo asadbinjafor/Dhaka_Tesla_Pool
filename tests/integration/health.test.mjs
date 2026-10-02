@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { createApplication } from '../../dhaka-tesla-pool-backend/dist/bootstrap.js';
 
 test('real Nest HTTP: liveness is separate from absent database readiness, with safe errors', async () => {
-  const app = await createApplication();
+  const app = await createApplication(null); // Explicit absent DB, independent of local/CI environment.
   try {
     await app.listen(0, '127.0.0.1');
     const base = await app.getUrl();

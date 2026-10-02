@@ -6,6 +6,9 @@ import { csrfSync } from 'csrf-sync';
 import { DatabaseService } from '../database/database.service.js';
 import { passwordOptions } from '../database/seed.js';
 import { fail } from '../common/business-error.js';
+import { InjectRepository } from '@nestjs/typeorm';
+import type { Repository } from 'typeorm';
+import { User } from './entities/user.entity.js';
 
 export interface Identity { id: string; displayName: string; email: string; role: 'PASSENGER' | 'DRIVER' }
 export interface Session { tokenHash: string; csrf: string; user: Identity | null }
@@ -22,7 +25,8 @@ const csrf = csrfSync({
 export class AuthService {
   private readonly dummyHash = argon2.hash(randomBytes(32).toString('hex'), passwordOptions);
   private readonly attempts = new Map<string, { count: number; until: number }>();
-  constructor(@Inject(DatabaseService) private readonly db: DatabaseService) {}
+  constructor(@Inject(DatabaseService) private readonly db: DatabaseService,
+    @InjectRepository(User) private readonly users: Repository<User>) {}
 
   async load(request: AuthRequest): Promise<Session | null> {
     const raw = request.headers.cookie?.split(';').map(s => s.trim()).find(s => s.startsWith(`${cookieName}=`))?.slice(cookieName.length + 1);
@@ -81,20 +85,18 @@ export class AuthService {
     const name=input.name.trim(); if(!name || name.length>100) fail('INVALID_INPUT',400);
     const passwordHash=await argon2.hash(input.password,passwordOptions);
     try {
-      const result=await this.db.query("INSERT INTO users(email,display_name,password_hash,role) VALUES($1,$2,$3,'PASSENGER') RETURNING id,email,display_name,role",[email,name,passwordHash]);
-      const row=result.rows[0];
+      const row=await this.db.orm(()=>this.users.save(this.users.create({email,displayName:name,passwordHash,role:'PASSENGER'})));
       if(!row) fail('TEMPORARILY_UNAVAILABLE',503);
-      return await this.rotate(request,response,{id:row.id,email:row.email,displayName:row.display_name,role:row.role});
+      return await this.rotate(request,response,{id:row.id,email:row.email,displayName:row.displayName,role:row.role});
     } catch(error) { if((error as {code?:string}).code==='23505') fail('ACCOUNT_EXISTS',409); throw error; }
   }
 
   async login(request: AuthRequest,response: Response,input:{email:string;password:string}) {
     const email=input.email.trim().toLowerCase(); this.limit(request,email);
-    const result=await this.db.query('SELECT id,email,display_name,password_hash,role FROM users WHERE email=$1',[email]);
-    const row=result.rows[0];
-    const valid=await argon2.verify(row?.password_hash ?? await this.dummyHash,input.password);
+    const row=await this.db.orm(()=>this.users.createQueryBuilder('user').addSelect('user.passwordHash').where('user.email = :email',{email}).getOne());
+    const valid=await argon2.verify(row?.passwordHash ?? await this.dummyHash,input.password);
     if(!row || !valid) fail('INVALID_CREDENTIALS',401);
-    return this.rotate(request,response,{id:row.id,email:row.email,displayName:row.display_name,role:row.role});
+    return this.rotate(request,response,{id:row.id,email:row.email,displayName:row.displayName,role:row.role});
   }
 
   async logout(request: AuthRequest,response: Response) {

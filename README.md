@@ -98,7 +98,7 @@ The selected Next/Nest/Tailwind/PostgreSQL stack is required by the user. Additi
 
 | Choice | Why it fits this pooling MVP | Alternative / change trigger |
 |---|---|---|
-| Parameterized pg + numbered SQL | Explicit parent locks, post-wait occupancy, one-client atomic receipts; inspectable relational constraints | Prisma/TypeORM if mapping overhead grows, retaining exact transaction semantics |
+| TypeORM entities/repositories + numbered SQL | User-selected Tech-Trolley database setup; ordinary entity access uses injected repositories, coordinated writes use one QueryRunner and explicit parent locks | Prisma or direct pg if requirements change, retaining exact transaction semantics and applied schema |
 | Opaque DB sessions + Argon2id + csrf-sync | Immediate logout/revocation, durable ownership, password hashing and same-origin unsafe-command protection | JWT/OIDC when federated/mobile identity is needed; preserve revocation/ownership |
 | REST + Nest class-validator DTOs | Small resource/command surface with strict types and safe stable errors | GraphQL for proven client query needs; Zod if shared validation benefits justify migration |
 | Typed en/bn JSON catalogs | Two fixed languages, canonical values and root state persistence | next-intl/ICU if plural rules or locale count outgrow catalogs |
@@ -137,3 +137,17 @@ Configured demo zones, cash-only collection, three passenger seats, seeded drive
 AI assistance: **Codex/ChatGPT** helped read/audit sources, implement selected-stack services/UI, draft docs and write/run tests. Accepted: shared database parent locks and root presentation state preserve capacity and user intent. Changed/rejected: a latest-only compiler/linter upgrade failed real peer compatibility; SQL date aliases and premature browser DOM assertions were corrected after actual failures. [Factual AI usage and changes](docs/AI_USAGE_LOG.md). Human ability to explain/debug/change live is **NOT_RUN** and cannot be certified by automation; architecture/debug notes support preparation.
 
 **Required video submission: DEFERRED_BY_USER (P38/U11), no link yet.** All video work stays deferred until separately requested. Original handoff files and source references are retained locally; the private original PDF/reference runtime is intentionally not published or included in containers.
+
+## TypeORM database setup — 2026-10-02
+
+The backend now follows Tech-Trolley's PostgreSQL setup: Nest ConfigModule,
+TypeOrmModule, feature-local entities and injected repositories. Configure
+DATABASE_HOST/PORT/NAME/USER/PASSWORD in backend .env using its .env.example;
+DATABASE_SSL=false for local PostgreSQL and DATABASE_SYNCHRONIZE=false. Existing
+DATABASE_URL remains supported and takes precedence when supplied. Existing local
+records and database identity are retained; this access-layer conversion needs no reset.
+Applied numbered SQL remains the schema authority, including constraints and immutable
+triggers. Entity synchronization is disabled. Migration and explicit repeat-safe seed
+commands use TypeORM connections. Capacity/lifecycle/receipts retain explicit ordered
+SQL locks on a single QueryRunner; ordinary user/zone/vehicle access uses repositories.
+See [conversion evidence](docs/TYPEORM_DATABASE_AUDIT.md).

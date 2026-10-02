@@ -1,4 +1,5 @@
-import type { PoolClient, QueryResultRow } from 'pg';
+import type { QueryResultRow } from 'pg';
+import type { DatabaseClient } from '../database/database.service.js';
 import { fail } from '../common/business-error.js';
 
 export interface Booking extends QueryResultRow {
@@ -21,7 +22,7 @@ export function fare(b:Booking, bookings:number) {
     basePoysha:b.base_poysha*b.seats,distancePoysha:distancePoysha*b.seats,discountPoysha:discountPoysha*b.seats,totalPoysha,soloMaximumPoysha};
 }
 export class RideRepository {
-  constructor(readonly client:PoolClient) {}
+  constructor(readonly client:DatabaseClient) {}
   async ownRide(id:string,owner:string,lock=false):Promise<Ride> {
     const result=await this.client.query<Ride>(`SELECT * FROM ride_requests WHERE id=$1 AND passenger_id=$2${lock?' FOR UPDATE':''}`,[id,owner]);
     return result.rows[0]??fail('NOT_FOUND',404);

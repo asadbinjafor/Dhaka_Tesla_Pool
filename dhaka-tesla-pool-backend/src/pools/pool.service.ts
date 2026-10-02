@@ -68,7 +68,7 @@ export class PoolService {
         if(members.some(r=>r.status!==memberState))fail('INVALID_TRANSITION');
         const next=action==='ARRIVE'?'DRIVER_ARRIVED':action==='START'?'STARTED':action==='COMPLETE'?'COMPLETED':'CANCELLED';
         const timeColumn=action==='ARRIVE'?'arrived_at':action==='START'?'started_at':action==='COMPLETE'?'completed_at':'cancelled_at';
-        const at=(await client.query('SELECT clock_timestamp()::text AS at')).rows[0].at;
+        const at=(await client.query('SELECT clock_timestamp()::text AS at')).rows[0]!.at;
         const changedPool=(await client.query<TripPool>(`UPDATE pools SET status=$2,version=version+1,${timeColumn}=$3${action==='DRIVER_CANCEL'?',cancellation_reason=$4':''} WHERE id=$1 RETURNING *`,action==='DRIVER_CANCEL'?[id,next,at,reason]:[id,next,at])).rows[0]!;
         for(const r of members){
           const params:unknown[]=[r.id,next,at];let extra='';
