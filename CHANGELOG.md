@@ -34,3 +34,13 @@ Pre-releasece17ce5/a470f72 full64-case CI PASS36540258465/36540724158. Actual re
   restart/cleanup; map production Docker/CI/current operating docs to actual paths.
 - Preserve67distinct full cases, run70executions including dev smoke;300views and existing
   DB/reference/source preservation audit. Failures and repairs retained; video deferred.
+
+## TypeORM database setup — 2026-10-02
+
+- Adopted user-requested Tech-Trolley-style TypeORM entities, Nest repository/config
+  integration and PostgreSQL split connection fields with DATABASE_URL compatibility.
+- Mapped all13existing tables without schema/data changes; retained numbered SQL,
+  immutable triggers, parent locks, transaction isolation and idempotency recovery.
+- Migration/explicit repeat-safe seed now use TypeORM; schema synchronization disabled.
+- Added5real ORM/config/manager/retry/connection-discard cases; complete CI37025204031
+  PASS72distinct tests/75executions/300views. Existing13table/84reference hashes unchanged.

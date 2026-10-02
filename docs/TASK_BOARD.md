@@ -105,3 +105,12 @@ original untracked handoff files remain untouched. Entity/Nest/config/QueryRunne
 conversion is implemented. Focused native real PostgreSQL gate10/10 PASS (original
 allocation, rollback, unknown-COMMIT, absent/unreachable readiness plus4new ORM/config
 cases). Full native/build/CI gates pending; see TYPEORM_DATABASE_AUDIT.md for updates.
+
+## TypeORM complete verification — 2026-10-02
+
+Feature audit7a9fdbf, implementation93904d0, docs813008e. CI37025204031 SUCCESS on
+813008e:33native+9unit+27production browser+3production smoke =72distinct tests;
+3development smoke repeats (75executions).300views and actual Compose persistence/
+reseed/outage/recovery PASS. Existing13local-table/84reference hashes unchanged.
+Final docs/integration retain the exact verified runtime/tests; ordinary publication
+to master/pre-release/release follows. See TYPEORM_DATABASE_AUDIT for actual evidence.

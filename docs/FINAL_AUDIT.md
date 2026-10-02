@@ -83,3 +83,25 @@ No source-policy weakening or visual redesign; original requirements and extras 
 Final publication refs are checked in Actions for their actual SHA, not inferred from
 a previous run. Formal WCAG/public TLS/live human assessment limits remain; video
 P38/U11 still DEFERRED_BY_USER. Original dated audit above remains historical evidence.
+
+## TypeORM production verification — 2026-10-02
+
+Complete CI37025204031 for exact feature candidate813008e7c6cfb864cc5ff823e79369d61031212b
+SUCCESS: clean npm installs, both production builds/typechecks/all lint,9unit,
+33native PostgreSQL/Nest/config/watch/ORM cases,3development smoke,3production
+smoke,27production browser cases.72distinct tests/75executions, no skipped native
+cases or failed browser cases. The300principal-view/four-theme-locale checks PASS.
+Actual clean/repeat Compose startup, explicit seed, persistent down/up, repeat seed,
+database outage503 and subsequent recovery200 all PASS. Runtime/source/test trees
+remain exactly this verified candidate during final documentation/integration.
+
+Existing13local-table hashes and84reference hashes PASS unchanged. Applied001 SQL,
+private root environment, selected UI/assets/catalogs/styles and original handoff
+files are preserved. Backend private local .env uses existing split connection fields
+and is ignored by Git. Published scope contains no private environment values/files.
+Video remains required DEFERRED_BY_USER; no hosted TLS or human certification claim.
+
+Actual run: https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/37025204031 .
+Evidence: TYPEORM_DATABASE_AUDIT.md and evidence/runs/2026-10-02-typeorm/ci.json.
+Normal verified feature -> master -> pre-release -> release/v1.0.0 integration follows
+under the established workflow; exact current refs are inspectable in the repository.

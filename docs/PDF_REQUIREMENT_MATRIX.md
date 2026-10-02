@@ -155,3 +155,11 @@ capacity/fare/lifecycle and all required UI extras remain in scope. P19–P26/P2
 P33–P36 and U01/U08–U10/U12–U13 require new access-layer regression evidence;
 historical PASS does not certify this conversion. Current results and remaining
 checks are tracked in TYPEORM_DATABASE_AUDIT.md. P38/U11 video remains deferred.
+
+### TypeORM gate closure
+
+Fresh complete CI37025204031/813008e SUCCESS verifies all previously pending Docker/
+browser/access-layer checks above, including all four modes/300views and owned graphs/
+recovery.72distinct tests/75executions. Native13table and84reference hash preservation
+PASS; original SQL unchanged. Exact evidence/limitations: TYPEORM_DATABASE_AUDIT.md.
+Human/video/TLS/formal certification statuses remain as previously classified.

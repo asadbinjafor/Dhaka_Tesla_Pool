@@ -72,3 +72,48 @@ Normal app startup accepts those environment settings; unreachable readiness sti
 The same-name TypeORM warning seen when tests create two isolated Nest containers in
 one process does not replace their independently injected sources; both real contention
 orderings pass. A normal single-container application does not need duplicate sources.
+
+## Separate final source/requirements review
+
+Re-read the original five-page PDF, including its product/stack/evaluation tables,
+after the implementation/native gate. Reviewed current diff and actual entity/config/
+auth/transaction code separately from the earlier audit. Original and extra matrices
+retain their prior IDs/classification; TypeORM is a user-selected implementation choice.
+
+| Scope | Reviewed result |
+|---|---|
+| P01–P18 story/product/privacy/driver/pooling/fare/payment | Native allocation/lifecycle/fare/ownership/history suites PASS; demo geography/cash/capacity rules unchanged |
+| P19–P26 stack/security/DB/Docker/choices | Current compatible TypeORM/Nest pins, explicit connection fields and migration/seed behavior verified; production Docker gate pending CI |
+| P27/P44 AI ownership/live human assessment | Disclosure retained; ORM change explained in architecture/debug docs; human live assessment NOT_RUN |
+| P28–P29 architecture/organization | Diagram and ERD describe actual QueryRunner/repository paths and unchanged tables; entity-to-table/column mapping PASS |
+| P30–P32/P39 contemporary Git | Audit7a9fdbf -> implementation93904d0 -> documentation813008e; verified exact origin; normal integration waits for feature CI |
+| P33–P36 run/env/tests/demo/API | Independent builds and field-only cwd-independent seed/login PASS; commands/examples/docs updated; private local data unchanged |
+| U01–U07/U12–U13 stack/UI/graphs/auth/presentation state | APIs and frontend source/catalog/style bytes unchanged; native security/statistics/retry checks PASS; fresh four-mode browser gate pending CI |
+| U08–U10 audit-first/final review/Git | Before-edit audit and separate post-change review recorded; original untracked work/reference/applied migration retained |
+| P38/U11 video | Required DEFERRED_BY_USER, no new recording task or invented link |
+
+Confirmed unresolved implementation defects after native repair: none observed.
+Public hosted TLS, human assessment and formal assistive-technology certification
+remain unclaimed. This review is not a future production guarantee or fabricated CI PASS.
+
+## TypeORM production verification — 2026-10-02
+
+Complete CI37025204031 for exact feature candidate813008e7c6cfb864cc5ff823e79369d61031212b
+SUCCESS: clean npm installs, both production builds/typechecks/all lint,9unit,
+33native PostgreSQL/Nest/config/watch/ORM cases,3development smoke,3production
+smoke,27production browser cases.72distinct tests/75executions, no skipped native
+cases or failed browser cases. The300principal-view/four-theme-locale checks PASS.
+Actual clean/repeat Compose startup, explicit seed, persistent down/up, repeat seed,
+database outage503 and subsequent recovery200 all PASS. Runtime/source/test trees
+remain exactly this verified candidate during final documentation/integration.
+
+Existing13local-table hashes and84reference hashes PASS unchanged. Applied001 SQL,
+private root environment, selected UI/assets/catalogs/styles and original handoff
+files are preserved. Backend private local .env uses existing split connection fields
+and is ignored by Git. Published scope contains no private environment values/files.
+Video remains required DEFERRED_BY_USER; no hosted TLS or human certification claim.
+
+Actual run: https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions/runs/37025204031 .
+Evidence: TYPEORM_DATABASE_AUDIT.md and evidence/runs/2026-10-02-typeorm/ci.json.
+Normal verified feature -> master -> pre-release -> release/v1.0.0 integration follows
+under the established workflow; exact current refs are inspectable in the repository.
