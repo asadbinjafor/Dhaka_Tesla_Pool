@@ -32,7 +32,11 @@ Set DATABASE_HOST, DATABASE_PORT (default5432), DATABASE_NAME, DATABASE_USER and
 DATABASE_PASSWORD in .env, plus DATABASE_SSL=false and DATABASE_SYNCHRONIZE=false.
 DATABASE_URL is a compatible alternative and takes precedence; explicit process
 variables retain priority over local .env. TLS connections verify the certificate.
-The prepared local database uses port15432; use your actual database port.
+The prepared local database uses the running Windows PostgreSQL service:
+DATABASE_HOST=localhost, DATABASE_PORT=5432, DATABASE_NAME=dhaka_tesla_pool,
+DATABASE_USER=postgres. The private .env already contains the local password.
+The previous portable database is retained as a backup; all 13 table records were
+copied and verified before switching. On other machines use your own credentials.
 
 Feature mappings live in src/auth/entities, src/rides/entities, src/pools/entities,
 src/history/entities; internal receipts and the migration ledger live in

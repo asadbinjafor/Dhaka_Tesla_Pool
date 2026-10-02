@@ -15,21 +15,35 @@ support folders-এ আছে। বিস্তারিত দুই app folde
 
 ## প্রস্তুত এই workspace
 
-Node 24.17.x এবং npm 12.x ব্যবহার করুন। বর্তমান private root `.env` ও PostgreSQL data
-রাখুন। এই conversion-এর জন্য আবার database তৈরি, migrate বা seed করতে হবে না।
-Backend নিজের `.env` না থাকলে পুরোনো root `.env` স্বয়ংক্রিয়ভাবে পড়বে।
+Node 24.17.x এবং npm 12.x ব্যবহার করুন। Tech-Trolley-এর মতো installed Windows
+PostgreSQL service দিয়ে database connect করা আছে। Backend-এর private `.env`:
 
-Database বন্ধ থাকলে আগে একই cluster-এর status দেখুন:
-
-```powershell
-& 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' status
+```dotenv
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=dhaka_tesla_pool
+DATABASE_USER=postgres
+DATABASE_PASSWORD=YOUR_LOCAL_POSTGRES_PASSWORD
+DATABASE_SSL=false
+DATABASE_SYNCHRONIZE=false
 ```
 
-শুধু stopped দেখালে একই data দিয়ে চালান:
+বর্তমান `.env`-এ আসল password দেওয়া আছে; এই example দিয়ে overwrite করবেন না।
+পুরোনো ১৩টি table-এর সব data এই database-এ রাখা হয়েছে। আবার migrate/seed লাগবে না।
+Backend নিজের `.env` না থাকলে root `.env` পড়বে। এই prepared workspace-এ দুই file-ই
+একই database ব্যবহার করে; tests-এর `TEST_DATABASE_URL` আলাদা `dtp_test` database।
+পুরোনো portable cluster ও private backup রাখা আছে।
+
+Windows service বর্তমানে চলছে। পরে database connection না হলে status দেখুন:
 
 ```powershell
-& 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' -l 'E:\Dhaka_Tesla_Pool\.local-runtime\postgres.log' -o '-h 127.0.0.1 -p 15432' start
+Get-Service postgresql-x64-18
 ```
+
+Stopped থাকলে Windows Services থেকে এই PostgreSQL service চালু করুন।
+pgAdmin-এ host `localhost`, port `5432`, username `postgres` এবং নিজের PostgreSQL
+password দিয়ে connect করলে `Databases > dhaka_tesla_pool > Schemas > public > Tables`
+থেকে tables দেখতে পাবেন।
 
 VS Code Terminal 1:
 
@@ -48,7 +62,7 @@ npm run dev
 ```
 
 Browser: **http://127.0.0.1:3000/bn/sign-in** অথবা
-**http://127.0.0.1:3000/en/sign-in**। Backend 3001, database 15432।
+**http://127.0.0.1:3000/en/sign-in**। Backend 3001, database 5432।
 Tech-Trolley-এর port উল্টো হলেও Dhaka-এর বিদ্যমান port রাখা হয়েছে, যাতে origin/cookie
 ও connection settings ঠিক থাকে। `localhost` বদলে `127.0.0.1` ব্যবহার করুন।
 Code save করলে frontend reload ও backend compile/restart হবে। বন্ধ করতে প্রত্যেক
@@ -85,7 +99,7 @@ Get-CimInstance Win32_Process -Filter 'ProcessId = YOUR_PID' | Select-Object Pro
 
 এটি এই project-এর পুরোনো terminal হলে সেখানে Ctrl+C দিন, তারপর একবার চালান। অজানা
 process বন্ধ করবেন না। Frontend 3000 busy হলেও একইভাবে identity দেখে সিদ্ধান্ত নিন।
-Database unavailable হলে cluster/connection যাচাই করুন; database reset করবেন না।
+Database unavailable হলে PostgreSQL service ও backend `.env` যাচাই করুন; database reset করবেন না।
 
 নতুন requirement ও test ফল `docs/NPM_STRUCTURE_AUDIT.md`-এ। মূল PDF-এর সব requirements
 ও তিনটি extras বহাল আছে; video **DEFERRED_BY_USER**, এখন record/upload করা হয়নি।

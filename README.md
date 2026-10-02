@@ -25,7 +25,7 @@ Open **http://127.0.0.1:3000/en/sign-in** or **http://127.0.0.1:3000/bn/sign-in*
 
 Docker Engine/Compose v2 are prerequisites for this path. API/database ports remain private; only loopback web 3000 is published. **Tested Docker fallback** fulfills PDF §6 when no free public backend is available. No hosted deployment URL or paid infrastructure is claimed. [Actual CI runs](https://github.com/asadbinjafor/Dhaka_Tesla_Pool/actions), [operating instructions, native Windows setup, env fields, migration/seed/run/tests and troubleshooting](docs/OPERATIONS.md).
 
-For this already prepared native workspace, retain its private root .env and isolated PostgreSQL data. Node **24.17.x**, npm **12.0.2 or compatible 12.x**, PostgreSQL **18.x**. Each app installs independently, like Tech-Trolley:
+For this already prepared native workspace, retain its private backend/root .env files. Dhaka connects to the installed Windows PostgreSQL service, like Tech-Trolley, using its own database with all existing records retained. Node **24.17.x**, npm **12.0.2 or compatible 12.x**, PostgreSQL **18.x**. Each app installs independently:
 
 ```powershell
 # Terminal 1, from the repository directory:
@@ -38,7 +38,7 @@ npm install
 npm run dev
 ```
 
-Backend automatically loads its own `.env` or the retained root `.env`; explicit process variables win. This prepared workspace uses PostgreSQL15432, backend3001 and frontend3000. Source edits compile/restart the backend automatically. Root npm install is only for regression tooling, not an app prerequisite. Fresh checkouts configure backend `.env` from its example; frontend may use `.env.local` for its private gateway origin. Backend `npm run db:migrate` and explicit `npm run db:seed` retain existing records. Production: build each app, then backend `npm run start:prod`, frontend `npm start`. [Bangla guide](RUN_NPM_BN.md), [conversion audit](docs/NPM_STRUCTURE_AUDIT.md). `docker compose down` retains records; never delete persistent volumes to fix a problem.
+Backend automatically loads its own `.env` or the retained root `.env`; explicit process variables win. This prepared workspace uses PostgreSQL `localhost:5432`, database `dhaka_tesla_pool`, backend3001 and frontend3000. The running Windows PostgreSQL service provides the native database. Source edits compile/restart the backend automatically. Root npm install is only for regression tooling, not an app prerequisite. Fresh checkouts configure backend `.env` from its example; frontend may use `.env.local` for its private gateway origin. Backend `npm run db:migrate` and explicit `npm run db:seed` retain existing records. Production: build each app, then backend `npm run start:prod`, frontend `npm start`. [Bangla guide](RUN_NPM_BN.md), [connection audit](docs/DATABASE_CONNECTION_AUDIT.md), [conversion audit](docs/NPM_STRUCTURE_AUDIT.md). `docker compose down` retains records; never delete persistent volumes to fix a problem.
 
 ## Actual screenshots
 

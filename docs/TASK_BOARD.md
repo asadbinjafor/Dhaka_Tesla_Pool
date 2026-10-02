@@ -114,3 +114,13 @@ Feature audit7a9fdbf, implementation93904d0, docs813008e. CI37025204031 SUCCESS 
 reseed/outage/recovery PASS. Existing13local-table/84reference hashes unchanged.
 Final docs/integration retain the exact verified runtime/tests; ordinary publication
 to master/pre-release/release follows. See TYPEORM_DATABASE_AUDIT for actual evidence.
+
+## Native PostgreSQL connection — 2026-10-02
+
+Audit-first34c35d2 on feature/local-postgres-connection. Switched private native
+configuration to the installed Windows PostgreSQL service, localhost:5432, own
+dhaka_tesla_pool database. All original13table record hashes retained; original
+portable data/private dump retained. Actual app-local connection readiness200,
+migration checksum/build, isolated33/33integration cases and84reference hashes PASS.
+Connection/run documents updated; runtime/UI/schema unchanged. Publication results
+are recorded in DATABASE_CONNECTION_AUDIT; video remains deferred.

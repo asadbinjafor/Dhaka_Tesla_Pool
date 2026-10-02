@@ -163,3 +163,11 @@ browser/access-layer checks above, including all four modes/300views and owned g
 recovery.72distinct tests/75executions. Native13table and84reference hash preservation
 PASS; original SQL unchanged. Exact evidence/limitations: TYPEORM_DATABASE_AUDIT.md.
 Human/video/TLS/formal certification statuses remain as previously classified.
+
+### Native connection update — 2026-10-02
+
+The requested Tech-Trolley connection now uses the installed local PostgreSQL
+service on5432 with dedicated dhaka_tesla_pool. P19–P26/P28/P33 native evidence:
+33/33 real integration tests, actual app-local readiness200, unchanged13table data
+and84reference hashes. Runtime/schema/UI are unchanged; original requirement
+classifications and earlier browser/Docker evidence remain. See DATABASE_CONNECTION_AUDIT.md.

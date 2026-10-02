@@ -38,19 +38,24 @@ frontend: `npm install`, then `npm run dev`. Backend source changes compile/rest
 frontend uses Next's development refresh. Existing ports are web3000/API3001.
 Use127.0.0.1 consistently for the documented APP_ORIGIN and cookies.
 
-Prepared workspace: preserve private root .env and .local-runtime/data. Backend
+Prepared workspace: preserve private backend/root .env and retained .local-runtime/data. Backend
 loads its app-local .env if present, otherwise the root fallback; explicit process
 variables take precedence, including Docker/CI. Frontend loads its .env.local and
 only reads the root private API_INTERNAL_ORIGIN fallback when needed. DB credentials
 never become NEXT_PUBLIC values. A fresh checkout must supply its own backend .env
 from the local .env.example and its own existing PostgreSQL database.
 
-If the prepared PostgreSQL cluster is stopped, start the same data (never init/reset):
+The prepared native connection now matches Tech-Trolley's installed Windows
+PostgreSQL service: localhost:5432, database dhaka_tesla_pool, user postgres. Its
+password is already in the ignored backend .env. The root fallback and separate
+dtp_test test connection also use this server. Existing 13-table records were copied
+with equal data hashes; the original portable cluster and private dump are retained.
+This is a local connection change; Docker settings/volumes retain their own identity.
+Check the installed service if the native database is unavailable:
 
 ```powershell
-& 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' status
-# Only if stopped; this prepared cluster uses explicit port15432:
-& 'E:\Dhaka_Tesla_Pool\.local-runtime\postgresql-18.6\pgsql\bin\pg_ctl.exe' -D 'E:\Dhaka_Tesla_Pool\.local-runtime\data' -l 'E:\Dhaka_Tesla_Pool\.local-runtime\postgres.log' -o '-h 127.0.0.1 -p 15432' start
+Get-Service postgresql-x64-18
+# If stopped, start this service using Windows Services.
 ```
 
 From backend, `npm run db:migrate` validates/applies numbered SQL in migrations

@@ -88,3 +88,12 @@ browser/access-layer checks above, including all four modes/300views and owned g
 recovery.72distinct tests/75executions. Native13table and84reference hash preservation
 PASS; original SQL unchanged. Exact evidence/limitations: TYPEORM_DATABASE_AUDIT.md.
 Human/video/TLS/formal certification statuses remain as previously classified.
+
+### Native connection update — 2026-10-02
+
+Native database connection now uses the installed local PostgreSQL service on5432.
+13table data hashes match the retained portable database;33real native integration
+cases, including owned history/statistics and recovery, PASS. No UI/catalog/theme/
+graph implementation change; all three extras remain required. Current connection
+evidence: DATABASE_CONNECTION_AUDIT.md. Existing browser evidence remains historical
+for this connection-only slice; no new browser/Docker execution is claimed.
