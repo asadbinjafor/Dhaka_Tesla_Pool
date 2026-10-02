@@ -57,7 +57,7 @@ terminal-এ Ctrl+C। একবার install হলে প্রতিবা�
 ## Fresh checkout, production ও tests
 
 Fresh checkout-এ নিজের PostgreSQL database রাখুন; backend `.env.example` থেকে নিজের
-`.env` তৈরি করে DATABASE_URL ও APP_ORIGIN দিন। বর্তমান prepared workspace-এ example
+`.env` তৈরি করে DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD এবং APP_ORIGIN দিন। DATABASE_SSL=false ও DATABASE_SYNCHRONIZE=false রাখুন। DATABASE_URL আগের setup/hosting-এর জন্য বিকল্প হিসেবে সমর্থিত। বর্তমান prepared workspace-এ example
 দিয়ে existing `.env` overwrite করবেন না। Frontend-এর `.env.example` থেকে `.env.local`
 লাগবে শুধু gateway origin বদলালে। কোনো credential NEXT_PUBLIC variable-এ রাখবেন না।
 

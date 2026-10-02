@@ -90,3 +90,14 @@ and https://www.enterprisedb.com/download-postgresql-binaries .
 - Operator APP_ORIGIN/Secure-cookie settings explicitly reach Compose API. Local HTTP Docker fallback is actually tested in free public-repository CI; public hosted TLS remains NOT_RUN. No paid infrastructure or host security/reboot change. Local extra frontend preview automatic rejection is respected, not bypassed.
 - Exact repository remains public/default master after ordinary Git publication; no default/visibility setting was manually changed. Contemporary tested feature -> master -> pre-release -> release/v1.0.0 remains the delivery workflow, with no force/reconstruction/unrelated deletion.
 - Video P38/U11 remains required DEFERRED_BY_USER; full human interview/debug ability and complete assistive-technology certification cannot be inferred from automated passes. No new video task/script/recording/upload.
+
+## Tech-Trolley-style database request — 2026-10-02
+
+User explicitly requested the reference project's database setup. Adopt TypeORM
+entities, Nest repository/configuration integration and split PostgreSQL connection
+fields, preserving DATABASE_URL compatibility and existing private data. This replaces
+the pg-only access-layer choice. One QueryRunner connection and its manager replace
+the explicit standalone pg-client contract while retaining lock order/isolation/SQL.
+No fare/matching/authentication/seat/lifecycle/API/UI policy changes. Keep schema sync
+disabled and the original numbered migration immutable. No destructive seed/reset.
+Audit and execution evidence: TYPEORM_DATABASE_AUDIT.md. Video remains deferred.

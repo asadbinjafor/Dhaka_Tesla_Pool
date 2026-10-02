@@ -39,3 +39,36 @@ Sources: actual Tech-Trolley app.module.ts/users entity/service/.env.example; cu
 application database/auth/rides/pools/history sources, existing DB/race tests and PRD.
 Official API references: https://docs.nestjs.com/techniques/database and
 https://typeorm.io/docs/data-source/data-source-options/ .
+
+## Native execution checkpoint
+
+- Both production builds, typechecks and all app/root lint PASS. Unit9/9 PASS.
+- Complete native suite33/33 PASS, no skips/cancellations: all28 existing scenarios
+  plus5 TypeORM mapping/repository/manager/config/retry/reconnection cases.
+- Actual two-instance last-seat races, original allocation rollback/receipt replay,
+  lifecycle cutoffs, privacy/CSRF/role/ownership, terminal fares/history and real graphs
+  PASS through TypeORM. Dev source compilation/restart/child cleanup also PASS.
+- ORM metadata matches all13 actual tables and every column. Composite relations,
+  generated ended_at, default hidden password selection and immutable DB protection
+  are checked through real repositories, not only inspected decorators.
+- EntityManager and SQL share pg_backend_pid and roll back together; read-only
+  queries remain REPEATABLE READ. Known serialization retry leaves one insert;
+  lost real COMMIT acknowledgement leaves one effect and discards the old PID.
+- Field-only settings run migration/repeat seed and real Nest login from unrelated
+  cwd. Existing private backend .env was created from retained database identity,
+  using split fields; root private .env remains untouched. No credentials in evidence.
+- Existing local13-table data hashes unchanged after access-layer conversion and
+  actual app-local migration command. Original001 SQL unchanged;84 reference hashes PASS.
+- New dependency audit0 reported vulnerabilities; npm ls has no peer failures.
+- Initial compilation exposed public TypeORM1 API differences (readonly connection
+  options/subpath export/removed onConflict); corrected with public DataSourceOptions
+  types, assignment-safe options and orIgnore. Assertions/invariants were not weakened.
+- Log: evidence/runs/2026-10-02-typeorm/native.txt. Production Docker/browser verification
+  for this revision remains pending CI, not inferred from previous releases.
+
+The unconfigured health test now explicitly passes null, ensuring absent-database
+readiness remains503 even when local/CI environment supplies connection fields.
+Normal app startup accepts those environment settings; unreachable readiness still503.
+The same-name TypeORM warning seen when tests create two isolated Nest containers in
+one process does not replace their independently injected sources; both real contention
+orderings pass. A normal single-container application does not need duplicate sources.

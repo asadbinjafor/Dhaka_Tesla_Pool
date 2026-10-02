@@ -1,0 +1,107 @@
+npm notice run dhaka-tesla-pool@1.0.0 test:integration
+npm notice run npm --prefix dhaka-tesla-pool-backend run build && node --env-file-if-exists=.env --test --test-concurrency=1 tests/integration/health.test.mjs tests/integration/database.test.mjs tests/integration/auth.test.mjs tests/integration/requests.test.mjs tests/integration/allocation.test.mjs tests/integration/lifecycle.test.mjs tests/integration/statistics.test.mjs tests/integration/hardening.test.mjs tests/integration/packaging.test.mjs tests/integration/dev-watch.test.mjs tests/integration/typeorm.test.mjs
+npm notice run dhaka-tesla-pool-backend@1.0.0 build
+npm notice run tsc -p tsconfig.json
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+[Nest] 23720  - 10/02/2026, 9:08:01 PM    WARN [DataSourceNameRegistry] A data source with the default name is already registered. Multiple data sources must be registered with unique names; otherwise, they will override each other. Please assign a unique "name" property to each TypeOrmModule.forRoot()/forRootAsync() registration.
+✔ two real Nest instances, SAME Jashim/Bullet: nusrat wins deterministic last-seat contention (1834.9416ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+[Nest] 23720  - 10/02/2026, 9:08:02 PM    WARN [DataSourceNameRegistry] A data source with the default name is already registered. Multiple data sources must be registered with unique names; otherwise, they will override each other. Please assign a unique "name" property to each TypeOrmModule.forRoot()/forRootAsync() registration.
+✔ two real Nest instances, SAME Jashim/Bullet: shirin wins deterministic last-seat contention (1210.2675ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+[Nest] 23720  - 10/02/2026, 9:08:03 PM    WARN [DataSourceNameRegistry] A data source with the default name is already registered. Multiple data sources must be registered with unique names; otherwise, they will override each other. Please assign a unique "name" property to each TypeOrmModule.forRoot()/forRootAsync() registration.
+✔ two distinct drivers compete for one request with no orphan pool; foreign-driver ownership and dispatch privacy (1147.7295ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+{"event":"request_failed","requestId":"fa8bbe21-a451-4b99-b8cc-70865b0cc58b","code":"INTERNAL_ERROR"}
+{"event":"request_failed","requestId":"606edd73-3967-4f4e-a676-6a44e3e4de52","code":"COMMAND_OUTCOME_UNKNOWN"}
+✔ accept rollback injection and ambiguous COMMIT acknowledgement recover one effect; no-pool concurrent acceptance and last-member cancellation (1242.9758ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ real HTTP + PostgreSQL auth: CSRF/origin, validation, roles, rotated/expired sessions, logout and safe identity (1629.8307ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+demo_seed_complete_no_existing_records_overwritten
+✔ real PostgreSQL migrations, repeat non-destructive seeds, constraints and atomic rollback (698.4461ms)
+migration_applied 001_initial.sql
+✔ backend app-directory dev command compiles source, restarts once changed, serves migrated DB and stops its children (7602.6459ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: offline obtains driver lock first (1043.2696ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ availability race: accept obtains driver lock first (780.2418ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ arrival first blocks actually contending passenger cancellation without fare/event damage (839.9785ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ completed remaining pool leaves earlier canceled member and event byte-for-byte intact (1046.2015ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ expired quote and session cannot leak receipt; same verified owner replays completed create once (2062.5773ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ HTTPS-origin configuration issues Secure cookies and rejects untrusted forwarding origin (743.6128ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ waiting hints expose only observed eligibility for offline/full/arrived/incompatible vehicles (1020.6727ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation first serializes against acceptance on the real request lock with no orphan membership (937.1265ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+{"event":"request_failed","requestId":"40c1c9d9-d16e-45d6-96aa-38b55381d098","code":"TEMPORARILY_UNAVAILABLE"}
+✔ owned read database failure returns safe unknown outcome without directory/hint/private diagnostic, then recovers (998.5421ms)
+{"event":"request_failed","requestId":"145fa98e-16e9-4117-a694-ab34939bca6c","code":"TEMPORARILY_UNAVAILABLE"}
+✔ real Nest HTTP: liveness is separate from absent database readiness, with safe errors (250.8225ms)
+{"event":"request_failed","requestId":"11d62ae4-e2f0-415a-b75a-a6ddb231f106","code":"TEMPORARILY_UNAVAILABLE"}
+✔ unreachable PostgreSQL returns safe not-ready, never false success or DSN (28.7955ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ real lifecycle: allowed transitions, immutable quoted/final fares, terminal receipt replay, ownership and API restart persistence (1560.0969ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ driver cancellation after arrival: zero charge and retained final evidence; previously cancelled member/time/event never rewritten (1030.3642ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: join acquires driver before competing command (1039.4092ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: arrive acquires driver before competing command (1065.9964ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ cutoff serialization: cancel acquires driver before competing command (1086.1041ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ unassigned cancellation discovers committed acceptance after request-lock wait and retries driver-first without partial effects (954.8619ms)
+✔ backend env is cwd-independent, local-first, and respects explicit process variables (183.3569ms)
+migration_applied 001_initial.sql
+✔ real migration resolves unchanged SQL from an unrelated working directory (359.0935ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ owned quotes/requests: exact fare, typed validation, private detail, concurrent active constraint, terminal replay and expiry after lock wait (1897.3177ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ owned SQL graphs: Dhaka midnight, completed-only money/quantity and one capacity per pool; precise filtered keyset history (1402.6399ms)
+✔ reference-style PostgreSQL fields validate safely; explicit URL and migration policy are authoritative (1.5068ms)
+migration_applied 001_initial.sql
+demo_seed_complete_no_existing_records_overwritten
+✔ TypeORM maps every existing table/column without schema changes; repositories preserve relations and generated terminal facts (1853.1727ms)
+migration_applied 001_initial.sql
+✔ transaction manager and SQL share a real connection, rollback together, and keep read-only snapshots (750.1357ms)
+migration_applied 001_initial.sql
+✔ field-only configuration runs migration, repeat seed and real Nest login independently of working directory (3798.3219ms)
+migration_applied 001_initial.sql
+✔ TypeORM retry rolls back the entire attempt; unknown COMMIT discards its connection and retains one effect (585.8696ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51393.4631

@@ -96,3 +96,15 @@ npm audit
 Full E2E tests create/complete/cancel records and are for an isolated test deployment, not your live local application database. CI provisions that fixture automatically. Playwright video and traces are disabled; screenshots and reports are retained. Optional `npm run check:reference` verifies 84 handoff reference files locally; a clean public checkout intentionally omits private/reference files and must not depend on them to run.
 
 `GET /api/v1/health/live` returns 200 independently of DB. `GET /api/v1/health/ready` returns 200 after reachable migrated DB or safe 503 when unavailable. CSRF failures: check exact APP_ORIGIN/cookie host; don't disable CSRF. Database unavailable: verify DB/credentials/migration, don't reset volumes. An uncertain command: use **Retry original command** with the retained key; reauthenticate as the same account if prompted. Confirmed business conflicts are localized and require a fresh valid user decision. History/stable IDs continue to explain terminal outcomes even when /current is null. No raw SQL, credentials or cookie values are emitted by application error responses/logs.
+
+## Tech-Trolley-style database configuration — 2026-10-02
+
+Backend .env.example now uses DATABASE_HOST, DATABASE_PORT, DATABASE_NAME,
+DATABASE_USER, DATABASE_PASSWORD, DATABASE_SSL and DATABASE_SYNCHRONIZE=false.
+Use the existing database credentials/port; configuring TypeORM does not require
+creating/resetting the database. DATABASE_URL remains a supported alternative and
+takes precedence when present; Docker/CI can retain that setting. Local .env wins
+over root fallback and explicit process values win over files. SSL=true verifies
+the server certificate. Never enable DATABASE_SYNCHRONIZE: use numbered migrations
+for schema changes. The applied SQL/checksum ledger and demo seed behavior are retained.
+Root npm run test:typeorm runs the additional real ORM/configuration regression suite.

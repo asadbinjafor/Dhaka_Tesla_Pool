@@ -71,3 +71,12 @@ separate final review PASS; U10 ordinary final Git integrations/actual published
 checks are part of delivery. U11 remains required DEFERRED_BY_USER. No extra removed
 or reclassified optional. Source/environment/lock preservation and limitations are
 in NPM_STRUCTURE_AUDIT.md; original reference and approval/task history preserved.
+
+## TypeORM conversion review — 2026-10-02
+
+User-requested database setup replaces pg-only access with TypeORM entities,
+repositories, QueryRunner and split connection settings. Original product/privacy/
+capacity/fare/lifecycle and all required UI extras remain in scope. P19–P26/P28/
+P33–P36 and U01/U08–U10/U12–U13 require new access-layer regression evidence;
+historical PASS does not certify this conversion. Current results and remaining
+checks are tracked in TYPEORM_DATABASE_AUDIT.md. P38/U11 video remains deferred.

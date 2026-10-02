@@ -74,3 +74,12 @@ translating primary keys. User-supplied names/reasons remain stored as entered. 
 preference may be stored in a validated cookie; cross-device profile preference is
 optional and requires its own explicit column/migration, not an undocumented field.
 Do not duplicate trips/fares/memberships by theme or language.
+
+## Implemented access-layer update — 2026-10-02
+
+The user requested Tech-Trolley-style TypeORM database integration. The existing
+schema and invariants above remain; the same-connection contract is now implemented
+by a TypeORM QueryRunner and transaction EntityManager instead of a standalone
+pg.PoolClient. Ordered lock statements, later occupancy reads, receipts and fare/
+history snapshots are retained. Numbered SQL/checksums remain authoritative; schema
+synchronization is disabled. See IMPLEMENTED_ARCHITECTURE/TYPEORM_DATABASE_AUDIT.
