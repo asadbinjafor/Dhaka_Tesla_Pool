@@ -101,3 +101,13 @@ the explicit standalone pg-client contract while retaining lock order/isolation/
 No fare/matching/authentication/seat/lifecycle/API/UI policy changes. Keep schema sync
 disabled and the original numbered migration immutable. No destructive seed/reset.
 Audit and execution evidence: TYPEORM_DATABASE_AUDIT.md. Video remains deferred.
+
+## Tech-Trolley native connection — 2026-10-02
+
+User requested the actual connection to match Tech-Trolley. Use the existing installed
+Windows PostgreSQL service on localhost:5432 with a separate dhaka_tesla_pool database.
+Copy and verify the current portable dtp_app data before changing ignored backend/root
+connection settings; preserve source data and private backups. Native application and
+test database identities remain separate. No Tech-Trolley table/record mutation, schema
+sync, seed/reset, API-origin or product-policy change. Actual 13-table preservation,
+Nest readiness200 and 33 real native integration passes: DATABASE_CONNECTION_AUDIT.md.
