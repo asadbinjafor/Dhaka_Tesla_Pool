@@ -111,3 +111,12 @@ connection settings; preserve source data and private backups. Native applicatio
 test database identities remain separate. No Tech-Trolley table/record mutation, schema
 sync, seed/reset, API-origin or product-policy change. Actual 13-table preservation,
 Nest readiness200 and 33 real native integration passes: DATABASE_CONNECTION_AUDIT.md.
+
+## User-requested unused file cleanup — 2026-10-10
+
+Remove verified obsolete original-package scaffolding, duplicate delivery/start guides,
+completed foundation prompt and generated local reports. Deduplicate six identical
+screenshots with canonical paths and original provenance retained. Current runtime,
+reference sources, private environments/database, migrations, tests, licenses,
+requirements/approval/task history and pre-existing user edits remain preserved.
+Actual removals and affected checks: CLEANUP_AUDIT.md and the cleanup evidence manifest.

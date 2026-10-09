@@ -157,8 +157,9 @@ Implement docs/07-UI-I18N.md, not just two toggle buttons.
   Locale/theme are not canonical business-command hash fields.
 - Four required combinations: EN/Dark, EN/Light, BN/Dark, BN/Light. Test all core views
   and both roles at mobile/tablet/desktop widths, including meaningful interaction paths.
-- Check catalog key/placeholder parity and missing translations. templates/messages
-  is a starting glossary, not a claim that application translation is already complete.
+- Check catalog key/placeholder parity and missing translations in the actual
+  dhaka-tesla-pool-frontend/src/i18n/messages catalogs. Original starter glossaries
+  were removed after the complete application catalogs were implemented and tested.
 
 ## 7. Required graphs
 Build authenticated completed-history statistics and usable charts/data tables. Passenger

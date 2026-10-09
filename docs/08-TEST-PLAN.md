@@ -117,5 +117,7 @@ These are acceptance scenarios, not a demand for 18 separate test files. Paramet
 Only instruction/package/translation-template consistency is checked while assembling
 this handoff. No new Next/Nest/Postgres app exists here, so I01–I50 and X01–X16 are not
 passed tests. Historical current-UI reports reside under reference/ui-dark-light/evidence;
-never count them as current real-backend evidence. templates/messages are not full
-application localization. Always identify the tested artifact/ref and actual environment.
+never count them as current real-backend evidence. Original starter translation
+templates were removed during cleanup; the actual application catalogs live in
+dhaka-tesla-pool-frontend/src/i18n/messages. Always identify the tested artifact/ref
+and actual environment; current executed results are in TEST_EVIDENCE.md and audits.
