@@ -124,3 +124,13 @@ portable data/private dump retained. Actual app-local connection readiness200,
 migration checksum/build, isolated33/33integration cases and84reference hashes PASS.
 Connection/run documents updated; runtime/UI/schema unchanged. Publication results
 are recorded in DATABASE_CONNECTION_AUDIT; video remains deferred.
+
+## Unused file cleanup — 2026-10-10
+
+Audit-firstc518d49 on feature/remove-unused-files. Removed28verified unused files
+(9tracked,19local-only), preserving6canonical duplicate images and all16browser
+manifest hashes.137source/config/test/private-file hashes and84reference hashes PASS.
+Both production builds, both typechecks, complete lint and9unit cases PASS. Existing
+backend .env.example/frontend next-env.d.ts edits remain unstaged and preserved.
+Runtime/domain/schema unchanged; ordinary tested feature/integration publication
+verified at delivery. Evidence: CLEANUP_AUDIT.md. Video remains deferred.

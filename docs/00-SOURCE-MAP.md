@@ -27,8 +27,9 @@ Current source audit anchors (static observations, NOT fresh runtime verificatio
 - src/store.js implements browser-local persistence/identity; not server authorization.
 - src/styles.css is the visual baseline; target styling is Tailwind with preserved tokens.
 - No new NestJS/PostgreSQL implementation is supplied in this handoff.
-- Bangla translation files under templates/ are a starting catalog, not implemented
-  bilingual support. Source English UI and old reports remain unchanged.
+- The original handoff translation templates were a starting glossary. Those unused
+  copies were removed after real catalogs were implemented in
+  dhaka-tesla-pool-frontend/src/i18n/messages. Source English UI remains unchanged.
 
 Root .gitignore excludes reference/ from new repositories. Keep exact private assets
 local unless authorized. Runtime/CI must not depend on ignored reference files. Copy

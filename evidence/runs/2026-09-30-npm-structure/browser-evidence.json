@@ -18,16 +18,18 @@
   "minimumGraphLabelHeightPx": 14,
   "screenshots": [
     {
-      "file": "nusrat-en-dark-1440-_passenger.png",
+      "file": "../../screenshots/nusrat-en-dark-1440-_passenger.png",
       "test": "principal views, widths, accessibility and screenshots nusrat/en/dark",
       "attachment": "1440-_passenger",
-      "sha256": "9002bb0c073d9615fa22078ca43b41884886d0d53553c90065b0bb0342c7e842"
+      "sha256": "9002bb0c073d9615fa22078ca43b41884886d0d53553c90065b0bb0342c7e842",
+      "originalFile": "nusrat-en-dark-1440-_passenger.png"
     },
     {
-      "file": "nusrat-en-light-1440-_passenger.png",
+      "file": "../../screenshots/nusrat-en-light-1440-_passenger.png",
       "test": "principal views, widths, accessibility and screenshots nusrat/en/light",
       "attachment": "1440-_passenger",
-      "sha256": "708e4deb2d4ec752d2e4cb50e7a93899d4590384393197482a016c28c59d1f65"
+      "sha256": "708e4deb2d4ec752d2e4cb50e7a93899d4590384393197482a016c28c59d1f65",
+      "originalFile": "nusrat-en-light-1440-_passenger.png"
     },
     {
       "file": "nusrat-bn-dark-360-_passenger_activity.png",
@@ -60,22 +62,25 @@
       "sha256": "30c5febb2d256c56ff3d306aed828b2d96b45cda34dd4e40f0b2d1dd9ce239ba"
     },
     {
-      "file": "nusrat-bn-light-1440-_passenger.png",
+      "file": "../../screenshots/nusrat-bn-light-1440-_passenger.png",
       "test": "principal views, widths, accessibility and screenshots nusrat/bn/light",
       "attachment": "1440-_passenger",
-      "sha256": "31775820be1697a826bf5e52bae83a815729a05b61a13e649c255174b7061d6a"
+      "sha256": "31775820be1697a826bf5e52bae83a815729a05b61a13e649c255174b7061d6a",
+      "originalFile": "nusrat-bn-light-1440-_passenger.png"
     },
     {
-      "file": "jashim-en-dark-1440-_driver.png",
+      "file": "../../screenshots/jashim-en-dark-1440-_driver.png",
       "test": "principal views, widths, accessibility and screenshots jashim/en/dark",
       "attachment": "1440-_driver",
-      "sha256": "07dc4e9ba2bb213d1624831f778786181d2f4ffb0df614c9b718276177e593b2"
+      "sha256": "07dc4e9ba2bb213d1624831f778786181d2f4ffb0df614c9b718276177e593b2",
+      "originalFile": "jashim-en-dark-1440-_driver.png"
     },
     {
-      "file": "jashim-en-light-1440-_driver.png",
+      "file": "../../screenshots/jashim-en-light-1440-_driver.png",
       "test": "principal views, widths, accessibility and screenshots jashim/en/light",
       "attachment": "1440-_driver",
-      "sha256": "a96d0c26fb725e3d3a9a3e92d684824e500f8b7bc242c153a008a68dcac2afe7"
+      "sha256": "a96d0c26fb725e3d3a9a3e92d684824e500f8b7bc242c153a008a68dcac2afe7",
+      "originalFile": "jashim-en-light-1440-_driver.png"
     },
     {
       "file": "jashim-bn-dark-360-_driver_activity.png",
@@ -108,10 +113,11 @@
       "sha256": "eec0bad6d5418e3ae91bad811f2fb99573ab403c782fa69535e35e06ab4c1297"
     },
     {
-      "file": "jashim-bn-light-1440-_driver.png",
+      "file": "../../screenshots/jashim-bn-light-1440-_driver.png",
       "test": "principal views, widths, accessibility and screenshots jashim/bn/light",
       "attachment": "1440-_driver",
-      "sha256": "6cfda03da8ebfe42c684bc24de5e18e11c177baf0e69ea0f149bbe73e246a725"
+      "sha256": "6cfda03da8ebfe42c684bc24de5e18e11c177baf0e69ea0f149bbe73e246a725",
+      "originalFile": "jashim-bn-light-1440-_driver.png"
     }
   ],
   "rows": [

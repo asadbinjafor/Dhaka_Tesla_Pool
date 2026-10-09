@@ -44,3 +44,11 @@ Pre-releasece17ce5/a470f72 full64-case CI PASS36540258465/36540724158. Actual re
 - Migration/explicit repeat-safe seed now use TypeORM; schema synchronization disabled.
 - Added5real ORM/config/manager/retry/connection-discard cases; complete CI37025204031
   PASS72distinct tests/75executions/300views. Existing13table/84reference hashes unchanged.
+
+## 2026-10-10 — unused file cleanup
+
+- Removed obsolete package-only guides/prompts/templates/checker and generated reports.
+- Removed six byte-identical screenshot copies; retained canonical files and original
+  CI/test/attachment/hash provenance in the historical browser manifest.
+- Kept runtime, database/migrations, tests, private settings, required documentation,
+  reference assets and existing user changes intact. Affected checks PASS.

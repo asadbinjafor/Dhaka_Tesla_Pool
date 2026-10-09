@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-10",
+  "removed": [
+    {
+      "file": "START_HERE_BN.md",
+      "tracked": true,
+      "reason": "obsolete package scaffolding",
+      "sha256": "b63a57176f91d86fef60333ce8ecf7530c73b76891521e046ea5c76126a8807c"
+    },
+    {
+      "file": "DELIVERY_STATUS.md",
+      "tracked": true,
+      "reason": "obsolete package scaffolding",
+      "sha256": "1c9446d51f27d0eba5e941486df4fd94a1eaf4c06b1e3d305138367709899498"
+    },
+    {
+      "file": "prompts/01-FOUNDATION.md",
+      "tracked": true,
+      "reason": "obsolete package scaffolding",
+      "sha256": "cdb90d8c1b470b2788ff6d78fb755d66ac12eabb468a91c8f15b20d2054ca207"
+    },
+    {
+      "file": "FINAL_PDF_AUDIT_PROMPT.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "8a3e47a38be5b5b58530867fe84f1a06f5699f07e997ba0ec76bc67a95cf8375"
+    },
+    {
+      "file": "HANDOFF_MANIFEST.json",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "9ca4facc3ed5245c19ac4046e9164a282a22468a247a20757f8114a2cfe0290a"
+    },
+    {
+      "file": "evidence/package-check.json",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "6cb9aa7ff68a8f3e5cb8378f1d145bd8abaab35da44c544f6cc0762e0ed32704"
+    },
+    {
+      "file": "prompts/02-DATABASE.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "a3a67c9f0ff6839cb8a9bf3032b8d21fc130ed989df91a0df12559f26cfca675"
+    },
+    {
+      "file": "prompts/03-AUTH.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "447376beff0673d6ece31192103af678d37c9a7a0a0e6bf96e6498c51ea2ef40"
+    },
+    {
+      "file": "prompts/04-REQUESTS.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "e3cd5ae88a937d5ee01afd614f18f21c662d6a73faa2ae898446832bef52c449"
+    },
+    {
+      "file": "prompts/05-ALLOCATION.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "d9bfb99ba109c80e41b08b6d1d8eef5ee7fc6a2443bc6f4a397e26f4731d0c4c"
+    },
+    {
+      "file": "prompts/06-LIFECYCLE.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "5c5f027d9ab618919a59e5712132cba4bcd7f1e729d5e71838658634bf164916"
+    },
+    {
+      "file": "prompts/07-FULL-UI.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "39c6e02550b79952b35122074eadc6ba0864d435c64e76e7fc007e93c632e682"
+    },
+    {
+      "file": "prompts/08-GRAPHS-HISTORY.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "282c0243c248ae1b5f4dd1773772d075a25b4a49119472c189f0db5c164649b3"
+    },
+    {
+      "file": "prompts/09-FINAL-AUDIT.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "64037140b8aa602b4572d20c60f1d15c8818514378825694e03cd1075ed31a6c"
+    },
+    {
+      "file": "prompts/10-RELEASE.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "6b5c7a94362c50a18d3693875dcfd776d3f02984ecc876ba97c11120125013ab"
+    },
+    {
+      "file": "prompts/REPAIR.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "2b95a586d9e4271634e8c450bf4cb227ed3463dcccd8e7422b4310a4b10e6db6"
+    },
+    {
+      "file": "templates/messages/README.md",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "eddebc91a4ad5e4c4b384edc3a0035d0f076fa11d6bf8434853e2e04626ed26d"
+    },
+    {
+      "file": "templates/messages/en.json",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "5462cc4b958d3138288239325747bf0b690d0774b157ee71413ff66b7eaf1877"
+    },
+    {
+      "file": "templates/messages/bn.json",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "2d7764147d885b2936ec6238e6e62de88f16b560a8d7bc12ab7af426b365c748"
+    },
+    {
+      "file": "tools/check_handoff.py",
+      "tracked": false,
+      "reason": "obsolete package scaffolding",
+      "sha256": "1d7374954430af186e44b0f12a83513e6055c5140f83ff6e9665e9acd9e68a04"
+    },
+    {
+      "file": "test-results/report.json",
+      "tracked": false,
+      "reason": "generated report",
+      "sha256": "327d9581862a80e959a07f46bd9bde155af0aa61f7e91c3524fcd926d269207c"
+    },
+    {
+      "file": "playwright-report/index.html",
+      "tracked": false,
+      "reason": "generated report",
+      "sha256": "472a869d366a361bbb620960d710aca2d9f1e0bb9b26aa0e0f73bda967a97310"
+    },
+    {
+      "file": "evidence/runs/2026-09-30-npm-structure/jashim-bn-light-1440-_driver.png",
+      "tracked": true,
+      "reason": "identical screenshot copy",
+      "retained": "evidence/screenshots/jashim-bn-light-1440-_driver.png",
+      "sha256": "6cfda03da8ebfe42c684bc24de5e18e11c177baf0e69ea0f149bbe73e246a725"
+    },
+    {
+      "file": "evidence/runs/2026-09-30-npm-structure/jashim-en-dark-1440-_driver.png",
+      "tracked": true,
+      "reason": "identical screenshot copy",
+      "retained": "evidence/screenshots/jashim-en-dark-1440-_driver.png",
+      "sha256": "07dc4e9ba2bb213d1624831f778786181d2f4ffb0df614c9b718276177e593b2"
+    },
+    {
+      "file": "evidence/runs/2026-09-30-npm-structure/jashim-en-light-1440-_driver.png",
+      "tracked": true,
+      "reason": "identical screenshot copy",
+      "retained": "evidence/screenshots/jashim-en-light-1440-_driver.png",
+      "sha256": "a96d0c26fb725e3d3a9a3e92d684824e500f8b7bc242c153a008a68dcac2afe7"
+    },
+    {
+      "file": "evidence/runs/2026-09-30-npm-structure/nusrat-bn-light-1440-_passenger.png",
+      "tracked": true,
+      "reason": "identical screenshot copy",
+      "retained": "evidence/screenshots/nusrat-bn-light-1440-_passenger.png",
+      "sha256": "31775820be1697a826bf5e52bae83a815729a05b61a13e649c255174b7061d6a"
+    },
+    {
+      "file": "evidence/runs/2026-09-30-npm-structure/nusrat-en-dark-1440-_passenger.png",
+      "tracked": true,
+      "reason": "identical screenshot copy",
+      "retained": "evidence/screenshots/nusrat-en-dark-1440-_passenger.png",
+      "sha256": "9002bb0c073d9615fa22078ca43b41884886d0d53553c90065b0bb0342c7e842"
+    },
+    {
+      "file": "evidence/runs/2026-09-30-npm-structure/nusrat-en-light-1440-_passenger.png",
+      "tracked": true,
+      "reason": "identical screenshot copy",
+      "retained": "evidence/screenshots/nusrat-en-light-1440-_passenger.png",
+      "sha256": "708e4deb2d4ec752d2e4cb50e7a93899d4590384393197482a016c28c59d1f65"
+    }
+  ],
+  "counts": {
+    "tracked": 9,
+    "localOnly": 19,
+    "total": 28
+  }
+}
